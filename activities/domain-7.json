@@ -1,0 +1,532 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "domainId": 7,
+  "domainName": "Structured Physical Operations",
+  "activities": [
+    {
+      "id": "7.1.1",
+      "name": "Assembly Line Work",
+      "description": "Performing repetitive assembly tasks on production lines with standardized components",
+      "categoryId": "7.1",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "dexterity",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Component installation",
+        "Fastening and securing",
+        "Part positioning",
+        "Sub-assembly completion"
+      ]
+    },
+    {
+      "id": "7.1.2",
+      "name": "Packaging Operations",
+      "description": "Placing products into containers and preparing for shipment",
+      "categoryId": "7.1",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "dexterity",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Box packing",
+        "Shrink wrapping",
+        "Label application",
+        "Palletizing"
+      ]
+    },
+    {
+      "id": "7.1.3",
+      "name": "Material Handling",
+      "description": "Moving raw materials and components within manufacturing facilities",
+      "categoryId": "7.1",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "mobility",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Loading production lines",
+        "Moving materials between stations",
+        "Staging components",
+        "Waste removal"
+      ]
+    },
+    {
+      "id": "7.1.4",
+      "name": "Welding (Automated)",
+      "description": "Performing spot welding and seam welding in controlled factory settings",
+      "categoryId": "7.1",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Spot welding",
+        "Seam welding",
+        "Robotic arc welding",
+        "Weld verification"
+      ]
+    },
+    {
+      "id": "7.1.5",
+      "name": "Injection Molding Operation",
+      "description": "Operating and monitoring plastic injection molding machines",
+      "categoryId": "7.1",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Machine setup",
+        "Cycle monitoring",
+        "Part extraction",
+        "Quality sampling"
+      ]
+    },
+    {
+      "id": "7.2.1",
+      "name": "Order Picking",
+      "description": "Retrieving specific items from warehouse locations to fulfill orders",
+      "categoryId": "7.2",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "dexterity",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Single item picking",
+        "Batch picking",
+        "Zone picking",
+        "Pick verification"
+      ]
+    },
+    {
+      "id": "7.2.2",
+      "name": "Inventory Stocking",
+      "description": "Placing received goods into designated storage locations",
+      "categoryId": "7.2",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "dexterity",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Shelf stocking",
+        "Bin replenishment",
+        "Pallet put-away",
+        "Location scanning"
+      ]
+    },
+    {
+      "id": "7.2.3",
+      "name": "Goods Receiving",
+      "description": "Unloading, verifying, and processing incoming shipments",
+      "categoryId": "7.2",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "dexterity",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Truck unloading",
+        "Shipment verification",
+        "Damage inspection",
+        "Receipt documentation"
+      ]
+    },
+    {
+      "id": "7.2.4",
+      "name": "Sortation",
+      "description": "Sorting packages and items by destination or category",
+      "categoryId": "7.2",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Package sorting",
+        "Mail sorting",
+        "Returns processing",
+        "Distribution routing"
+      ]
+    },
+    {
+      "id": "7.2.5",
+      "name": "Inventory Counting",
+      "description": "Counting and verifying stock levels in warehouse locations",
+      "categoryId": "7.2",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "sensing",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Cycle counting",
+        "Physical inventory",
+        "SKU verification",
+        "Discrepancy resolution"
+      ]
+    },
+    {
+      "id": "7.3.1",
+      "name": "CNC Machine Operation",
+      "description": "Operating computer-controlled machining equipment for precision manufacturing",
+      "categoryId": "7.3",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Part loading/unloading",
+        "Program execution",
+        "Tool changes",
+        "Process monitoring"
+      ]
+    },
+    {
+      "id": "7.3.2",
+      "name": "Printing Press Operation",
+      "description": "Operating commercial printing equipment for publications and packaging",
+      "categoryId": "7.3",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "sensing",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Press setup",
+        "Paper loading",
+        "Color registration",
+        "Quality monitoring"
+      ]
+    },
+    {
+      "id": "7.3.3",
+      "name": "Food Processing Equipment Operation",
+      "description": "Operating machinery for food processing, cooking, and packaging",
+      "categoryId": "7.3",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 3,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "safety",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Mixer operation",
+        "Filling line operation",
+        "Oven operation",
+        "Packaging machine operation"
+      ]
+    },
+    {
+      "id": "7.3.4",
+      "name": "Textile Machine Operation",
+      "description": "Operating looms, knitting machines, and sewing equipment",
+      "categoryId": "7.3",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "dexterity",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Loom operation",
+        "Thread changes",
+        "Pattern monitoring",
+        "Machine adjustment"
+      ]
+    },
+    {
+      "id": "7.3.5",
+      "name": "Semiconductor Equipment Operation",
+      "description": "Operating cleanroom equipment for chip manufacturing",
+      "categoryId": "7.3",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 4,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "sensing",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Wafer handling",
+        "Lithography operation",
+        "Etching processes",
+        "Cleanroom protocols"
+      ]
+    },
+    {
+      "id": "7.4.1",
+      "name": "Visual Product Inspection",
+      "description": "Examining products for defects, damage, or quality issues",
+      "categoryId": "7.4",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "sensing",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Surface defect detection",
+        "Cosmetic inspection",
+        "Label verification",
+        "Assembly completeness check"
+      ]
+    },
+    {
+      "id": "7.4.2",
+      "name": "Dimensional Measurement",
+      "description": "Measuring product dimensions against specifications using gauges and instruments",
+      "categoryId": "7.4",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Caliper measurement",
+        "Gauge checking",
+        "CMM operation",
+        "Tolerance verification"
+      ]
+    },
+    {
+      "id": "7.4.3",
+      "name": "Functional Testing",
+      "description": "Testing products to verify they work according to specifications",
+      "categoryId": "7.4",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Electrical testing",
+        "Pressure testing",
+        "Operational checks",
+        "Performance verification"
+      ]
+    },
+    {
+      "id": "7.4.4",
+      "name": "Sample Collection",
+      "description": "Collecting product samples for laboratory analysis and testing",
+      "categoryId": "7.4",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "dexterity",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Random sampling",
+        "Batch sampling",
+        "Sample preparation",
+        "Chain of custody"
+      ]
+    },
+    {
+      "id": "7.4.5",
+      "name": "Documentation and Traceability",
+      "description": "Recording inspection results and maintaining quality records",
+      "categoryId": "7.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Recording measurements",
+        "Lot tracking",
+        "Non-conformance reporting",
+        "Certificate generation"
+      ]
+    },
+    {
+      "id": "7.5.1",
+      "name": "Floor Cleaning (Commercial)",
+      "description": "Cleaning floors in commercial and industrial facilities using equipment",
+      "categoryId": "7.5",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "mobility",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Floor scrubbing",
+        "Vacuuming",
+        "Mopping",
+        "Floor polishing"
+      ]
+    },
+    {
+      "id": "7.5.2",
+      "name": "Waste Management",
+      "description": "Collecting, sorting, and disposing of waste in facilities",
+      "categoryId": "7.5",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "dexterity",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Trash collection",
+        "Recycling sorting",
+        "Bin emptying",
+        "Hazardous waste handling"
+      ]
+    },
+    {
+      "id": "7.5.3",
+      "name": "Restroom Maintenance",
+      "description": "Cleaning and restocking restroom facilities",
+      "categoryId": "7.5",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "dexterity",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Toilet cleaning",
+        "Fixture sanitization",
+        "Supply restocking",
+        "Floor maintenance"
+      ]
+    },
+    {
+      "id": "7.5.4",
+      "name": "HVAC Filter Replacement",
+      "description": "Replacing air filters and performing basic HVAC maintenance tasks",
+      "categoryId": "7.5",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "dexterity",
+        "agiWave": 3
+      },
+      "exampleTasks": [
+        "Filter changes",
+        "Vent cleaning",
+        "Basic maintenance checks",
+        "Air quality monitoring"
+      ]
+    },
+    {
+      "id": "7.5.5",
+      "name": "Light Maintenance",
+      "description": "Replacing bulbs and performing basic lighting maintenance",
+      "categoryId": "7.5",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "dexterity",
+        "agiWave": 3
+      },
+      "exampleTasks": [
+        "Bulb replacement",
+        "Fixture cleaning",
+        "Ballast checking",
+        "Emergency light testing"
+      ]
+    }
+  ]
+}

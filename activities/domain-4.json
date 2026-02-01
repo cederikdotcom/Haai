@@ -1,0 +1,532 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "domainId": 4,
+  "domainName": "Interpersonal Communication",
+  "activities": [
+    {
+      "id": "4.1.1",
+      "name": "Lecture Delivery",
+      "description": "Presenting educational content to groups through structured verbal presentation",
+      "categoryId": "4.1",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 3,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Delivering university lectures",
+        "Presenting conference talks",
+        "Conducting webinars",
+        "Leading training sessions"
+      ]
+    },
+    {
+      "id": "4.1.2",
+      "name": "One-on-One Tutoring",
+      "description": "Providing personalized instruction adapted to individual learner needs and pace",
+      "categoryId": "4.1",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 3,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Academic tutoring sessions",
+        "Language instruction",
+        "Music lessons",
+        "Skill coaching"
+      ]
+    },
+    {
+      "id": "4.1.3",
+      "name": "Corporate Training",
+      "description": "Delivering professional development and skills training to employees",
+      "categoryId": "4.1",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 3,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Onboarding new employees",
+        "Software training sessions",
+        "Compliance training",
+        "Leadership development workshops"
+      ]
+    },
+    {
+      "id": "4.1.4",
+      "name": "Technical Explanation",
+      "description": "Explaining complex technical concepts to non-technical audiences",
+      "categoryId": "4.1",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 2,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Explaining software features to users",
+        "Translating scientific findings",
+        "Simplifying technical documentation",
+        "Demo presentations"
+      ]
+    },
+    {
+      "id": "4.1.5",
+      "name": "Procedural Instruction",
+      "description": "Teaching step-by-step processes and procedures for task completion",
+      "categoryId": "4.1",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 2,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Teaching software workflows",
+        "Explaining safety procedures",
+        "Guiding process completion",
+        "How-to demonstrations"
+      ]
+    },
+    {
+      "id": "4.2.1",
+      "name": "Sales Presentations",
+      "description": "Pitching products or services to potential customers to generate revenue",
+      "categoryId": "4.2",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 3,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Product demonstrations",
+        "Proposal presentations",
+        "Cold calling pitches",
+        "Trade show presentations"
+      ]
+    },
+    {
+      "id": "4.2.2",
+      "name": "Business Negotiation",
+      "description": "Reaching agreements through discussion on terms, prices, and conditions",
+      "categoryId": "4.2",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 3,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Contract negotiations",
+        "Salary discussions",
+        "Vendor negotiations",
+        "Partnership terms"
+      ]
+    },
+    {
+      "id": "4.2.3",
+      "name": "Political Advocacy",
+      "description": "Persuading stakeholders to support policies, causes, or positions",
+      "categoryId": "4.2",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 4,
+        "socialComplexity": 3,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Lobbying officials",
+        "Campaign messaging",
+        "Community organizing",
+        "Public testimony"
+      ]
+    },
+    {
+      "id": "4.2.4",
+      "name": "Legal Argumentation",
+      "description": "Presenting persuasive arguments in legal contexts to judges, juries, or opposing counsel",
+      "categoryId": "4.2",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 3,
+        "feedbackSpeed": 3,
+        "socialComplexity": 3,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Courtroom arguments",
+        "Mediation advocacy",
+        "Settlement negotiations",
+        "Written briefs presentation"
+      ]
+    },
+    {
+      "id": "4.2.5",
+      "name": "Fundraising Appeals",
+      "description": "Persuading donors and investors to provide financial support",
+      "categoryId": "4.2",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 3,
+        "socialComplexity": 3,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Investor pitches",
+        "Donor solicitation",
+        "Grant presentations",
+        "Crowdfunding campaigns"
+      ]
+    },
+    {
+      "id": "4.3.1",
+      "name": "Meeting Facilitation",
+      "description": "Leading group discussions to achieve objectives and manage participant dynamics",
+      "categoryId": "4.3",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Running team meetings",
+        "Facilitating workshops",
+        "Leading brainstorming sessions",
+        "Moderating discussions"
+      ]
+    },
+    {
+      "id": "4.3.2",
+      "name": "Project Status Communication",
+      "description": "Reporting on project progress, blockers, and updates to stakeholders",
+      "categoryId": "4.3",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 2,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Daily standups",
+        "Sprint reviews",
+        "Executive updates",
+        "Client status calls"
+      ]
+    },
+    {
+      "id": "4.3.3",
+      "name": "Schedule Coordination",
+      "description": "Arranging and confirming meeting times and resource availability across parties",
+      "categoryId": "4.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Calendar management",
+        "Meeting scheduling",
+        "Resource booking",
+        "Travel coordination"
+      ]
+    },
+    {
+      "id": "4.3.4",
+      "name": "Cross-Team Alignment",
+      "description": "Coordinating priorities and dependencies between different teams or departments",
+      "categoryId": "4.3",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Inter-team syncs",
+        "Dependency planning",
+        "Cross-functional coordination",
+        "Stakeholder alignment"
+      ]
+    },
+    {
+      "id": "4.3.5",
+      "name": "Delegation and Task Assignment",
+      "description": "Assigning work to team members and communicating expectations",
+      "categoryId": "4.3",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Work assignment",
+        "Task prioritization communication",
+        "Deadline setting",
+        "Responsibility clarification"
+      ]
+    },
+    {
+      "id": "4.4.1",
+      "name": "Customer Service Inquiries",
+      "description": "Answering customer questions about products, services, policies, and account issues",
+      "categoryId": "4.4",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Answering product questions",
+        "Explaining policies",
+        "Account inquiries",
+        "Order status updates"
+      ]
+    },
+    {
+      "id": "4.4.2",
+      "name": "Technical Support",
+      "description": "Diagnosing and resolving technical problems through communication with users",
+      "categoryId": "4.4",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Troubleshooting software issues",
+        "Hardware problem diagnosis",
+        "Configuration assistance",
+        "Error resolution"
+      ]
+    },
+    {
+      "id": "4.4.3",
+      "name": "Help Desk Triage",
+      "description": "Categorizing and routing incoming support requests to appropriate handlers",
+      "categoryId": "4.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Ticket categorization",
+        "Priority assessment",
+        "Request routing",
+        "Initial response"
+      ]
+    },
+    {
+      "id": "4.4.4",
+      "name": "Expert Consultation",
+      "description": "Providing specialized knowledge and advice in response to specific questions",
+      "categoryId": "4.4",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Legal consultations",
+        "Financial advice",
+        "Medical information",
+        "Technical consulting"
+      ]
+    },
+    {
+      "id": "4.4.5",
+      "name": "Information Booth Services",
+      "description": "Providing directions, information, and assistance at public venues",
+      "categoryId": "4.4",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Giving directions",
+        "Event information",
+        "Visitor assistance",
+        "FAQ responses"
+      ]
+    },
+    {
+      "id": "4.5.1",
+      "name": "Professional Networking",
+      "description": "Building and maintaining professional relationships for career and business purposes",
+      "categoryId": "4.5",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 4,
+        "socialComplexity": 3,
+        "aiCapability": "early",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Conference networking",
+        "LinkedIn engagement",
+        "Professional introductions",
+        "Industry events"
+      ]
+    },
+    {
+      "id": "4.5.2",
+      "name": "Small Talk and Social Conversation",
+      "description": "Engaging in casual conversation to build rapport and maintain relationships",
+      "categoryId": "4.5",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Office chitchat",
+        "Social event conversations",
+        "Icebreakers",
+        "Casual check-ins"
+      ]
+    },
+    {
+      "id": "4.5.3",
+      "name": "Hosting and Entertainment",
+      "description": "Welcoming and engaging guests in social settings",
+      "categoryId": "4.5",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 3,
+        "aiCapability": "early",
+        "bottleneck": "social",
+        "agiWave": 3
+      },
+      "exampleTasks": [
+        "Dinner party hosting",
+        "Event emceeing",
+        "Client entertainment",
+        "Reception hosting"
+      ]
+    },
+    {
+      "id": "4.5.4",
+      "name": "Online Community Engagement",
+      "description": "Participating in and moderating online social spaces and forums",
+      "categoryId": "4.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Forum moderation",
+        "Social media engagement",
+        "Community management",
+        "Discord/Slack participation"
+      ]
+    },
+    {
+      "id": "4.5.5",
+      "name": "Relationship Check-ins",
+      "description": "Maintaining ongoing connections through periodic communication",
+      "categoryId": "4.5",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 4,
+        "socialComplexity": 3,
+        "aiCapability": "early",
+        "bottleneck": "social",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Follow-up messages",
+        "Birthday greetings",
+        "Anniversary acknowledgments",
+        "Reconnection outreach"
+      ]
+    }
+  ]
+}
