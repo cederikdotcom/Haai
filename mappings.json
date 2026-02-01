@@ -1,0 +1,482 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "title": "External Taxonomy Mappings",
+  "description": "Mappings between HAAI taxonomy and external classification systems",
+  "lastUpdated": "2026-02-01",
+  "sources": {
+    "onet": {
+      "name": "O*NET Content Model",
+      "description": "US Department of Labor occupational information network",
+      "url": "https://www.onetcenter.org/content.html",
+      "version": "28.0"
+    },
+    "atus": {
+      "name": "American Time Use Survey Activity Lexicon",
+      "description": "Bureau of Labor Statistics time use classification",
+      "url": "https://www.bls.gov/tus/lexicons.htm",
+      "version": "2023"
+    },
+    "hetus": {
+      "name": "Harmonised European Time Use Surveys",
+      "description": "Eurostat time use classification guidelines",
+      "url": "https://ec.europa.eu/eurostat/web/time-use-surveys"
+    },
+    "icatus": {
+      "name": "International Classification of Activities for Time-Use Statistics",
+      "description": "UN Statistics Division classification",
+      "url": "https://unstats.un.org/unsd/gender/timeuse/",
+      "version": "2016"
+    },
+    "behavior1k": {
+      "name": "BEHAVIOR-1K",
+      "description": "Stanford benchmark for embodied AI household tasks",
+      "url": "https://behavior.stanford.edu"
+    },
+    "activitynet": {
+      "name": "ActivityNet",
+      "description": "Large-scale video understanding benchmark",
+      "url": "http://activity-net.org/"
+    },
+    "kinetics": {
+      "name": "Kinetics Dataset",
+      "description": "DeepMind human action video dataset",
+      "url": "https://github.com/cvdfoundation/kinetics-dataset"
+    },
+    "isco": {
+      "name": "International Standard Classification of Occupations",
+      "description": "ILO occupational classification",
+      "version": "ISCO-08"
+    }
+  },
+  "onetMapping": {
+    "description": "Mapping O*NET Work Activities to HAAI domains",
+    "mappings": [
+      {
+        "onetCategory": "Information Input",
+        "onetActivities": [
+          "Getting Information",
+          "Monitoring Processes, Materials, or Surroundings",
+          "Identifying Objects, Actions, and Events",
+          "Inspecting Equipment, Structures, or Materials",
+          "Estimating the Quantifiable Characteristics"
+        ],
+        "haaiDomains": [1, 2, "7.4"]
+      },
+      {
+        "onetCategory": "Mental Processes",
+        "onetActivities": [
+          "Processing Information",
+          "Evaluating Information to Determine Compliance",
+          "Analyzing Data or Information",
+          "Judging the Qualities of Objects, Services, or People",
+          "Making Decisions and Solving Problems",
+          "Thinking Creatively",
+          "Updating and Using Relevant Knowledge",
+          "Developing Objectives and Strategies",
+          "Scheduling Work and Activities",
+          "Organizing, Planning, and Prioritizing Work"
+        ],
+        "haaiDomains": [1, 2, 3, "4.3"]
+      },
+      {
+        "onetCategory": "Work Output (Digital)",
+        "onetActivities": [
+          "Interacting With Computers",
+          "Documenting/Recording Information"
+        ],
+        "haaiDomains": [1, 2, 3]
+      },
+      {
+        "onetCategory": "Work Output (Technical)",
+        "onetActivities": [
+          "Drafting, Laying Out, and Specifying Technical Devices",
+          "Repairing and Maintaining Mechanical Equipment",
+          "Repairing and Maintaining Electronic Equipment"
+        ],
+        "haaiDomains": ["3.3", "8.1", "8.2"]
+      },
+      {
+        "onetCategory": "Work Output (Physical)",
+        "onetActivities": [
+          "Performing General Physical Activities",
+          "Handling and Moving Objects",
+          "Controlling Machines and Processes",
+          "Operating Vehicles, Mechanized Devices, or Equipment"
+        ],
+        "haaiDomains": [7, 8, 9]
+      },
+      {
+        "onetCategory": "Interacting (Communication)",
+        "onetActivities": [
+          "Interpreting the Meaning of Information for Others",
+          "Communicating with Supervisors, Peers, or Subordinates",
+          "Communicating with People Outside the Organization"
+        ],
+        "haaiDomains": [4]
+      },
+      {
+        "onetCategory": "Interacting (Relationships)",
+        "onetActivities": [
+          "Establishing and Maintaining Interpersonal Relationships",
+          "Assisting and Caring for Others",
+          "Selling or Influencing Others",
+          "Resolving Conflicts and Negotiating with Others"
+        ],
+        "haaiDomains": [4, 5, 6]
+      },
+      {
+        "onetCategory": "Interacting (Leadership)",
+        "onetActivities": [
+          "Coordinating the Work and Activities of Others",
+          "Developing and Building Teams",
+          "Training and Teaching Others",
+          "Coaching and Developing Others",
+          "Provide Consultation and Advice to Others"
+        ],
+        "haaiDomains": ["4.1", "4.3", "6.4"]
+      },
+      {
+        "onetCategory": "Interacting (Administrative)",
+        "onetActivities": [
+          "Performing Administrative Activities",
+          "Staffing Organizational Units",
+          "Monitoring and Controlling Resources"
+        ],
+        "haaiDomains": ["5.1", "5.3"]
+      }
+    ]
+  },
+  "atusMapping": {
+    "description": "Mapping ATUS activity codes to HAAI domains",
+    "mappings": [
+      {
+        "atusCode": "01",
+        "atusCategory": "Personal Care Activities",
+        "haaiCategories": ["10.1", "10.3"],
+        "notes": "Includes sleeping, grooming, health-related self-care"
+      },
+      {
+        "atusCode": "02",
+        "atusCategory": "Household Activities",
+        "haaiCategories": ["10.2", "10.4"],
+        "notes": "Housework, cooking, lawn/garden, household management"
+      },
+      {
+        "atusCode": "03",
+        "atusCategory": "Caring for and Helping Household Members",
+        "haaiCategories": ["6.1", "6.2"],
+        "notes": "Childcare, adult care within household"
+      },
+      {
+        "atusCode": "04",
+        "atusCategory": "Caring for and Helping Non-Household Members",
+        "haaiCategories": ["6.1", "6.2", "6.5"],
+        "notes": "Care for family/friends outside household"
+      },
+      {
+        "atusCode": "05",
+        "atusCategory": "Work and Work-Related Activities",
+        "haaiCategories": ["1-8"],
+        "notes": "Mapped by occupation type"
+      },
+      {
+        "atusCode": "06",
+        "atusCategory": "Education",
+        "haaiCategories": ["2.1", "4.1"],
+        "notes": "Taking classes, research, homework"
+      },
+      {
+        "atusCode": "07",
+        "atusCategory": "Consumer Purchases",
+        "haaiCategories": ["5.2", "9.2"],
+        "notes": "Shopping, obtaining services"
+      },
+      {
+        "atusCode": "08",
+        "atusCategory": "Professional and Personal Care Services",
+        "haaiCategories": ["5", "6.3", "6.4"],
+        "notes": "Using professional services (medical, legal, financial, personal care)"
+      },
+      {
+        "atusCode": "09",
+        "atusCategory": "Household Services",
+        "haaiCategories": ["5.1"],
+        "notes": "Using household services (home repair, cleaning services)"
+      },
+      {
+        "atusCode": "10",
+        "atusCategory": "Government Services and Civic Obligations",
+        "haaiCategories": ["5.5", "6.5"],
+        "notes": "Civic duties, government services, voting"
+      },
+      {
+        "atusCode": "11",
+        "atusCategory": "Eating and Drinking",
+        "haaiCategories": ["10.2"],
+        "notes": "Meals and snacks"
+      },
+      {
+        "atusCode": "12",
+        "atusCategory": "Socializing, Relaxing, and Leisure",
+        "haaiCategories": ["4.5", "6.6", "10.5"],
+        "notes": "Social activities, relaxation, arts/entertainment"
+      },
+      {
+        "atusCode": "13",
+        "atusCategory": "Sports, Exercise, and Recreation",
+        "haaiCategories": ["9.5", "10.3"],
+        "notes": "Physical activities, sports participation"
+      },
+      {
+        "atusCode": "14",
+        "atusCategory": "Religious and Spiritual Activities",
+        "haaiCategories": ["6.5"],
+        "notes": "Religious practice, spiritual activities"
+      },
+      {
+        "atusCode": "15",
+        "atusCategory": "Volunteer Activities",
+        "haaiCategories": ["6.5"],
+        "notes": "Volunteering for organizations"
+      },
+      {
+        "atusCode": "16",
+        "atusCategory": "Telephone Calls",
+        "haaiCategories": ["4"],
+        "notes": "Phone communication (classified by purpose)"
+      },
+      {
+        "atusCode": "18",
+        "atusCategory": "Traveling",
+        "haaiCategories": ["9.1", "9.2"],
+        "notes": "Travel related to other activities"
+      }
+    ]
+  },
+  "behavior1kMapping": {
+    "description": "Mapping BEHAVIOR-1K task categories to HAAI domains",
+    "mappings": [
+      {
+        "behaviorCategory": "Cleaning/Wiping",
+        "haaiCategories": ["7.5", "10.4"],
+        "taskExamples": ["Wiping surfaces", "Mopping floors", "Cleaning appliances"]
+      },
+      {
+        "behaviorCategory": "Cooking/Freezing",
+        "haaiCategories": ["8.4", "10.2"],
+        "taskExamples": ["Preparing meals", "Using stove/oven", "Storing food"]
+      },
+      {
+        "behaviorCategory": "Rearrangement",
+        "haaiCategories": ["7.2", "10.4"],
+        "taskExamples": ["Organizing items", "Moving furniture", "Tidying rooms"]
+      },
+      {
+        "behaviorCategory": "Slicing/Dicing",
+        "haaiCategories": ["8.4"],
+        "taskExamples": ["Cutting vegetables", "Preparing ingredients"]
+      },
+      {
+        "behaviorCategory": "Baking",
+        "haaiCategories": ["8.4"],
+        "taskExamples": ["Making bread", "Preparing pastries"]
+      },
+      {
+        "behaviorCategory": "Laundry",
+        "haaiCategories": ["7.5", "10.4"],
+        "taskExamples": ["Washing clothes", "Folding laundry", "Ironing"]
+      },
+      {
+        "behaviorCategory": "Painting/Spraying",
+        "haaiCategories": ["8.1", "8.5"],
+        "taskExamples": ["Wall painting", "Applying finishes"]
+      },
+      {
+        "behaviorCategory": "Hanging/Installing",
+        "haaiCategories": ["8.1"],
+        "taskExamples": ["Mounting shelves", "Installing fixtures"]
+      }
+    ]
+  },
+  "activityNetMapping": {
+    "description": "Mapping ActivityNet/Kinetics action classes to HAAI domains",
+    "mappings": [
+      {
+        "actionType": "Human-Object Interaction",
+        "haaiDomains": [7, 8, 10],
+        "examples": ["Using tools", "Manipulating objects", "Operating devices"]
+      },
+      {
+        "actionType": "Body-Motion Only",
+        "haaiDomains": ["9.5", "10.3"],
+        "examples": ["Running", "Jumping", "Dancing"]
+      },
+      {
+        "actionType": "Human-Human Interaction",
+        "haaiDomains": [4, 6],
+        "examples": ["Handshaking", "Hugging", "Conversing"]
+      },
+      {
+        "actionType": "Playing Instruments",
+        "haaiDomains": ["3.4", "10.5"],
+        "examples": ["Playing guitar", "Playing piano", "Drumming"]
+      },
+      {
+        "actionType": "Sports",
+        "haaiDomains": ["9.5", "10.3"],
+        "examples": ["Playing soccer", "Swimming", "Cycling"]
+      }
+    ]
+  },
+  "iscoMapping": {
+    "description": "Mapping ISCO-08 major occupation groups to HAAI domains",
+    "mappings": [
+      {
+        "iscoGroup": 1,
+        "iscoName": "Managers",
+        "sampleTasks": ["Strategy development", "Coordination", "Decision making"],
+        "haaiCategories": ["3.5", "4.3", "5.1"]
+      },
+      {
+        "iscoGroup": 2,
+        "iscoName": "Professionals",
+        "sampleTasks": ["Analysis", "Design", "Consultation"],
+        "haaiCategories": ["2", "3", "4.1", "6.3", "6.4"]
+      },
+      {
+        "iscoGroup": 3,
+        "iscoName": "Technicians and Associate Professionals",
+        "sampleTasks": ["Technical support", "Operation", "Implementation"],
+        "haaiCategories": ["3.3", "7.3", "8.2"]
+      },
+      {
+        "iscoGroup": 4,
+        "iscoName": "Clerical Support Workers",
+        "sampleTasks": ["Administration", "Data entry", "Filing"],
+        "haaiCategories": ["1.2", "2.3", "5.1"]
+      },
+      {
+        "iscoGroup": 5,
+        "iscoName": "Service and Sales Workers",
+        "sampleTasks": ["Customer service", "Retail sales", "Personal services"],
+        "haaiCategories": ["4.4", "5.2"]
+      },
+      {
+        "iscoGroup": 6,
+        "iscoName": "Skilled Agricultural, Forestry and Fishery Workers",
+        "sampleTasks": ["Farming", "Animal husbandry", "Forestry"],
+        "haaiCategories": ["9.3"]
+      },
+      {
+        "iscoGroup": 7,
+        "iscoName": "Craft and Related Trades Workers",
+        "sampleTasks": ["Construction", "Repair", "Artisan work"],
+        "haaiCategories": ["8.1", "8.2", "8.5"]
+      },
+      {
+        "iscoGroup": 8,
+        "iscoName": "Plant and Machine Operators and Assemblers",
+        "sampleTasks": ["Manufacturing", "Machine operation", "Driving"],
+        "haaiCategories": ["7.1", "7.3", "9.1"]
+      },
+      {
+        "iscoGroup": 9,
+        "iscoName": "Elementary Occupations",
+        "sampleTasks": ["Cleaning", "Loading", "Basic manual tasks"],
+        "haaiCategories": ["7.2", "7.5", "9.2"]
+      }
+    ]
+  },
+  "aiCapabilityAlignment": {
+    "description": "Mapping current AI systems to taxonomy predictions for validation",
+    "systems": [
+      {
+        "system": "GPT-4 / Claude",
+        "demonstratedCapabilities": ["Text generation", "Analysis", "Code generation", "Reasoning"],
+        "haaiDomains": [1, 2, 3],
+        "predictedWave": [1, 2],
+        "alignmentStatus": "confirmed"
+      },
+      {
+        "system": "GitHub Copilot",
+        "demonstratedCapabilities": ["Code completion", "Code generation", "Documentation"],
+        "haaiCategories": ["3.3"],
+        "predictedWave": [1, 2],
+        "alignmentStatus": "confirmed"
+      },
+      {
+        "system": "Midjourney / DALL-E / Stable Diffusion",
+        "demonstratedCapabilities": ["Image generation", "Style transfer", "Image editing"],
+        "haaiCategories": ["3.2"],
+        "predictedWave": [1, 2],
+        "alignmentStatus": "confirmed"
+      },
+      {
+        "system": "Tesla Autopilot / FSD",
+        "demonstratedCapabilities": ["Highway driving", "Lane keeping", "Adaptive cruise"],
+        "haaiCategories": ["9.1"],
+        "predictedWave": [2, 3],
+        "alignmentStatus": "confirmed"
+      },
+      {
+        "system": "Waymo",
+        "demonstratedCapabilities": ["Urban autonomous driving", "Intersection navigation"],
+        "haaiCategories": ["9.1"],
+        "predictedWave": [2, 3],
+        "alignmentStatus": "confirmed"
+      },
+      {
+        "system": "Boston Dynamics Spot",
+        "demonstratedCapabilities": ["Navigation", "Inspection", "Terrain traversal"],
+        "haaiCategories": ["9.4"],
+        "predictedWave": [2, 3],
+        "alignmentStatus": "confirmed"
+      },
+      {
+        "system": "Amazon Kiva / Warehouse Robots",
+        "demonstratedCapabilities": ["Warehouse navigation", "Item retrieval", "Sorting"],
+        "haaiCategories": ["7.2"],
+        "predictedWave": 2,
+        "alignmentStatus": "confirmed"
+      },
+      {
+        "system": "Da Vinci Surgical System",
+        "demonstratedCapabilities": ["Assisted surgery", "Precision manipulation"],
+        "haaiCategories": ["8.3"],
+        "predictedWave": [3, 4],
+        "alignmentStatus": "confirmed"
+      },
+      {
+        "system": "Figure / 1X Humanoid Robots",
+        "demonstratedCapabilities": ["General manipulation", "Human-like movement"],
+        "haaiDomains": [7, 8, 10],
+        "predictedWave": [3, 4],
+        "alignmentStatus": "in_development"
+      }
+    ]
+  },
+  "cognitiveFrameworks": {
+    "description": "Related cognitive and psychomotor taxonomies for reference",
+    "frameworks": [
+      {
+        "name": "Bloom's Taxonomy",
+        "domain": "Cognitive",
+        "levels": ["Remember", "Understand", "Apply", "Analyze", "Evaluate", "Create"],
+        "relevance": "Mapping cognitive complexity of activities"
+      },
+      {
+        "name": "Dave's Taxonomy",
+        "domain": "Psychomotor",
+        "levels": ["Imitation", "Manipulation", "Precision", "Articulation", "Naturalization"],
+        "relevance": "Mapping physical skill acquisition stages"
+      },
+      {
+        "name": "Krathwohl's Taxonomy",
+        "domain": "Affective",
+        "levels": ["Receiving", "Responding", "Valuing", "Organizing", "Characterizing"],
+        "relevance": "Mapping emotional/social complexity"
+      }
+    ]
+  }
+}
