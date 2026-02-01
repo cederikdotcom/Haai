@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 7,
   "domainName": "Structured Physical Operations",
-  "assessmentsSource": "../assessments.json",
-  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments.json (activityAssessments). Values here are kept in sync for convenience.",
+  "assessmentsDir": "../assessments/",
+  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments/ (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "7.1.1",

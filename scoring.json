@@ -2,9 +2,9 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "version": "1.0.0",
   "title": "Human Activity Scoring System",
-  "description": "Attribute definitions and scoring scales for predicting AI automation timelines. NOTE: Periodically-updated values (wave timelines, composite weights, activity assessments) are in assessments.json",
+  "description": "Attribute definitions and scoring scales for predicting AI automation timelines. NOTE: Periodically-updated values (wave timelines, composite weights, activity assessments) are in assessments/",
   "lastUpdated": "2026-02-01",
-  "assessmentsFile": "assessments.json",
+  "assessmentsDir": "assessments/",
   "attributes": [
     {
       "id": 1,
@@ -263,7 +263,7 @@
         "min": 1,
         "max": 4
       },
-      "note": "Current wave timelines are in assessments.json (agiWaveTimelines). Below is the schema reference.",
+      "note": "Current wave timelines are in assessments/ (agiWaveTimelines). Below is the schema reference.",
       "waves": [
         {
           "wave": 1,
@@ -394,7 +394,7 @@
     }
   },
   "compositeScores": {
-    "note": "Weights for these formulas are configurable in assessments.json (compositeWeights). Below uses default weights.",
+    "note": "Weights for these formulas are configurable in assessments/ (compositeWeights). Below uses default weights.",
     "automationReadiness": {
       "description": "Overall estimate of how ready an activity is for AI automation",
       "formula": "((5 - abstraction) * weights.abstraction) + ((4 - errorTolerance) * weights.errorTolerance) + ((4 - socialComplexity) * weights.socialComplexity) + (capabilityScore * weights.aiCapability)",
