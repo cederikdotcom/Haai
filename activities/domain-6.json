@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 6,
   "domainName": "Care & Relational Support",
-  "quarterlyScoresSource": "../quarterly.json",
-  "quarterlyScoresNote": "The aiCapability, bottleneck, and agiWave scores are quarterly-changing values. The authoritative source is quarterly.json (activityAssessments). Values here are kept in sync for convenience.",
+  "assessmentsDir": "../assessments/",
+  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments/ (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "6.1.1",

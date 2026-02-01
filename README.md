@@ -16,12 +16,28 @@ HAAI classifies all human activities—paid work and unpaid life—into a struct
 
 ```
 Haai/
-├── taxonomy.json    # Domain and category definitions (10 domains, 50 categories)
-├── scoring.json     # Attribute definitions and scoring scales
-├── mappings.json    # External taxonomy mappings (O*NET, ATUS, ISCO, etc.)
-├── validation.json  # Test cases and validation checklists
-└── README.md        # This file
+├── taxonomy.json        # Domain and category definitions (10 domains, 50 categories)
+├── scoring.json         # Attribute definitions and scoring scales
+├── mappings.json        # External taxonomy mappings (O*NET, ATUS, ISCO, etc.)
+├── validation.json      # Test cases and validation checklists
+├── activities/          # Activity definitions by domain
+│   ├── domain-1.json    # Symbolic Computation activities
+│   ├── domain-2.json    # Information Synthesis activities
+│   └── ...              # domain-3.json through domain-10.json
+├── assessments/         # Timestamped AI capability assessments
+│   └── 2026-01-01.json  # Assessment dated YYYY-MM-DD
+└── README.md            # This file
 ```
+
+## Assessments
+
+The `assessments/` directory contains timestamped snapshots of AI capability assessments. Each file is named by date (YYYY-MM-DD.json) and contains:
+
+- **agiWaveTimelines**: Current timeline predictions for each AGI wave
+- **compositeWeights**: Weights for scoring formulas
+- **activityAssessments**: Per-activity scores for aiCapability, bottleneck, and agiWave
+
+Create a new assessment file whenever you want to capture the current state of AI capabilities. This builds a historical record for tracking progress over time.
 
 ## Taxonomy Structure
 
@@ -126,7 +142,7 @@ See `mappings.json` for detailed crosswalks.
 
 - [x] Level 1: Domain definitions (10 domains)
 - [x] Level 2: Category definitions (50 categories)
-- [ ] Level 3: Activity enumeration (200-400 activities with scores)
+- [x] Level 3: Activity enumeration (255 activities with scores)
 - [ ] Validation: Inter-rater reliability testing
 - [ ] Predictive validation against AI deployment data
 
