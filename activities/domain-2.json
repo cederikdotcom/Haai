@@ -1,0 +1,547 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "domainId": 2,
+  "domainName": "Information Synthesis",
+  "activities": [
+    {
+      "id": "2.1.1",
+      "name": "Literature Review",
+      "description": "Systematically searching, reading, and synthesizing published research on a topic",
+      "categoryId": "2.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 3,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Searching academic databases",
+        "Summarizing research papers",
+        "Identifying research gaps"
+      ]
+    },
+    {
+      "id": "2.1.2",
+      "name": "Market Research",
+      "description": "Gathering and analyzing information about markets, competitors, and consumer behavior",
+      "categoryId": "2.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 3,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "data",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Competitor analysis",
+        "Consumer trend identification",
+        "Market sizing estimates"
+      ]
+    },
+    {
+      "id": "2.1.3",
+      "name": "Statistical Data Analysis",
+      "description": "Applying statistical methods to datasets to extract insights and test hypotheses",
+      "categoryId": "2.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Running regression analyses",
+        "Hypothesis testing",
+        "Creating statistical models"
+      ]
+    },
+    {
+      "id": "2.1.4",
+      "name": "Due Diligence Research",
+      "description": "Comprehensive investigation of companies, individuals, or assets for business decisions",
+      "categoryId": "2.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 3,
+        "feedbackSpeed": 3,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "data",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Background checks",
+        "Financial record analysis",
+        "Risk assessment compilation"
+      ]
+    },
+    {
+      "id": "2.1.5",
+      "name": "Survey Analysis",
+      "description": "Processing and interpreting responses from surveys and questionnaires",
+      "categoryId": "2.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Coding open-ended responses",
+        "Cross-tabulation analysis",
+        "Generating survey reports"
+      ]
+    },
+    {
+      "id": "2.2.1",
+      "name": "Technical Documentation",
+      "description": "Creating written documentation explaining technical systems, processes, or products",
+      "categoryId": "2.2",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 3,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Writing API documentation",
+        "Creating user manuals",
+        "Documenting code"
+      ]
+    },
+    {
+      "id": "2.2.2",
+      "name": "Business Report Writing",
+      "description": "Composing formal reports on business performance, projects, or initiatives",
+      "categoryId": "2.2",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 3,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Quarterly performance reports",
+        "Project status reports",
+        "Annual reviews"
+      ]
+    },
+    {
+      "id": "2.2.3",
+      "name": "Executive Summary Creation",
+      "description": "Distilling lengthy documents or data into concise summaries for decision-makers",
+      "categoryId": "2.2",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Summarizing research findings",
+        "Creating brief reports",
+        "Abstracting long documents"
+      ]
+    },
+    {
+      "id": "2.2.4",
+      "name": "Meeting Minutes Documentation",
+      "description": "Recording and formatting key points, decisions, and action items from meetings",
+      "categoryId": "2.2",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Transcribing meetings",
+        "Extracting action items",
+        "Formatting meeting notes"
+      ]
+    },
+    {
+      "id": "2.2.5",
+      "name": "Research Paper Writing",
+      "description": "Drafting academic or scientific papers presenting research methodology and findings",
+      "categoryId": "2.2",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 4,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Writing methodology sections",
+        "Drafting literature reviews",
+        "Formatting citations"
+      ]
+    },
+    {
+      "id": "2.3.1",
+      "name": "Content Tagging and Labeling",
+      "description": "Assigning descriptive tags, keywords, or labels to content for retrieval",
+      "categoryId": "2.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Tagging articles with keywords",
+        "Labeling images",
+        "Categorizing support tickets"
+      ]
+    },
+    {
+      "id": "2.3.2",
+      "name": "Document Classification",
+      "description": "Sorting documents into predefined categories based on content",
+      "categoryId": "2.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Email categorization",
+        "Legal document sorting",
+        "Filing records"
+      ]
+    },
+    {
+      "id": "2.3.3",
+      "name": "Knowledge Base Maintenance",
+      "description": "Organizing, updating, and maintaining repositories of organizational knowledge",
+      "categoryId": "2.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Updating wiki articles",
+        "Organizing FAQ entries",
+        "Linking related content"
+      ]
+    },
+    {
+      "id": "2.3.4",
+      "name": "Metadata Management",
+      "description": "Creating and maintaining descriptive information about data assets",
+      "categoryId": "2.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Data cataloging",
+        "Schema documentation",
+        "Asset tagging"
+      ]
+    },
+    {
+      "id": "2.3.5",
+      "name": "Content Deduplication",
+      "description": "Identifying and resolving duplicate or near-duplicate content across systems",
+      "categoryId": "2.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Finding duplicate records",
+        "Merging similar entries",
+        "Identifying redundant files"
+      ]
+    },
+    {
+      "id": "2.4.1",
+      "name": "Trend Analysis",
+      "description": "Identifying and interpreting patterns of change over time in data",
+      "categoryId": "2.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 3,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Sales trend forecasting",
+        "Social media trend detection",
+        "Economic indicator tracking"
+      ]
+    },
+    {
+      "id": "2.4.2",
+      "name": "Anomaly Detection",
+      "description": "Identifying unusual patterns, outliers, or deviations in data",
+      "categoryId": "2.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Fraud detection",
+        "System error identification",
+        "Quality control alerts"
+      ]
+    },
+    {
+      "id": "2.4.3",
+      "name": "Correlation Analysis",
+      "description": "Discovering and measuring relationships between variables in datasets",
+      "categoryId": "2.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Feature correlation in datasets",
+        "Cause-effect hypothesis generation",
+        "Variable relationship mapping"
+      ]
+    },
+    {
+      "id": "2.4.4",
+      "name": "Sentiment Analysis",
+      "description": "Determining emotional tone and opinion from text data",
+      "categoryId": "2.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Social media sentiment tracking",
+        "Customer review analysis",
+        "Brand perception monitoring"
+      ]
+    },
+    {
+      "id": "2.4.5",
+      "name": "Clustering and Segmentation",
+      "description": "Grouping data points or entities based on shared characteristics",
+      "categoryId": "2.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Customer segmentation",
+        "Topic clustering",
+        "Behavioral grouping"
+      ]
+    },
+    {
+      "id": "2.4.6",
+      "name": "Predictive Pattern Modeling",
+      "description": "Building models to predict future outcomes based on historical patterns",
+      "categoryId": "2.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 4,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "data",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Demand forecasting",
+        "Churn prediction",
+        "Risk scoring models"
+      ]
+    },
+    {
+      "id": "2.5.1",
+      "name": "Product Recommendations",
+      "description": "Suggesting products or services based on user preferences and behavior",
+      "categoryId": "2.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "E-commerce product suggestions",
+        "Cross-selling recommendations",
+        "Personalized catalogs"
+      ]
+    },
+    {
+      "id": "2.5.2",
+      "name": "Content Recommendations",
+      "description": "Suggesting articles, videos, or media based on user interests",
+      "categoryId": "2.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "News article suggestions",
+        "Video recommendations",
+        "Reading lists"
+      ]
+    },
+    {
+      "id": "2.5.3",
+      "name": "Decision Support Analysis",
+      "description": "Providing ranked options and analysis to support human decision-making",
+      "categoryId": "2.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Vendor comparison matrices",
+        "Investment option ranking",
+        "Scenario analysis"
+      ]
+    },
+    {
+      "id": "2.5.4",
+      "name": "Resource Allocation Suggestions",
+      "description": "Recommending optimal distribution of resources based on constraints and goals",
+      "categoryId": "2.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 3,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Budget allocation recommendations",
+        "Staff scheduling suggestions",
+        "Inventory optimization"
+      ]
+    },
+    {
+      "id": "2.5.5",
+      "name": "Talent Matching",
+      "description": "Matching candidates to job requirements or team compositions",
+      "categoryId": "2.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 3,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Resume-job matching",
+        "Team composition suggestions",
+        "Skill gap analysis"
+      ]
+    },
+    {
+      "id": "2.5.6",
+      "name": "Diagnostic Recommendations",
+      "description": "Suggesting likely diagnoses or solutions based on symptoms or indicators",
+      "categoryId": "2.5",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 3,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Medical differential diagnosis support",
+        "IT troubleshooting suggestions",
+        "Equipment fault diagnosis"
+      ]
+    }
+  ]
+}

@@ -39,7 +39,7 @@
       {
         "id": 6,
         "name": "MECE compliant",
-        "description": "Mutually exclusive, collectively exhaustive—every activity fits exactly one category"
+        "description": "Mutually exclusive, collectively exhaustive\u2014every activity fits exactly one category"
       }
     ],
     "organizingPrinciple": "Abstraction-Embodiment Spectrum: Domains ordered from highest abstraction (earliest AI automation) to lowest abstraction (latest AI automation)"
@@ -97,7 +97,10 @@
       "description": "Combining, analyzing, and transforming information from multiple sources to produce new informational outputs",
       "abstractionScore": 9,
       "typicalErrorTolerance": "medium-high",
-      "estimatedAgiWave": [1, 2],
+      "estimatedAgiWave": [
+        1,
+        2
+      ],
       "primaryAiSystemType": "Language models, RAG",
       "inclusionCriteria": [
         "Primary input/output are information (text, data, documents)",
@@ -149,7 +152,10 @@
       "description": "Producing novel artifacts (text, images, code, music, designs) that did not exist before",
       "abstractionScore": 8,
       "typicalErrorTolerance": "high",
-      "estimatedAgiWave": [1, 2],
+      "estimatedAgiWave": [
+        1,
+        2
+      ],
       "primaryAiSystemType": "Generative AI",
       "inclusionCriteria": [
         "Output is a novel artifact",
@@ -253,7 +259,10 @@
       "description": "Providing services to others by following established procedures and protocols",
       "abstractionScore": 6,
       "typicalErrorTolerance": "medium",
-      "estimatedAgiWave": [2, 3],
+      "estimatedAgiWave": [
+        2,
+        3
+      ],
       "primaryAiSystemType": "Multimodal AI + workflows",
       "inclusionCriteria": [
         "Follows defined procedures or protocols",
@@ -305,7 +314,10 @@
       "description": "Activities primarily focused on human wellbeing, emotional support, and relationship maintenance",
       "abstractionScore": 5,
       "typicalErrorTolerance": "low",
-      "estimatedAgiWave": [3, 4],
+      "estimatedAgiWave": [
+        3,
+        4
+      ],
       "primaryAiSystemType": "Affective computing",
       "inclusionCriteria": [
         "Primary purpose is human wellbeing or relationship",
@@ -363,7 +375,10 @@
       "description": "Physical manipulation and movement within controlled, predictable environments",
       "abstractionScore": 4,
       "typicalErrorTolerance": "variable",
-      "estimatedAgiWave": [2, 3],
+      "estimatedAgiWave": [
+        2,
+        3
+      ],
       "primaryAiSystemType": "Industrial robotics",
       "inclusionCriteria": [
         "Primary activity involves physical manipulation or operation",
@@ -415,7 +430,10 @@
       "description": "Physical manipulation requiring expertise, dexterity, and judgment",
       "abstractionScore": 3,
       "typicalErrorTolerance": "low-medium",
-      "estimatedAgiWave": [3, 4],
+      "estimatedAgiWave": [
+        3,
+        4
+      ],
       "primaryAiSystemType": "Dexterous manipulation",
       "inclusionCriteria": [
         "Requires acquired physical skill and expertise",
@@ -467,7 +485,10 @@
       "description": "Moving through and interacting with unstructured, dynamic environments",
       "abstractionScore": 2,
       "typicalErrorTolerance": "low",
-      "estimatedAgiWave": [2, 4],
+      "estimatedAgiWave": [
+        2,
+        4
+      ],
       "primaryAiSystemType": "Mobile robotics, AV",
       "inclusionCriteria": [
         "Primary activity is locomotion or navigation",
@@ -519,7 +540,10 @@
       "description": "Activities for maintaining one's own body, meeting basic human needs, and personal self-expression through physical activity",
       "abstractionScore": 1,
       "typicalErrorTolerance": "variable",
-      "estimatedAgiWave": [3, 4],
+      "estimatedAgiWave": [
+        3,
+        4
+      ],
       "primaryAiSystemType": "General-purpose home robots",
       "inclusionCriteria": [
         "Activity is self-directed (for oneself)",
