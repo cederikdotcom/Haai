@@ -1,0 +1,532 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "domainId": 5,
+  "domainName": "Procedural Service Delivery",
+  "activities": [
+    {
+      "id": "5.1.1",
+      "name": "Form Processing",
+      "description": "Reviewing, validating, and processing submitted forms and applications",
+      "categoryId": "5.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Processing permit applications",
+        "Reviewing registration forms",
+        "Validating application completeness",
+        "Data entry from forms"
+      ]
+    },
+    {
+      "id": "5.1.2",
+      "name": "Document Filing and Retrieval",
+      "description": "Organizing, storing, and retrieving documents according to filing systems",
+      "categoryId": "5.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Filing paperwork",
+        "Document scanning",
+        "Record retrieval",
+        "Archive management"
+      ]
+    },
+    {
+      "id": "5.1.3",
+      "name": "Appointment Scheduling",
+      "description": "Booking, confirming, and managing appointments for services",
+      "categoryId": "5.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Booking appointments",
+        "Sending reminders",
+        "Managing cancellations",
+        "Waitlist management"
+      ]
+    },
+    {
+      "id": "5.1.4",
+      "name": "License and Permit Administration",
+      "description": "Processing applications for licenses, permits, and certifications",
+      "categoryId": "5.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 3,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "regulation",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Driver's license processing",
+        "Business permit issuance",
+        "Professional certification",
+        "Renewal processing"
+      ]
+    },
+    {
+      "id": "5.1.5",
+      "name": "Mail and Correspondence Handling",
+      "description": "Receiving, sorting, routing, and responding to incoming communications",
+      "categoryId": "5.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Email triage",
+        "Mail sorting",
+        "Response drafting",
+        "Communication routing"
+      ]
+    },
+    {
+      "id": "5.2.1",
+      "name": "Point-of-Sale Transactions",
+      "description": "Processing purchases, payments, and returns at retail locations",
+      "categoryId": "5.2",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Cash register operation",
+        "Payment processing",
+        "Return handling",
+        "Gift card transactions"
+      ]
+    },
+    {
+      "id": "5.2.2",
+      "name": "Order Taking",
+      "description": "Receiving and recording customer orders for products or services",
+      "categoryId": "5.2",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Restaurant order taking",
+        "Phone orders",
+        "Custom order specifications",
+        "Catering requests"
+      ]
+    },
+    {
+      "id": "5.2.3",
+      "name": "Hotel Check-in/Check-out",
+      "description": "Processing guest arrivals and departures including room assignment and billing",
+      "categoryId": "5.2",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Guest registration",
+        "Room key issuance",
+        "Checkout processing",
+        "Billing reconciliation"
+      ]
+    },
+    {
+      "id": "5.2.4",
+      "name": "Reservation Management",
+      "description": "Taking, modifying, and managing bookings for services and accommodations",
+      "categoryId": "5.2",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Restaurant reservations",
+        "Hotel bookings",
+        "Event reservations",
+        "Service appointments"
+      ]
+    },
+    {
+      "id": "5.2.5",
+      "name": "Food Service Counter Operations",
+      "description": "Serving customers at food counters including assembly and presentation",
+      "categoryId": "5.2",
+      "scores": {
+        "abstraction": 3,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "dexterity",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Deli counter service",
+        "Cafeteria serving",
+        "Bakery counter service",
+        "Coffee bar operation"
+      ]
+    },
+    {
+      "id": "5.3.1",
+      "name": "Bank Teller Transactions",
+      "description": "Processing deposits, withdrawals, and basic banking services",
+      "categoryId": "5.3",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "regulation",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Processing deposits",
+        "Cash withdrawals",
+        "Check cashing",
+        "Account inquiries"
+      ]
+    },
+    {
+      "id": "5.3.2",
+      "name": "Insurance Claims Processing",
+      "description": "Reviewing and processing insurance claims according to policy terms",
+      "categoryId": "5.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 3,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Claim documentation review",
+        "Coverage verification",
+        "Payment processing",
+        "Claim status updates"
+      ]
+    },
+    {
+      "id": "5.3.3",
+      "name": "Loan Application Processing",
+      "description": "Reviewing loan applications and supporting documentation for approval",
+      "categoryId": "5.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 3,
+        "feedbackSpeed": 3,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "regulation",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Document verification",
+        "Credit check processing",
+        "Application review",
+        "Approval workflow"
+      ]
+    },
+    {
+      "id": "5.3.4",
+      "name": "Account Opening and Maintenance",
+      "description": "Setting up and maintaining customer accounts for financial services",
+      "categoryId": "5.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "regulation",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "New account setup",
+        "Account modifications",
+        "Address changes",
+        "Beneficiary updates"
+      ]
+    },
+    {
+      "id": "5.3.5",
+      "name": "Tax Preparation Services",
+      "description": "Preparing and filing tax returns based on client information",
+      "categoryId": "5.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 3,
+        "feedbackSpeed": 3,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "regulation",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Individual tax returns",
+        "Business tax filing",
+        "Deduction identification",
+        "Tax form completion"
+      ]
+    },
+    {
+      "id": "5.4.1",
+      "name": "Patient Registration",
+      "description": "Collecting and recording patient information for healthcare visits",
+      "categoryId": "5.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "regulation",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "New patient intake",
+        "Insurance verification",
+        "Demographic updates",
+        "Consent form collection"
+      ]
+    },
+    {
+      "id": "5.4.2",
+      "name": "Medical Scheduling",
+      "description": "Scheduling appointments with healthcare providers and procedures",
+      "categoryId": "5.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Appointment booking",
+        "Procedure scheduling",
+        "Follow-up scheduling",
+        "Referral coordination"
+      ]
+    },
+    {
+      "id": "5.4.3",
+      "name": "Medical Billing and Coding",
+      "description": "Translating healthcare services into billing codes and processing claims",
+      "categoryId": "5.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "ICD-10 coding",
+        "CPT code assignment",
+        "Claim submission",
+        "Denial management"
+      ]
+    },
+    {
+      "id": "5.4.4",
+      "name": "Prescription Processing",
+      "description": "Receiving, verifying, and filling prescription orders",
+      "categoryId": "5.4",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 3,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "safety",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Prescription verification",
+        "Drug interaction checking",
+        "Refill processing",
+        "Insurance authorization"
+      ]
+    },
+    {
+      "id": "5.4.5",
+      "name": "Medical Records Management",
+      "description": "Maintaining, updating, and sharing patient health records",
+      "categoryId": "5.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "regulation",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Chart updates",
+        "Record requests",
+        "Information release",
+        "Records archiving"
+      ]
+    },
+    {
+      "id": "5.5.1",
+      "name": "Legal Document Preparation",
+      "description": "Drafting and formatting legal documents based on templates and specifications",
+      "categoryId": "5.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Contract drafting",
+        "Will preparation",
+        "Filing documents",
+        "Legal correspondence"
+      ]
+    },
+    {
+      "id": "5.5.2",
+      "name": "Compliance Monitoring",
+      "description": "Checking organizational activities against regulatory requirements",
+      "categoryId": "5.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 3,
+        "feedbackSpeed": 3,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Policy compliance audits",
+        "Regulatory reporting",
+        "Risk assessments",
+        "Control testing"
+      ]
+    },
+    {
+      "id": "5.5.3",
+      "name": "Notarization Services",
+      "description": "Witnessing and authenticating document signatures",
+      "categoryId": "5.5",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 3,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "early",
+        "bottleneck": "regulation",
+        "agiWave": 3
+      },
+      "exampleTasks": [
+        "Document witnessing",
+        "Identity verification",
+        "Signature authentication",
+        "Record keeping"
+      ]
+    },
+    {
+      "id": "5.5.4",
+      "name": "Background Check Processing",
+      "description": "Conducting and processing background verification checks",
+      "categoryId": "5.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "data",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Criminal record checks",
+        "Employment verification",
+        "Education verification",
+        "Reference checks"
+      ]
+    },
+    {
+      "id": "5.5.5",
+      "name": "Regulatory Filing",
+      "description": "Preparing and submitting required filings to regulatory agencies",
+      "categoryId": "5.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 3,
+        "feedbackSpeed": 3,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "regulation",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "SEC filings",
+        "Environmental reports",
+        "Business registration",
+        "Annual reports"
+      ]
+    }
+  ]
+}
