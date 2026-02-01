@@ -1,0 +1,422 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "metadata": {
+    "title": "HAAI Scoring & Attribute Definitions",
+    "description": "Attribute scales and scoring methodology for activity classification",
+    "created": "2026-02-01",
+    "lastModified": "2026-02-01"
+  },
+  "attributes": {
+    "abstractionLevel": {
+      "id": "abstraction_level",
+      "name": "Abstraction Level",
+      "description": "Measures how far removed the activity is from direct physical manipulation",
+      "scale": {
+        "min": 1,
+        "max": 5,
+        "type": "ordinal"
+      },
+      "levels": [
+        {
+          "value": 1,
+          "name": "Pure Abstract",
+          "definition": "Operates entirely in symbol space. No physical grounding required.",
+          "signal": "Input/output are text, numbers, code",
+          "examples": ["Mathematical proofs", "Code compilation", "Spreadsheet formulas"]
+        },
+        {
+          "value": 2,
+          "name": "Grounded Abstract",
+          "definition": "Reasons about physical world but acts through digital intermediaries.",
+          "signal": "Interprets sensor data, outputs decisions",
+          "examples": ["Remote monitoring", "Traffic control", "Telehealth diagnosis"]
+        },
+        {
+          "value": 3,
+          "name": "Supervised Physical",
+          "definition": "Physical action in structured, predictable environments.",
+          "signal": "Repeatable motions, known objects",
+          "examples": ["Assembly line work", "Warehouse picking", "CNC operation"]
+        },
+        {
+          "value": 4,
+          "name": "Adaptive Physical",
+          "definition": "Physical action requiring real-time adaptation to variability.",
+          "signal": "Novel objects, changing conditions",
+          "examples": ["Plumbing repairs", "Field agriculture", "Vehicle driving"]
+        },
+        {
+          "value": 5,
+          "name": "Deeply Embodied",
+          "definition": "Full sensorimotor integration, social presence, human-like dexterity.",
+          "signal": "Touch sensitivity, emotional attunement",
+          "examples": ["Surgery", "Massage therapy", "Infant care"]
+        }
+      ],
+      "scoringGuidelines": {
+        "principle": "Score based on the MINIMUM abstraction level required for competent performance",
+        "tiebreaker": "When uncertain, consider: Could a disembodied AI with only digital I/O perform this task?"
+      }
+    },
+    "errorTolerance": {
+      "id": "error_tolerance",
+      "name": "Error Tolerance",
+      "description": "How forgiving the activity is of mistakes",
+      "scale": {
+        "min": 1,
+        "max": 4,
+        "type": "ordinal"
+      },
+      "levels": [
+        {
+          "value": 1,
+          "name": "High",
+          "definition": "Errors easily corrected, low stakes, iteration expected.",
+          "examples": ["Drafting documents", "Brainstorming", "Prototyping"],
+          "recoveryTime": "Immediate to minutes",
+          "typicalConsequence": "Minor rework"
+        },
+        {
+          "value": 2,
+          "name": "Medium",
+          "definition": "Errors costly but recoverable, moderate stakes.",
+          "examples": ["Cooking meals", "Scheduling", "Routine maintenance"],
+          "recoveryTime": "Minutes to hours",
+          "typicalConsequence": "Significant rework or waste"
+        },
+        {
+          "value": 3,
+          "name": "Low",
+          "definition": "Errors expensive or harmful, limited recovery.",
+          "examples": ["Surgery", "Vehicle repair", "Legal filing"],
+          "recoveryTime": "Days to permanent",
+          "typicalConsequence": "Financial loss, injury risk"
+        },
+        {
+          "value": 4,
+          "name": "Very Low",
+          "definition": "Errors potentially catastrophic or irreversible.",
+          "examples": ["Emergency response", "Childcare safety", "Nuclear operations"],
+          "recoveryTime": "Potentially never",
+          "typicalConsequence": "Death, major disaster"
+        }
+      ],
+      "scoringGuidelines": {
+        "principle": "Score based on WORST reasonably foreseeable outcome of an error",
+        "tiebreaker": "Consider: What is the cost of the most likely error type?"
+      }
+    },
+    "feedbackLoopSpeed": {
+      "id": "feedback_loop_speed",
+      "name": "Feedback Loop Speed",
+      "description": "How quickly the actor receives feedback on action quality",
+      "scale": {
+        "min": 1,
+        "max": 4,
+        "type": "ordinal"
+      },
+      "levels": [
+        {
+          "value": 1,
+          "name": "Immediate",
+          "timeframe": "Seconds to minutes",
+          "examples": ["Conversation", "Object manipulation", "Typing"],
+          "implication": "Rapid skill acquisition possible"
+        },
+        {
+          "value": 2,
+          "name": "Short",
+          "timeframe": "Minutes to hours",
+          "examples": ["Task completion", "Cooking", "Debugging"],
+          "implication": "Same-session feedback available"
+        },
+        {
+          "value": 3,
+          "name": "Medium",
+          "timeframe": "Hours to days",
+          "examples": ["Project work", "Analysis", "Training sessions"],
+          "implication": "Delayed feedback, harder to attribute"
+        },
+        {
+          "value": 4,
+          "name": "Long",
+          "timeframe": "Days to months",
+          "examples": ["Strategy", "Research", "Investment decisions"],
+          "implication": "Very delayed feedback, confounded by many factors"
+        }
+      ],
+      "scoringGuidelines": {
+        "principle": "Score based on time to RELIABLE feedback on quality",
+        "tiebreaker": "When feedback comes at multiple timescales, score by the feedback most relevant to quality"
+      }
+    },
+    "socialComplexity": {
+      "id": "social_complexity",
+      "name": "Social Complexity",
+      "description": "Level of human interaction required",
+      "scale": {
+        "min": 0,
+        "max": 4,
+        "type": "ordinal"
+      },
+      "levels": [
+        {
+          "value": 0,
+          "name": "None",
+          "definition": "Solo task, no human interaction",
+          "examples": ["Data processing", "Solo manufacturing", "Personal grooming"]
+        },
+        {
+          "value": 1,
+          "name": "Informational",
+          "definition": "Exchange information with humans",
+          "examples": ["Q&A", "Status reporting", "Documentation handoff"]
+        },
+        {
+          "value": 2,
+          "name": "Coordinative",
+          "definition": "Synchronize actions with humans",
+          "examples": ["Team projects", "Pair work", "Scheduling"]
+        },
+        {
+          "value": 3,
+          "name": "Persuasive",
+          "definition": "Influence human beliefs or behavior",
+          "examples": ["Sales", "Negotiation", "Teaching"]
+        },
+        {
+          "value": 4,
+          "name": "Relational",
+          "definition": "Build trust, provide emotional support",
+          "examples": ["Therapy", "Caregiving", "Close mentorship"]
+        }
+      ],
+      "scoringGuidelines": {
+        "principle": "Score based on the HIGHEST level of social interaction required for success",
+        "tiebreaker": "If social interaction is optional but improves outcomes, score based on typical practice"
+      }
+    },
+    "currentAICapability": {
+      "id": "current_ai_capability",
+      "name": "Current AI Capability",
+      "description": "State of AI development for this activity",
+      "type": "categorical",
+      "values": [
+        {
+          "code": "solved",
+          "name": "Solved",
+          "definition": "AI matches or exceeds median human performance",
+          "indicator": "Widely deployed commercial systems",
+          "examples": ["Spell checking", "Chess", "Basic image classification"]
+        },
+        {
+          "code": "near_solved",
+          "name": "Near-solved",
+          "definition": "AI approaches human performance, deployment underway",
+          "indicator": "Commercial pilots, limited deployment",
+          "examples": ["Language translation", "Code completion", "Highway driving"]
+        },
+        {
+          "code": "partial",
+          "name": "Partial",
+          "definition": "AI assists but cannot fully replace humans",
+          "indicator": "AI-in-the-loop systems common",
+          "examples": ["Medical diagnosis assistance", "Legal document review", "Content moderation"]
+        },
+        {
+          "code": "early",
+          "name": "Early",
+          "definition": "Research prototypes only",
+          "indicator": "Lab demos, not production-ready",
+          "examples": ["General robot manipulation", "Open-domain dialogue", "Creative writing"]
+        },
+        {
+          "code": "not_attempted",
+          "name": "Not Attempted",
+          "definition": "No serious AI efforts yet",
+          "indicator": "No significant research investment",
+          "examples": ["Highly niche tasks", "Tasks with insufficient data"]
+        }
+      ],
+      "scoringGuidelines": {
+        "principle": "Score based on BEST available AI system, not average",
+        "updateFrequency": "Review quarterly as AI capabilities evolve rapidly"
+      }
+    },
+    "primaryBottleneck": {
+      "id": "primary_bottleneck",
+      "name": "Primary Bottleneck",
+      "description": "Main barrier to AI automation",
+      "type": "categorical",
+      "values": [
+        {
+          "code": "none",
+          "name": "None",
+          "description": "Activity is solved"
+        },
+        {
+          "code": "sensing",
+          "name": "Sensing",
+          "description": "Perception limitations (visual, tactile, auditory)"
+        },
+        {
+          "code": "reasoning",
+          "name": "Reasoning",
+          "description": "Cognitive complexity, planning, judgment"
+        },
+        {
+          "code": "dexterity",
+          "name": "Dexterity",
+          "description": "Fine motor control, manipulation precision"
+        },
+        {
+          "code": "mobility",
+          "name": "Mobility",
+          "description": "Locomotion, navigation in unstructured environments"
+        },
+        {
+          "code": "adaptation",
+          "name": "Adaptation",
+          "description": "Handling novel situations, generalization"
+        },
+        {
+          "code": "social",
+          "name": "Social",
+          "description": "Human interaction requirements, trust building"
+        },
+        {
+          "code": "safety",
+          "name": "Safety",
+          "description": "Risk tolerance requirements, liability concerns"
+        },
+        {
+          "code": "regulation",
+          "name": "Regulation",
+          "description": "Legal or policy barriers to deployment"
+        },
+        {
+          "code": "data",
+          "name": "Data",
+          "description": "Insufficient training data available"
+        }
+      ],
+      "scoringGuidelines": {
+        "principle": "Identify the SINGLE most limiting factor",
+        "tiebreaker": "If multiple bottlenecks, choose the one that would take longest to solve"
+      }
+    },
+    "estimatedAGIWave": {
+      "id": "estimated_agi_wave",
+      "name": "Estimated AGI Wave",
+      "description": "Predicted timeline for human-level AI capability",
+      "scale": {
+        "min": 1,
+        "max": 4,
+        "type": "ordinal"
+      },
+      "levels": [
+        {
+          "value": 1,
+          "name": "Wave 1",
+          "timeline": "2024-2026",
+          "characteristics": "Current LLM capabilities + basic robotics",
+          "typicalDomains": [1, 2, 3]
+        },
+        {
+          "value": 2,
+          "name": "Wave 2",
+          "timeline": "2026-2028",
+          "characteristics": "Multimodal AI + structured environments",
+          "typicalDomains": [4, 5, 7]
+        },
+        {
+          "value": 3,
+          "name": "Wave 3",
+          "timeline": "2028-2032",
+          "characteristics": "Adaptive embodied AI + social modeling",
+          "typicalDomains": [6, 8, 9]
+        },
+        {
+          "value": 4,
+          "name": "Wave 4",
+          "timeline": "2032+",
+          "characteristics": "General-purpose embodied AI",
+          "typicalDomains": [10]
+        }
+      ],
+      "scoringGuidelines": {
+        "principle": "Estimate based on current trajectory, not breakthrough assumptions",
+        "methodology": "Combine abstraction level + error tolerance + primary bottleneck"
+      }
+    }
+  },
+  "activityScoreSchema": {
+    "description": "Schema for scoring individual Level 3 activities",
+    "required": [
+      "activityId",
+      "name",
+      "abstractionLevel",
+      "errorTolerance",
+      "feedbackLoopSpeed",
+      "socialComplexity",
+      "currentAICapability",
+      "primaryBottleneck",
+      "estimatedAGIWave"
+    ],
+    "optional": [
+      "description",
+      "examples",
+      "notes",
+      "lastUpdated",
+      "confidence"
+    ],
+    "example": {
+      "activityId": "3.3.1",
+      "name": "Writing unit tests",
+      "description": "Creating automated tests for software functions",
+      "abstractionLevel": 1,
+      "errorTolerance": 1,
+      "feedbackLoopSpeed": 1,
+      "socialComplexity": 0,
+      "currentAICapability": "near_solved",
+      "primaryBottleneck": "reasoning",
+      "estimatedAGIWave": 1,
+      "examples": ["pytest tests", "Jest specs", "JUnit assertions"],
+      "notes": "AI code assistants already effective for simple cases",
+      "lastUpdated": "2026-02-01",
+      "confidence": "high"
+    }
+  },
+  "validationProtocol": {
+    "interRaterReliability": {
+      "metric": "Cohen's Kappa",
+      "threshold": 0.7,
+      "methodology": "Two independent raters score each activity"
+    },
+    "coverageAudit": {
+      "description": "Walk through 10 diverse occupations, ensure all tasks map",
+      "frequency": "Per major taxonomy update"
+    },
+    "predictiveValidation": {
+      "description": "Compare predictions to actual AI deployment timelines",
+      "frequency": "Annual retrospective"
+    }
+  },
+  "scoringTeam": {
+    "roles": [
+      {
+        "role": "Domain Expert",
+        "responsibility": "Score current AI capability for their domain"
+      },
+      {
+        "role": "AI Researcher",
+        "responsibility": "Identify bottlenecks and estimate timelines"
+      },
+      {
+        "role": "Time-use Researcher",
+        "responsibility": "Validate against ATUS/HETUS data"
+      }
+    ]
+  }
+}

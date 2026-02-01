@@ -1,0 +1,664 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "metadata": {
+    "title": "Human Activity Automation Index (HAAI)",
+    "description": "Taxonomy for predicting AI automation timelines across all human activities",
+    "created": "2026-02-01",
+    "lastModified": "2026-02-01"
+  },
+  "coreThesis": {
+    "principle": "Abstraction level predicts automation timeline",
+    "reasoning": [
+      "Software AGI operates in abstract/symbolic space - solves abstract tasks first",
+      "Embodied AGI requires physical interaction - solves physical tasks later",
+      "The software-to-hardware progression maps directly to AI development trajectory"
+    ],
+    "primaryPredictors": ["abstraction_level", "error_tolerance"]
+  },
+  "designPrinciples": [
+    {
+      "id": "predict",
+      "name": "Predict, don't describe",
+      "description": "Optimize for attributes that predict AI capability timing, not occupational classification"
+    },
+    {
+      "id": "task_not_job",
+      "name": "Task, not job",
+      "description": "A nurse performs dozens of tasks; each belongs in the taxonomy separately"
+    },
+    {
+      "id": "observable",
+      "name": "Observable, not inferred",
+      "description": "Activities are objectively identifiable, not based on mental states"
+    },
+    {
+      "id": "technology_agnostic",
+      "name": "Technology-agnostic",
+      "description": "Define by human capability required, not current technology"
+    },
+    {
+      "id": "global",
+      "name": "Globally applicable",
+      "description": "Avoid Western/developed-world bias"
+    },
+    {
+      "id": "mece",
+      "name": "MECE compliant",
+      "description": "Mutually exclusive, collectively exhaustive - every activity fits exactly one category"
+    }
+  ],
+  "domains": [
+    {
+      "id": 1,
+      "name": "Symbolic Computation",
+      "definition": "Pure transformation of formal symbols, numbers, or structured data without reference to real-world meaning",
+      "abstractionScore": 10,
+      "typicalErrorTolerance": "variable",
+      "estimatedAGIWave": 1,
+      "primaryAISystemType": "Rule engines, calculators",
+      "inclusionCriteria": [
+        "Input/output are formal symbols (numbers, code, logical expressions)",
+        "Transformation rules are explicit and deterministic",
+        "No interpretation of real-world meaning required",
+        "Correctness is objectively verifiable"
+      ],
+      "exclusionCriteria": [
+        "Requires understanding natural language semantics",
+        "Requires world knowledge for interpretation",
+        "Involves judgment about edge cases"
+      ],
+      "categories": [
+        {
+          "id": "1.1",
+          "name": "Numerical Computation",
+          "description": "Arithmetic, statistical calculations, spreadsheet operations",
+          "activities": []
+        },
+        {
+          "id": "1.2",
+          "name": "Data Transformation",
+          "description": "ETL, format conversion, database operations",
+          "activities": []
+        },
+        {
+          "id": "1.3",
+          "name": "Formal Verification",
+          "description": "Code compilation, syntax checking, validation",
+          "activities": []
+        },
+        {
+          "id": "1.4",
+          "name": "Algorithmic Execution",
+          "description": "Running defined procedures, sorting, searching",
+          "activities": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Information Synthesis",
+      "definition": "Combining, analyzing, and transforming information from multiple sources to produce new informational outputs",
+      "abstractionScore": 9,
+      "typicalErrorTolerance": "medium-high",
+      "estimatedAGIWave": [1, 2],
+      "primaryAISystemType": "Language models, RAG",
+      "inclusionCriteria": [
+        "Primary input/output are information (text, data, documents)",
+        "Requires synthesis across multiple sources",
+        "Output evaluated on informational quality",
+        "Can be performed entirely through digital interfaces"
+      ],
+      "exclusionCriteria": [
+        "Requires physical presence or manipulation",
+        "Primary output is a physical artifact",
+        "Requires real-time social interaction"
+      ],
+      "categories": [
+        {
+          "id": "2.1",
+          "name": "Research & Analysis",
+          "description": "Literature review, market research, data analysis",
+          "activities": []
+        },
+        {
+          "id": "2.2",
+          "name": "Report Generation",
+          "description": "Writing reports, summaries, documentation",
+          "activities": []
+        },
+        {
+          "id": "2.3",
+          "name": "Information Curation",
+          "description": "Organizing, tagging, categorizing information",
+          "activities": []
+        },
+        {
+          "id": "2.4",
+          "name": "Pattern Recognition",
+          "description": "Identifying trends, anomalies, correlations",
+          "activities": []
+        },
+        {
+          "id": "2.5",
+          "name": "Recommendation Systems",
+          "description": "Evaluating options, producing ranked suggestions",
+          "activities": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Creative Generation",
+      "definition": "Producing novel artifacts (text, images, code, music, designs) that did not exist before",
+      "abstractionScore": 8,
+      "typicalErrorTolerance": "high",
+      "estimatedAGIWave": [1, 2],
+      "primaryAISystemType": "Generative AI",
+      "inclusionCriteria": [
+        "Output is a novel artifact",
+        "Success measured by creativity, aesthetics, or functional innovation",
+        "Requires generation rather than transformation",
+        "Output exists in digital or symbolic form"
+      ],
+      "exclusionCriteria": [
+        "Pure reproduction or copying",
+        "Output is physical (see Domain 8)",
+        "No creative latitude allowed"
+      ],
+      "categories": [
+        {
+          "id": "3.1",
+          "name": "Textual Creation",
+          "description": "Writing fiction, copy, scripts, articles",
+          "activities": []
+        },
+        {
+          "id": "3.2",
+          "name": "Visual Design",
+          "description": "Graphic design, UI/UX, illustration",
+          "activities": []
+        },
+        {
+          "id": "3.3",
+          "name": "Software Development",
+          "description": "Writing code, system architecture, algorithms",
+          "activities": []
+        },
+        {
+          "id": "3.4",
+          "name": "Musical Composition",
+          "description": "Creating music, sound design, audio production",
+          "activities": []
+        },
+        {
+          "id": "3.5",
+          "name": "Strategic Innovation",
+          "description": "Business strategy, product design, invention",
+          "activities": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Interpersonal Communication",
+      "definition": "Exchanging information, ideas, and intentions between humans through primarily digital or verbal channels",
+      "abstractionScore": 7,
+      "typicalErrorTolerance": "medium",
+      "estimatedAGIWave": 2,
+      "primaryAISystemType": "Conversational AI",
+      "inclusionCriteria": [
+        "Primary purpose is information exchange between people",
+        "Success depends on mutual understanding",
+        "Can be conducted via digital channels",
+        "Involves interpretation of intent and context"
+      ],
+      "exclusionCriteria": [
+        "Physical presence essential (see Domain 6)",
+        "Primarily about emotional support (see Domain 6)",
+        "Purely transactional (see Domain 5)"
+      ],
+      "categories": [
+        {
+          "id": "4.1",
+          "name": "Instructional Communication",
+          "description": "Teaching, training, explaining",
+          "activities": []
+        },
+        {
+          "id": "4.2",
+          "name": "Persuasive Communication",
+          "description": "Sales, negotiation, advocacy",
+          "activities": []
+        },
+        {
+          "id": "4.3",
+          "name": "Coordinative Communication",
+          "description": "Meetings, project management, scheduling",
+          "activities": []
+        },
+        {
+          "id": "4.4",
+          "name": "Informational Exchange",
+          "description": "Customer service, technical support, Q&A",
+          "activities": []
+        },
+        {
+          "id": "4.5",
+          "name": "Social Communication",
+          "description": "Casual conversation, networking, relationship maintenance",
+          "activities": []
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Procedural Service Delivery",
+      "definition": "Providing services to others by following established procedures and protocols",
+      "abstractionScore": 6,
+      "typicalErrorTolerance": "medium",
+      "estimatedAGIWave": [2, 3],
+      "primaryAISystemType": "Multimodal AI + workflows",
+      "inclusionCriteria": [
+        "Follows defined procedures or protocols",
+        "Service delivered to customers/clients/citizens",
+        "Success measured by procedure completion",
+        "Interaction is transactional rather than relational"
+      ],
+      "exclusionCriteria": [
+        "Requires deep personal relationship (see Domain 6)",
+        "Primarily physical manipulation (see Domain 7-8)",
+        "High creative latitude (see Domain 3)"
+      ],
+      "categories": [
+        {
+          "id": "5.1",
+          "name": "Administrative Processing",
+          "description": "Forms, applications, records management",
+          "activities": []
+        },
+        {
+          "id": "5.2",
+          "name": "Retail & Hospitality",
+          "description": "Sales transactions, food service, accommodation",
+          "activities": []
+        },
+        {
+          "id": "5.3",
+          "name": "Financial Services",
+          "description": "Banking, insurance, accounting services",
+          "activities": []
+        },
+        {
+          "id": "5.4",
+          "name": "Healthcare Administration",
+          "description": "Scheduling, billing, records, triage",
+          "activities": []
+        },
+        {
+          "id": "5.5",
+          "name": "Legal & Compliance Services",
+          "description": "Document preparation, compliance checking",
+          "activities": []
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Care & Relational Support",
+      "definition": "Activities primarily focused on human wellbeing, emotional support, and relationship maintenance",
+      "abstractionScore": 5,
+      "typicalErrorTolerance": "low",
+      "estimatedAGIWave": [3, 4],
+      "primaryAISystemType": "Affective computing",
+      "inclusionCriteria": [
+        "Primary purpose is human wellbeing or relationship",
+        "Success depends on trust, empathy, or emotional attunement",
+        "Human presence has intrinsic value",
+        "Involves vulnerability of care recipient"
+      ],
+      "exclusionCriteria": [
+        "Purely informational exchange (see Domain 4)",
+        "Transactional service (see Domain 5)",
+        "Can be fully automated without loss of value"
+      ],
+      "categories": [
+        {
+          "id": "6.1",
+          "name": "Childcare & Development",
+          "description": "Parenting, early childhood education, supervision",
+          "activities": []
+        },
+        {
+          "id": "6.2",
+          "name": "Eldercare & Disability Support",
+          "description": "Assistance with daily living, companionship",
+          "activities": []
+        },
+        {
+          "id": "6.3",
+          "name": "Healthcare Delivery",
+          "description": "Nursing, therapy, medical care (direct patient contact)",
+          "activities": []
+        },
+        {
+          "id": "6.4",
+          "name": "Psychological Support",
+          "description": "Counseling, coaching, emotional support",
+          "activities": []
+        },
+        {
+          "id": "6.5",
+          "name": "Community & Civic Care",
+          "description": "Volunteering, community organizing, religious service",
+          "activities": []
+        },
+        {
+          "id": "6.6",
+          "name": "Social Relationship Maintenance",
+          "description": "Family time, friendship, intimacy",
+          "activities": []
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Structured Physical Operations",
+      "definition": "Physical manipulation and movement within controlled, predictable environments",
+      "abstractionScore": 4,
+      "typicalErrorTolerance": "variable",
+      "estimatedAGIWave": [2, 3],
+      "primaryAISystemType": "Industrial robotics",
+      "inclusionCriteria": [
+        "Primary activity involves physical manipulation or operation",
+        "Environment is controlled and predictable",
+        "Procedures are standardized",
+        "Physical objects are uniform or classified"
+      ],
+      "exclusionCriteria": [
+        "Environment is unstructured (see Domain 9)",
+        "Requires high dexterity/craft skill (see Domain 8)",
+        "Primarily about human interaction (see Domain 4-6)"
+      ],
+      "categories": [
+        {
+          "id": "7.1",
+          "name": "Manufacturing & Assembly",
+          "description": "Production lines, assembly, packaging",
+          "activities": []
+        },
+        {
+          "id": "7.2",
+          "name": "Warehouse & Logistics",
+          "description": "Picking, packing, inventory management",
+          "activities": []
+        },
+        {
+          "id": "7.3",
+          "name": "Machine Operation",
+          "description": "Operating industrial equipment, CNC, printing",
+          "activities": []
+        },
+        {
+          "id": "7.4",
+          "name": "Quality Control & Inspection",
+          "description": "Testing, measuring, inspecting products",
+          "activities": []
+        },
+        {
+          "id": "7.5",
+          "name": "Facility Maintenance",
+          "description": "Cleaning, maintenance of commercial spaces",
+          "activities": []
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Skilled Physical Craft",
+      "definition": "Physical manipulation requiring expertise, dexterity, and judgment",
+      "abstractionScore": 3,
+      "typicalErrorTolerance": "low-medium",
+      "estimatedAGIWave": [3, 4],
+      "primaryAISystemType": "Dexterous manipulation",
+      "inclusionCriteria": [
+        "Requires acquired physical skill and expertise",
+        "Conditions vary requiring adaptation",
+        "Quality depends on craftsperson judgment",
+        "Cannot be fully procedualized"
+      ],
+      "exclusionCriteria": [
+        "Fully standardized operations (see Domain 7)",
+        "Primarily about locomotion (see Domain 9)",
+        "Purely symbolic output (see Domain 1-3)"
+      ],
+      "categories": [
+        {
+          "id": "8.1",
+          "name": "Construction & Building",
+          "description": "Carpentry, plumbing, electrical, masonry",
+          "activities": []
+        },
+        {
+          "id": "8.2",
+          "name": "Equipment Repair & Maintenance",
+          "description": "Automotive, HVAC, appliance repair",
+          "activities": []
+        },
+        {
+          "id": "8.3",
+          "name": "Surgical & Medical Procedures",
+          "description": "Surgery, dental procedures, medical interventions",
+          "activities": []
+        },
+        {
+          "id": "8.4",
+          "name": "Culinary Arts",
+          "description": "Professional cooking, food preparation",
+          "activities": []
+        },
+        {
+          "id": "8.5",
+          "name": "Artisan Crafts",
+          "description": "Woodworking, metalwork, textiles, ceramics",
+          "activities": []
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Environmental Navigation",
+      "definition": "Moving through and interacting with unstructured, dynamic environments",
+      "abstractionScore": 2,
+      "typicalErrorTolerance": "low",
+      "estimatedAGIWave": [2, 4],
+      "primaryAISystemType": "Mobile robotics, AV",
+      "inclusionCriteria": [
+        "Primary activity is locomotion or navigation",
+        "Environment is unstructured or dynamic",
+        "Requires real-time perception and decision-making",
+        "Physical safety is a primary constraint"
+      ],
+      "exclusionCriteria": [
+        "Controlled environment (see Domain 7)",
+        "Stationary manipulation (see Domain 8)",
+        "Social navigation (see Domain 4-6)"
+      ],
+      "categories": [
+        {
+          "id": "9.1",
+          "name": "Vehicle Operation",
+          "description": "Driving cars, trucks, forklifts",
+          "activities": []
+        },
+        {
+          "id": "9.2",
+          "name": "Last-Mile Delivery",
+          "description": "Package delivery, food delivery",
+          "activities": []
+        },
+        {
+          "id": "9.3",
+          "name": "Field Work",
+          "description": "Agriculture, surveying, outdoor maintenance",
+          "activities": []
+        },
+        {
+          "id": "9.4",
+          "name": "Exploration & Search",
+          "description": "Search and rescue, inspection of novel environments",
+          "activities": []
+        },
+        {
+          "id": "9.5",
+          "name": "Recreational Navigation",
+          "description": "Hiking, sports, outdoor recreation",
+          "activities": []
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Personal Embodiment",
+      "definition": "Activities for maintaining one's own body, meeting basic human needs, and personal self-expression through physical activity",
+      "abstractionScore": 1,
+      "typicalErrorTolerance": "variable",
+      "estimatedAGIWave": [3, 4],
+      "primaryAISystemType": "General-purpose home robots",
+      "inclusionCriteria": [
+        "Activity is self-directed (for oneself)",
+        "Involves one's own body",
+        "Fundamental human need or expression",
+        "Cannot be delegated without losing essential meaning"
+      ],
+      "exclusionCriteria": [
+        "Service provided to others (see Domain 5-6)",
+        "Work performed for compensation (see other domains)",
+        "Can be meaningfully automated for the person"
+      ],
+      "categories": [
+        {
+          "id": "10.1",
+          "name": "Basic Self-Care",
+          "description": "Sleeping, bathing, grooming, dressing",
+          "activities": []
+        },
+        {
+          "id": "10.2",
+          "name": "Nourishment",
+          "description": "Eating, meal preparation for self",
+          "activities": []
+        },
+        {
+          "id": "10.3",
+          "name": "Health Maintenance",
+          "description": "Exercise, medical self-care, medication",
+          "activities": []
+        },
+        {
+          "id": "10.4",
+          "name": "Domestic Maintenance",
+          "description": "Cleaning, laundry, home organization",
+          "activities": []
+        },
+        {
+          "id": "10.5",
+          "name": "Personal Expression",
+          "description": "Hobbies, leisure activities, rest",
+          "activities": []
+        }
+      ]
+    }
+  ],
+  "classificationRules": {
+    "multiDomainActivities": {
+      "rule": "When an activity involves multiple domains, classify by primary purpose",
+      "examples": [
+        {
+          "activity": "Video call with client",
+          "appearsAs": ["Communication", "Service"],
+          "classifyAs": "4.4",
+          "rationale": "Primary purpose is communication"
+        },
+        {
+          "activity": "Writing code while pair programming",
+          "appearsAs": ["Creative", "Social"],
+          "classifyAs": "3.3",
+          "rationale": "Primary output is code"
+        },
+        {
+          "activity": "Teaching surgery",
+          "appearsAs": ["Education", "Craft"],
+          "classifyAs": "4.1",
+          "rationale": "Primary purpose is teaching"
+        },
+        {
+          "activity": "Telehealth consultation",
+          "appearsAs": ["Healthcare", "Communication"],
+          "classifyAs": "6.3",
+          "rationale": "Primary purpose is care"
+        }
+      ]
+    },
+    "boundaryRules": [
+      {
+        "domains": [1, 2],
+        "rule": "If requires interpretation of meaning → Domain 2",
+        "signal": "Semantic understanding needed vs pure symbol manipulation"
+      },
+      {
+        "domains": [2, 3],
+        "rule": "If output must be novel/creative → Domain 3",
+        "signal": "Synthesis of existing info vs generation of new artifacts"
+      },
+      {
+        "domains": [4, 5],
+        "rule": "If relationship > transaction → Domain 4; if procedure > relationship → Domain 5",
+        "signal": "Mutual understanding focus vs procedure completion focus"
+      },
+      {
+        "domains": [5, 6],
+        "rule": "If trust/emotional attunement essential → Domain 6",
+        "signal": "Vulnerability of recipient, intrinsic value of human presence"
+      },
+      {
+        "domains": [7, 8],
+        "rule": "If requires acquired expertise/judgment → Domain 8",
+        "signal": "Standardized procedures vs adaptive skill application"
+      },
+      {
+        "domains": [8, 9],
+        "rule": "If primary activity is locomotion → Domain 9",
+        "signal": "Stationary manipulation vs movement through environment"
+      },
+      {
+        "domains": [9, 10],
+        "rule": "If for self vs. for work → Domain 10 (self) or 9 (work)",
+        "signal": "Personal need fulfillment vs occupational task"
+      }
+    ],
+    "contextModifiers": [
+      {
+        "action": "Cooking",
+        "professionalContext": { "categoryId": "8.4", "name": "Culinary Arts" },
+        "personalContext": { "categoryId": "10.2", "name": "Nourishment" }
+      },
+      {
+        "action": "Driving",
+        "professionalContext": { "categoryId": "9.1", "name": "Vehicle Operation" },
+        "personalContext": { "categoryId": "9.1", "name": "Vehicle Operation" },
+        "note": "Same classification regardless of context"
+      },
+      {
+        "action": "Cleaning",
+        "professionalContext": { "categoryId": "7.5", "name": "Facility Maintenance" },
+        "personalContext": { "categoryId": "10.4", "name": "Domestic Maintenance" }
+      },
+      {
+        "action": "Exercise",
+        "professionalContext": { "categoryId": "6.3", "name": "Healthcare Delivery (PT)" },
+        "personalContext": { "categoryId": "10.3", "name": "Health Maintenance" }
+      }
+    ]
+  }
+}

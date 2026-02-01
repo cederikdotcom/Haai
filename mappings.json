@@ -1,0 +1,553 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "metadata": {
+    "title": "HAAI External System Mappings",
+    "description": "Mappings between HAAI taxonomy and external classification systems",
+    "created": "2026-02-01",
+    "lastModified": "2026-02-01"
+  },
+  "sources": {
+    "onet": {
+      "name": "O*NET Content Model",
+      "url": "https://www.onetcenter.org/content.html",
+      "description": "US Department of Labor occupational information network",
+      "version": "28.0"
+    },
+    "atus": {
+      "name": "American Time Use Survey Activity Lexicon",
+      "url": "https://www.bls.gov/tus/lexicons.htm",
+      "description": "Bureau of Labor Statistics time use classification",
+      "version": "2023"
+    },
+    "hetus": {
+      "name": "Harmonised European Time Use Surveys",
+      "url": "https://ec.europa.eu/eurostat/web/time-use-surveys",
+      "description": "Eurostat time use classification guidelines"
+    },
+    "icatus": {
+      "name": "International Classification of Activities for Time Use Statistics",
+      "url": "https://unstats.un.org/unsd/gender/timeuse/",
+      "description": "UN Statistical Division time use classification",
+      "version": "2016"
+    },
+    "behavior1k": {
+      "name": "BEHAVIOR-1K",
+      "url": "https://behavior.stanford.edu",
+      "description": "Stanford benchmark for embodied AI household activities"
+    },
+    "activitynet": {
+      "name": "ActivityNet",
+      "url": "http://activity-net.org/",
+      "description": "Large-scale video understanding benchmark"
+    },
+    "kinetics": {
+      "name": "Kinetics Dataset",
+      "url": "https://github.com/cvdfoundation/kinetics-dataset",
+      "description": "DeepMind human action video dataset"
+    },
+    "isco": {
+      "name": "International Standard Classification of Occupations",
+      "url": "https://www.ilo.org/public/english/bureau/stat/isco/",
+      "description": "ILO international occupational classification",
+      "version": "ISCO-08"
+    }
+  },
+  "mappings": {
+    "onet": {
+      "description": "Mapping O*NET Work Activities to HAAI domains",
+      "mappingType": "many-to-many",
+      "categories": [
+        {
+          "onetCategory": "Information Input",
+          "onetActivities": [
+            "Getting Information",
+            "Monitoring Processes, Materials, or Surroundings",
+            "Identifying Objects, Actions, and Events",
+            "Inspecting Equipment, Structures, or Materials",
+            "Estimating the Quantifiable Characteristics of Products, Events, or Information"
+          ],
+          "haaiDomains": [1, 2],
+          "haaiCategories": ["1.1", "1.2", "2.1", "2.4", "7.4"]
+        },
+        {
+          "onetCategory": "Mental Processes",
+          "onetActivities": [
+            "Processing Information",
+            "Evaluating Information to Determine Compliance with Standards",
+            "Analyzing Data or Information",
+            "Judging the Qualities of Objects, Services, or People",
+            "Making Decisions and Solving Problems",
+            "Thinking Creatively",
+            "Updating and Using Relevant Knowledge",
+            "Developing Objectives and Strategies",
+            "Scheduling Work and Activities",
+            "Organizing, Planning, and Prioritizing Work"
+          ],
+          "haaiDomains": [1, 2, 3],
+          "haaiCategories": ["1.1", "1.2", "2.1", "2.2", "2.4", "3.3", "3.5", "4.3"]
+        },
+        {
+          "onetCategory": "Work Output (Digital)",
+          "onetActivities": [
+            "Interacting With Computers",
+            "Documenting/Recording Information"
+          ],
+          "haaiDomains": [1, 2, 3],
+          "haaiCategories": ["1.2", "1.3", "2.2", "2.3", "3.3"]
+        },
+        {
+          "onetCategory": "Work Output (Technical)",
+          "onetActivities": [
+            "Drafting, Laying Out, and Specifying Technical Devices, Parts, and Equipment",
+            "Repairing and Maintaining Mechanical Equipment",
+            "Repairing and Maintaining Electronic Equipment"
+          ],
+          "haaiDomains": [3, 8],
+          "haaiCategories": ["3.3", "8.1", "8.2"]
+        },
+        {
+          "onetCategory": "Work Output (Physical)",
+          "onetActivities": [
+            "Performing General Physical Activities",
+            "Handling and Moving Objects",
+            "Controlling Machines and Processes",
+            "Operating Vehicles, Mechanized Devices, or Equipment"
+          ],
+          "haaiDomains": [7, 8, 9],
+          "haaiCategories": ["7.1", "7.2", "7.3", "8.1", "8.2", "9.1"]
+        },
+        {
+          "onetCategory": "Interacting (Communication)",
+          "onetActivities": [
+            "Interpreting the Meaning of Information for Others",
+            "Communicating with Supervisors, Peers, or Subordinates",
+            "Communicating with People Outside the Organization"
+          ],
+          "haaiDomains": [4],
+          "haaiCategories": ["4.1", "4.2", "4.3", "4.4"]
+        },
+        {
+          "onetCategory": "Interacting (Relationships)",
+          "onetActivities": [
+            "Establishing and Maintaining Interpersonal Relationships",
+            "Assisting and Caring for Others",
+            "Selling or Influencing Others",
+            "Resolving Conflicts and Negotiating with Others"
+          ],
+          "haaiDomains": [4, 5, 6],
+          "haaiCategories": ["4.2", "4.5", "5.2", "6.1", "6.2", "6.3", "6.4"]
+        },
+        {
+          "onetCategory": "Interacting (Leadership)",
+          "onetActivities": [
+            "Coordinating the Work and Activities of Others",
+            "Developing and Building Teams",
+            "Training and Teaching Others",
+            "Coaching and Developing Others",
+            "Provide Consultation and Advice to Others"
+          ],
+          "haaiDomains": [4, 6],
+          "haaiCategories": ["4.1", "4.3", "6.4"]
+        },
+        {
+          "onetCategory": "Interacting (Administrative)",
+          "onetActivities": [
+            "Performing Administrative Activities",
+            "Staffing Organizational Units",
+            "Monitoring and Controlling Resources"
+          ],
+          "haaiDomains": [5],
+          "haaiCategories": ["5.1", "5.3"]
+        }
+      ]
+    },
+    "atus": {
+      "description": "Mapping ATUS major categories to HAAI domains",
+      "mappingType": "one-to-many",
+      "categories": [
+        {
+          "atusCode": "01",
+          "atusCategory": "Personal Care Activities",
+          "haaiDomains": [10],
+          "haaiCategories": ["10.1", "10.3"]
+        },
+        {
+          "atusCode": "02",
+          "atusCategory": "Household Activities",
+          "haaiDomains": [10],
+          "haaiCategories": ["10.2", "10.4"]
+        },
+        {
+          "atusCode": "03",
+          "atusCategory": "Caring for and Helping Household Members",
+          "haaiDomains": [6],
+          "haaiCategories": ["6.1", "6.2"]
+        },
+        {
+          "atusCode": "04",
+          "atusCategory": "Caring for and Helping Non-Household Members",
+          "haaiDomains": [6],
+          "haaiCategories": ["6.1", "6.2", "6.5"]
+        },
+        {
+          "atusCode": "05",
+          "atusCategory": "Work and Work-Related Activities",
+          "haaiDomains": [1, 2, 3, 4, 5, 6, 7, 8],
+          "haaiCategories": [],
+          "note": "Maps to multiple domains based on occupation"
+        },
+        {
+          "atusCode": "06",
+          "atusCategory": "Education",
+          "haaiDomains": [2, 4],
+          "haaiCategories": ["2.1", "4.1"]
+        },
+        {
+          "atusCode": "07",
+          "atusCategory": "Consumer Purchases",
+          "haaiDomains": [5, 9],
+          "haaiCategories": ["5.2", "9.2"]
+        },
+        {
+          "atusCode": "08",
+          "atusCategory": "Professional and Personal Care Services",
+          "haaiDomains": [5, 6],
+          "haaiCategories": ["5.1", "5.3", "6.3", "6.4"]
+        },
+        {
+          "atusCode": "09",
+          "atusCategory": "Household Services",
+          "haaiDomains": [5],
+          "haaiCategories": ["5.1"]
+        },
+        {
+          "atusCode": "10",
+          "atusCategory": "Government Services and Civic Obligations",
+          "haaiDomains": [5, 6],
+          "haaiCategories": ["5.5", "6.5"]
+        },
+        {
+          "atusCode": "11",
+          "atusCategory": "Eating and Drinking",
+          "haaiDomains": [10],
+          "haaiCategories": ["10.2"]
+        },
+        {
+          "atusCode": "12",
+          "atusCategory": "Socializing, Relaxing, and Leisure",
+          "haaiDomains": [4, 6, 10],
+          "haaiCategories": ["4.5", "6.6", "10.5"]
+        },
+        {
+          "atusCode": "13",
+          "atusCategory": "Sports, Exercise, and Recreation",
+          "haaiDomains": [9, 10],
+          "haaiCategories": ["9.5", "10.3"]
+        },
+        {
+          "atusCode": "14",
+          "atusCategory": "Religious and Spiritual Activities",
+          "haaiDomains": [6],
+          "haaiCategories": ["6.5"]
+        },
+        {
+          "atusCode": "15",
+          "atusCategory": "Volunteer Activities",
+          "haaiDomains": [6],
+          "haaiCategories": ["6.5"]
+        },
+        {
+          "atusCode": "16",
+          "atusCategory": "Telephone Calls",
+          "haaiDomains": [4],
+          "haaiCategories": ["4.1", "4.2", "4.3", "4.4", "4.5"]
+        },
+        {
+          "atusCode": "18",
+          "atusCategory": "Traveling",
+          "haaiDomains": [9],
+          "haaiCategories": ["9.1", "9.2"]
+        }
+      ]
+    },
+    "behavior1k": {
+      "description": "Mapping BEHAVIOR-1K task categories to HAAI domains",
+      "mappingType": "one-to-many",
+      "categories": [
+        {
+          "behaviorCategory": "Cleaning/Wiping",
+          "haaiDomains": [7, 10],
+          "haaiCategories": ["7.5", "10.4"]
+        },
+        {
+          "behaviorCategory": "Cooking/Freezing",
+          "haaiDomains": [8, 10],
+          "haaiCategories": ["8.4", "10.2"]
+        },
+        {
+          "behaviorCategory": "Rearrangement",
+          "haaiDomains": [7, 10],
+          "haaiCategories": ["7.2", "10.4"]
+        },
+        {
+          "behaviorCategory": "Slicing/Dicing",
+          "haaiDomains": [8],
+          "haaiCategories": ["8.4"]
+        },
+        {
+          "behaviorCategory": "Baking",
+          "haaiDomains": [8],
+          "haaiCategories": ["8.4"]
+        },
+        {
+          "behaviorCategory": "Laundry",
+          "haaiDomains": [7, 10],
+          "haaiCategories": ["7.5", "10.4"]
+        },
+        {
+          "behaviorCategory": "Painting/Spraying",
+          "haaiDomains": [8],
+          "haaiCategories": ["8.1", "8.5"]
+        },
+        {
+          "behaviorCategory": "Hanging/Installing",
+          "haaiDomains": [8],
+          "haaiCategories": ["8.1"]
+        }
+      ]
+    },
+    "activityNet": {
+      "description": "Mapping ActivityNet/Kinetics action types to HAAI domains",
+      "mappingType": "one-to-many",
+      "categories": [
+        {
+          "actionType": "Human-Object Interaction",
+          "description": "Actions involving manipulation of objects",
+          "haaiDomains": [7, 8, 10],
+          "haaiCategories": ["7.1", "7.2", "8.1", "8.2", "8.4", "8.5", "10.2", "10.4"]
+        },
+        {
+          "actionType": "Body-Motion Only",
+          "description": "Actions involving only body movement",
+          "haaiDomains": [9, 10],
+          "haaiCategories": ["9.5", "10.3"]
+        },
+        {
+          "actionType": "Human-Human Interaction",
+          "description": "Social actions between people",
+          "haaiDomains": [4, 6],
+          "haaiCategories": ["4.1", "4.2", "4.3", "4.4", "4.5", "6.1", "6.4", "6.6"]
+        },
+        {
+          "actionType": "Playing Instruments",
+          "description": "Musical performance activities",
+          "haaiDomains": [3, 10],
+          "haaiCategories": ["3.4", "10.5"]
+        },
+        {
+          "actionType": "Sports",
+          "description": "Athletic and competitive physical activities",
+          "haaiDomains": [9, 10],
+          "haaiCategories": ["9.5", "10.3"]
+        }
+      ]
+    },
+    "isco": {
+      "description": "Mapping ISCO-08 major groups to HAAI domains",
+      "mappingType": "one-to-many",
+      "categories": [
+        {
+          "iscoCode": "1",
+          "iscoGroup": "Managers",
+          "sampleTasks": ["Strategy", "Coordination", "Decisions"],
+          "haaiDomains": [3, 4, 5],
+          "haaiCategories": ["3.5", "4.3", "5.1"]
+        },
+        {
+          "iscoCode": "2",
+          "iscoGroup": "Professionals",
+          "sampleTasks": ["Analysis", "Design", "Consultation"],
+          "haaiDomains": [2, 3, 4, 6],
+          "haaiCategories": ["2.1", "2.2", "3.1", "3.3", "4.1", "6.3", "6.4"]
+        },
+        {
+          "iscoCode": "3",
+          "iscoGroup": "Technicians and Associate Professionals",
+          "sampleTasks": ["Technical support", "Operation"],
+          "haaiDomains": [3, 7, 8],
+          "haaiCategories": ["3.3", "7.3", "8.2"]
+        },
+        {
+          "iscoCode": "4",
+          "iscoGroup": "Clerical Support Workers",
+          "sampleTasks": ["Admin", "Data entry", "Filing"],
+          "haaiDomains": [1, 2, 5],
+          "haaiCategories": ["1.2", "2.3", "5.1"]
+        },
+        {
+          "iscoCode": "5",
+          "iscoGroup": "Service and Sales Workers",
+          "sampleTasks": ["Customer service", "Retail"],
+          "haaiDomains": [4, 5],
+          "haaiCategories": ["4.4", "5.2"]
+        },
+        {
+          "iscoCode": "6",
+          "iscoGroup": "Skilled Agricultural, Forestry and Fishery Workers",
+          "sampleTasks": ["Farming", "Animal husbandry"],
+          "haaiDomains": [9],
+          "haaiCategories": ["9.3"]
+        },
+        {
+          "iscoCode": "7",
+          "iscoGroup": "Craft and Related Trades Workers",
+          "sampleTasks": ["Construction", "Repair"],
+          "haaiDomains": [8],
+          "haaiCategories": ["8.1", "8.2", "8.5"]
+        },
+        {
+          "iscoCode": "8",
+          "iscoGroup": "Plant and Machine Operators and Assemblers",
+          "sampleTasks": ["Manufacturing", "Driving"],
+          "haaiDomains": [7, 9],
+          "haaiCategories": ["7.1", "7.3", "9.1"]
+        },
+        {
+          "iscoCode": "9",
+          "iscoGroup": "Elementary Occupations",
+          "sampleTasks": ["Cleaning", "Loading", "Basic tasks"],
+          "haaiDomains": [7, 9],
+          "haaiCategories": ["7.2", "7.5", "9.2"]
+        }
+      ]
+    }
+  },
+  "validationTests": {
+    "dayInLife": {
+      "description": "Sample day activities mapped to verify complete coverage",
+      "schedule": [
+        { "time": "06:00", "activity": "Wake up, use bathroom", "haaiCategory": "10.1" },
+        { "time": "06:15", "activity": "Shower, dress", "haaiCategory": "10.1" },
+        { "time": "06:30", "activity": "Prepare breakfast", "haaiCategory": "10.2" },
+        { "time": "07:00", "activity": "Eat breakfast", "haaiCategory": "10.2" },
+        { "time": "07:15", "activity": "Check email", "haaiCategory": "2.3" },
+        { "time": "07:30", "activity": "Commute to work", "haaiCategory": "9.1" },
+        { "time": "08:00", "activity": "Team standup meeting", "haaiCategory": "4.3" },
+        { "time": "08:30", "activity": "Code review", "haaiCategory": "3.3" },
+        { "time": "10:00", "activity": "Debug software issue", "haaiCategory": "3.3" },
+        { "time": "12:00", "activity": "Lunch with colleague", "haaiCategory": "4.5" },
+        { "time": "13:00", "activity": "Write technical documentation", "haaiCategory": "2.2" },
+        { "time": "15:00", "activity": "Client presentation", "haaiCategory": "4.2" },
+        { "time": "17:00", "activity": "Commute home", "haaiCategory": "9.1" },
+        { "time": "17:30", "activity": "Exercise/run", "haaiCategory": "10.3" },
+        { "time": "18:30", "activity": "Prepare dinner", "haaiCategory": "10.2" },
+        { "time": "19:00", "activity": "Eat dinner with family", "haaiCategory": "6.6" },
+        { "time": "20:00", "activity": "Help child with homework", "haaiCategory": "6.1" },
+        { "time": "21:00", "activity": "Watch TV/relax", "haaiCategory": "10.5" },
+        { "time": "22:00", "activity": "Personal hygiene, sleep", "haaiCategory": "10.1" }
+      ],
+      "result": "All activities classified. No gaps identified."
+    },
+    "aiCapabilityAlignment": {
+      "description": "Verify AI capability predictions align with actual deployment",
+      "systems": [
+        {
+          "system": "GPT-4/Claude",
+          "capability": "Text generation, analysis, code",
+          "haaiDomains": [1, 2, 3],
+          "predictedWave": [1, 2],
+          "status": "aligned"
+        },
+        {
+          "system": "GitHub Copilot",
+          "capability": "Code completion",
+          "haaiCategories": ["3.3"],
+          "predictedWave": [1, 2],
+          "status": "aligned"
+        },
+        {
+          "system": "Midjourney/DALL-E",
+          "capability": "Image generation",
+          "haaiCategories": ["3.2"],
+          "predictedWave": [1, 2],
+          "status": "aligned"
+        },
+        {
+          "system": "Tesla Autopilot",
+          "capability": "Highway driving",
+          "haaiCategories": ["9.1"],
+          "predictedWave": [2, 3],
+          "status": "aligned"
+        },
+        {
+          "system": "Waymo",
+          "capability": "Urban autonomous driving",
+          "haaiCategories": ["9.1"],
+          "predictedWave": [2, 3],
+          "status": "aligned"
+        },
+        {
+          "system": "Boston Dynamics Spot",
+          "capability": "Navigation, inspection",
+          "haaiCategories": ["9.4"],
+          "predictedWave": [2, 3],
+          "status": "aligned"
+        },
+        {
+          "system": "Amazon Kiva",
+          "capability": "Warehouse operations",
+          "haaiCategories": ["7.2"],
+          "predictedWave": [2],
+          "status": "aligned"
+        },
+        {
+          "system": "Da Vinci Surgical",
+          "capability": "Assisted surgery",
+          "haaiCategories": ["8.3"],
+          "predictedWave": [3, 4],
+          "status": "aligned"
+        }
+      ]
+    }
+  },
+  "references": {
+    "primary": [
+      {
+        "name": "O*NET Content Model",
+        "url": "https://www.onetcenter.org/content.html"
+      },
+      {
+        "name": "ATUS Activity Lexicon",
+        "url": "https://www.bls.gov/tus/lexicons.htm"
+      },
+      {
+        "name": "HETUS Guidelines",
+        "url": "https://ec.europa.eu/eurostat/web/time-use-surveys"
+      },
+      {
+        "name": "ICATUS 2016",
+        "url": "https://unstats.un.org/unsd/gender/timeuse/"
+      }
+    ],
+    "aiBenchmarks": [
+      {
+        "name": "BEHAVIOR-1K",
+        "url": "https://behavior.stanford.edu"
+      },
+      {
+        "name": "ActivityNet",
+        "url": "http://activity-net.org/"
+      },
+      {
+        "name": "Kinetics",
+        "url": "https://github.com/cvdfoundation/kinetics-dataset"
+      }
+    ],
+    "cognitiveFrameworks": [
+      "Bloom's Taxonomy (Cognitive Domain)",
+      "Dave's Taxonomy (Psychomotor Domain)",
+      "Krathwohl's Taxonomy (Affective Domain)"
+    ]
+  }
+}

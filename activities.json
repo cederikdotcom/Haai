@@ -1,0 +1,764 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "metadata": {
+    "title": "HAAI Level 3 Activities",
+    "description": "Specific activities with full attribute scoring",
+    "created": "2026-02-01",
+    "lastModified": "2026-02-01",
+    "status": "partial",
+    "targetCount": { "min": 200, "max": 400 },
+    "currentCount": 47
+  },
+  "classificationDecisionTree": {
+    "description": "Algorithmic approach to resolve classification ambiguities",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Is the primary output purely symbolic (numbers, code, formal logic)?",
+        "ifYes": "Domain 1",
+        "ifNo": "Continue to step 2"
+      },
+      {
+        "step": 2,
+        "question": "Does the activity require physical presence or manipulation?",
+        "ifNo": {
+          "subQuestion": "Is the output novel/creative or synthesis of existing info?",
+          "ifNovel": "Domain 3",
+          "ifSynthesis": "Domain 2"
+        },
+        "ifYes": "Continue to step 3"
+      },
+      {
+        "step": 3,
+        "question": "Is the primary purpose human wellbeing, trust, or emotional support?",
+        "ifYes": "Domain 6",
+        "ifNo": "Continue to step 4"
+      },
+      {
+        "step": 4,
+        "question": "Is the primary activity locomotion/navigation?",
+        "ifYes": {
+          "subQuestion": "For self or for work?",
+          "ifSelf": "Domain 10",
+          "ifWork": "Domain 9"
+        },
+        "ifNo": "Continue to step 5"
+      },
+      {
+        "step": 5,
+        "question": "Does the activity primarily involve human communication?",
+        "ifYes": {
+          "subQuestion": "Transactional/procedural or relationship-focused?",
+          "ifTransactional": "Domain 5",
+          "ifRelationship": "Domain 4"
+        },
+        "ifNo": "Continue to step 6"
+      },
+      {
+        "step": 6,
+        "question": "Is the environment controlled and predictable?",
+        "ifYes": "Domain 7",
+        "ifNo": {
+          "subQuestion": "Requires acquired expertise/craft judgment?",
+          "ifYes": "Domain 8",
+          "ifNo": "Domain 10 (personal) or reconsider classification"
+        }
+      }
+    ]
+  },
+  "activities": {
+    "domain1": [
+      {
+        "activityId": "1.1.1",
+        "categoryId": "1.1",
+        "name": "Spreadsheet formula calculation",
+        "description": "Creating and executing formulas in spreadsheet software",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "solved",
+        "primaryBottleneck": "none",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "1.1.2",
+        "categoryId": "1.1",
+        "name": "Statistical analysis execution",
+        "description": "Running statistical tests and computing metrics",
+        "abstractionLevel": 1,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 0,
+        "currentAICapability": "solved",
+        "primaryBottleneck": "none",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "1.2.1",
+        "categoryId": "1.2",
+        "name": "Data format conversion",
+        "description": "Converting data between formats (CSV, JSON, XML, etc.)",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "solved",
+        "primaryBottleneck": "none",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "1.3.1",
+        "categoryId": "1.3",
+        "name": "Code compilation",
+        "description": "Compiling source code to executable form",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "solved",
+        "primaryBottleneck": "none",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "1.4.1",
+        "categoryId": "1.4",
+        "name": "Database query execution",
+        "description": "Running SQL or NoSQL queries against databases",
+        "abstractionLevel": 1,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "solved",
+        "primaryBottleneck": "none",
+        "estimatedAGIWave": 1
+      }
+    ],
+    "domain2": [
+      {
+        "activityId": "2.1.1",
+        "categoryId": "2.1",
+        "name": "Literature review synthesis",
+        "description": "Reviewing and summarizing academic literature on a topic",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 3,
+        "socialComplexity": 0,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "reasoning",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "2.1.2",
+        "categoryId": "2.1",
+        "name": "Competitive analysis",
+        "description": "Researching and comparing competitor products/services",
+        "abstractionLevel": 1,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 3,
+        "socialComplexity": 0,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "reasoning",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "2.2.1",
+        "categoryId": "2.2",
+        "name": "Technical documentation writing",
+        "description": "Creating documentation for software or systems",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 1,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "reasoning",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "2.3.1",
+        "categoryId": "2.3",
+        "name": "Email inbox management",
+        "description": "Organizing, prioritizing, and categorizing emails",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 1,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "reasoning",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "2.4.1",
+        "categoryId": "2.4",
+        "name": "Anomaly detection in data",
+        "description": "Identifying unusual patterns or outliers in datasets",
+        "abstractionLevel": 1,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 0,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "none",
+        "estimatedAGIWave": 1
+      }
+    ],
+    "domain3": [
+      {
+        "activityId": "3.1.1",
+        "categoryId": "3.1",
+        "name": "Marketing copy writing",
+        "description": "Creating persuasive text for advertisements and promotions",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 1,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "reasoning",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "3.2.1",
+        "categoryId": "3.2",
+        "name": "UI mockup creation",
+        "description": "Designing user interface layouts and visual designs",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 1,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "reasoning",
+        "estimatedAGIWave": 2
+      },
+      {
+        "activityId": "3.3.1",
+        "categoryId": "3.3",
+        "name": "Writing unit tests",
+        "description": "Creating automated tests for software functions",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "reasoning",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "3.3.2",
+        "categoryId": "3.3",
+        "name": "API endpoint implementation",
+        "description": "Writing code for REST/GraphQL API endpoints",
+        "abstractionLevel": 1,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "reasoning",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "3.4.1",
+        "categoryId": "3.4",
+        "name": "Background music composition",
+        "description": "Creating ambient or background music for media",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 0,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "reasoning",
+        "estimatedAGIWave": 1
+      }
+    ],
+    "domain4": [
+      {
+        "activityId": "4.1.1",
+        "categoryId": "4.1",
+        "name": "Online course instruction",
+        "description": "Teaching concepts through video or text-based courses",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 3,
+        "socialComplexity": 3,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "social",
+        "estimatedAGIWave": 2
+      },
+      {
+        "activityId": "4.2.1",
+        "categoryId": "4.2",
+        "name": "Cold call sales pitch",
+        "description": "Initial sales outreach via phone or video",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 3,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "social",
+        "estimatedAGIWave": 2
+      },
+      {
+        "activityId": "4.3.1",
+        "categoryId": "4.3",
+        "name": "Sprint planning meeting facilitation",
+        "description": "Running agile planning meetings with development teams",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 2,
+        "currentAICapability": "early",
+        "primaryBottleneck": "social",
+        "estimatedAGIWave": 2
+      },
+      {
+        "activityId": "4.4.1",
+        "categoryId": "4.4",
+        "name": "IT helpdesk ticket resolution",
+        "description": "Answering and resolving technical support questions",
+        "abstractionLevel": 1,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 1,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "reasoning",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "4.5.1",
+        "categoryId": "4.5",
+        "name": "Professional networking conversation",
+        "description": "Building professional relationships at events",
+        "abstractionLevel": 1,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 3,
+        "socialComplexity": 3,
+        "currentAICapability": "early",
+        "primaryBottleneck": "social",
+        "estimatedAGIWave": 3
+      }
+    ],
+    "domain5": [
+      {
+        "activityId": "5.1.1",
+        "categoryId": "5.1",
+        "name": "Invoice processing",
+        "description": "Receiving, validating, and recording invoices",
+        "abstractionLevel": 1,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 1,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "none",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "5.2.1",
+        "categoryId": "5.2",
+        "name": "Retail checkout transaction",
+        "description": "Processing customer purchases at point of sale",
+        "abstractionLevel": 3,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 1,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "sensing",
+        "estimatedAGIWave": 2
+      },
+      {
+        "activityId": "5.3.1",
+        "categoryId": "5.3",
+        "name": "Loan application review",
+        "description": "Evaluating loan applications against criteria",
+        "abstractionLevel": 1,
+        "errorTolerance": 3,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 1,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "regulation",
+        "estimatedAGIWave": 2
+      },
+      {
+        "activityId": "5.4.1",
+        "categoryId": "5.4",
+        "name": "Medical appointment scheduling",
+        "description": "Booking and managing patient appointments",
+        "abstractionLevel": 1,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 1,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "none",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "5.5.1",
+        "categoryId": "5.5",
+        "name": "Contract review for compliance",
+        "description": "Checking legal documents against requirements",
+        "abstractionLevel": 1,
+        "errorTolerance": 3,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 0,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "reasoning",
+        "estimatedAGIWave": 2
+      }
+    ],
+    "domain6": [
+      {
+        "activityId": "6.1.1",
+        "categoryId": "6.1",
+        "name": "Infant soothing and comfort",
+        "description": "Calming distressed infants through physical touch and voice",
+        "abstractionLevel": 5,
+        "errorTolerance": 4,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 4,
+        "currentAICapability": "not_attempted",
+        "primaryBottleneck": "social",
+        "estimatedAGIWave": 4
+      },
+      {
+        "activityId": "6.2.1",
+        "categoryId": "6.2",
+        "name": "Mobility assistance for elderly",
+        "description": "Helping elderly individuals move safely",
+        "abstractionLevel": 4,
+        "errorTolerance": 4,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 4,
+        "currentAICapability": "early",
+        "primaryBottleneck": "dexterity",
+        "estimatedAGIWave": 4
+      },
+      {
+        "activityId": "6.3.1",
+        "categoryId": "6.3",
+        "name": "Bedside nursing care",
+        "description": "Providing direct patient care and monitoring",
+        "abstractionLevel": 4,
+        "errorTolerance": 4,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 4,
+        "currentAICapability": "early",
+        "primaryBottleneck": "social",
+        "estimatedAGIWave": 4
+      },
+      {
+        "activityId": "6.4.1",
+        "categoryId": "6.4",
+        "name": "Crisis counseling session",
+        "description": "Providing mental health support during acute distress",
+        "abstractionLevel": 2,
+        "errorTolerance": 4,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 4,
+        "currentAICapability": "early",
+        "primaryBottleneck": "social",
+        "estimatedAGIWave": 3
+      },
+      {
+        "activityId": "6.5.1",
+        "categoryId": "6.5",
+        "name": "Community event organizing",
+        "description": "Planning and coordinating local community gatherings",
+        "abstractionLevel": 2,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 3,
+        "socialComplexity": 3,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "social",
+        "estimatedAGIWave": 3
+      }
+    ],
+    "domain7": [
+      {
+        "activityId": "7.1.1",
+        "categoryId": "7.1",
+        "name": "Assembly line component insertion",
+        "description": "Placing parts in designated positions on production line",
+        "abstractionLevel": 3,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "dexterity",
+        "estimatedAGIWave": 2
+      },
+      {
+        "activityId": "7.2.1",
+        "categoryId": "7.2",
+        "name": "Warehouse bin picking",
+        "description": "Selecting items from storage bins for orders",
+        "abstractionLevel": 3,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "sensing",
+        "estimatedAGIWave": 2
+      },
+      {
+        "activityId": "7.3.1",
+        "categoryId": "7.3",
+        "name": "CNC machine operation",
+        "description": "Operating computer-controlled machining equipment",
+        "abstractionLevel": 3,
+        "errorTolerance": 3,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 0,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "sensing",
+        "estimatedAGIWave": 2
+      },
+      {
+        "activityId": "7.4.1",
+        "categoryId": "7.4",
+        "name": "Visual quality inspection",
+        "description": "Examining products for defects",
+        "abstractionLevel": 3,
+        "errorTolerance": 3,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "sensing",
+        "estimatedAGIWave": 1
+      },
+      {
+        "activityId": "7.5.1",
+        "categoryId": "7.5",
+        "name": "Commercial floor cleaning",
+        "description": "Operating floor cleaning equipment in commercial spaces",
+        "abstractionLevel": 3,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "mobility",
+        "estimatedAGIWave": 2
+      }
+    ],
+    "domain8": [
+      {
+        "activityId": "8.1.1",
+        "categoryId": "8.1",
+        "name": "Residential electrical wiring",
+        "description": "Installing and connecting electrical systems in homes",
+        "abstractionLevel": 4,
+        "errorTolerance": 3,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 1,
+        "currentAICapability": "early",
+        "primaryBottleneck": "dexterity",
+        "estimatedAGIWave": 4
+      },
+      {
+        "activityId": "8.2.1",
+        "categoryId": "8.2",
+        "name": "Automotive engine diagnosis",
+        "description": "Identifying problems in vehicle engines",
+        "abstractionLevel": 4,
+        "errorTolerance": 3,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 1,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "sensing",
+        "estimatedAGIWave": 3
+      },
+      {
+        "activityId": "8.3.1",
+        "categoryId": "8.3",
+        "name": "Laparoscopic surgery",
+        "description": "Performing minimally invasive surgical procedures",
+        "abstractionLevel": 5,
+        "errorTolerance": 4,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 2,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "safety",
+        "estimatedAGIWave": 4
+      },
+      {
+        "activityId": "8.4.1",
+        "categoryId": "8.4",
+        "name": "Restaurant line cooking",
+        "description": "Preparing dishes in professional kitchen environment",
+        "abstractionLevel": 4,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 2,
+        "currentAICapability": "early",
+        "primaryBottleneck": "dexterity",
+        "estimatedAGIWave": 3
+      },
+      {
+        "activityId": "8.5.1",
+        "categoryId": "8.5",
+        "name": "Custom furniture woodworking",
+        "description": "Creating bespoke wooden furniture pieces",
+        "abstractionLevel": 4,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 1,
+        "currentAICapability": "early",
+        "primaryBottleneck": "dexterity",
+        "estimatedAGIWave": 4
+      }
+    ],
+    "domain9": [
+      {
+        "activityId": "9.1.1",
+        "categoryId": "9.1",
+        "name": "Highway truck driving",
+        "description": "Operating commercial trucks on highways",
+        "abstractionLevel": 4,
+        "errorTolerance": 4,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "near_solved",
+        "primaryBottleneck": "safety",
+        "estimatedAGIWave": 2
+      },
+      {
+        "activityId": "9.1.2",
+        "categoryId": "9.1",
+        "name": "Urban delivery driving",
+        "description": "Navigating city streets for deliveries",
+        "abstractionLevel": 4,
+        "errorTolerance": 3,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 1,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "adaptation",
+        "estimatedAGIWave": 3
+      },
+      {
+        "activityId": "9.2.1",
+        "categoryId": "9.2",
+        "name": "Doorstep package delivery",
+        "description": "Delivering packages to residential addresses",
+        "abstractionLevel": 4,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 1,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "mobility",
+        "estimatedAGIWave": 3
+      },
+      {
+        "activityId": "9.3.1",
+        "categoryId": "9.3",
+        "name": "Crop harvesting",
+        "description": "Gathering mature crops from fields",
+        "abstractionLevel": 4,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 0,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "adaptation",
+        "estimatedAGIWave": 3
+      },
+      {
+        "activityId": "9.4.1",
+        "categoryId": "9.4",
+        "name": "Building fire search and rescue",
+        "description": "Searching burning buildings for survivors",
+        "abstractionLevel": 5,
+        "errorTolerance": 4,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 2,
+        "currentAICapability": "early",
+        "primaryBottleneck": "adaptation",
+        "estimatedAGIWave": 4
+      }
+    ],
+    "domain10": [
+      {
+        "activityId": "10.1.1",
+        "categoryId": "10.1",
+        "name": "Morning personal hygiene",
+        "description": "Showering, brushing teeth, personal grooming",
+        "abstractionLevel": 5,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "not_attempted",
+        "primaryBottleneck": "dexterity",
+        "estimatedAGIWave": 4,
+        "notes": "Intrinsic value of self-performance"
+      },
+      {
+        "activityId": "10.2.1",
+        "categoryId": "10.2",
+        "name": "Home meal preparation",
+        "description": "Cooking meals for personal/family consumption",
+        "abstractionLevel": 4,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "early",
+        "primaryBottleneck": "dexterity",
+        "estimatedAGIWave": 3
+      },
+      {
+        "activityId": "10.3.1",
+        "categoryId": "10.3",
+        "name": "Personal exercise routine",
+        "description": "Performing physical exercise for health",
+        "abstractionLevel": 5,
+        "errorTolerance": 2,
+        "feedbackLoopSpeed": 3,
+        "socialComplexity": 0,
+        "currentAICapability": "not_attempted",
+        "primaryBottleneck": "dexterity",
+        "estimatedAGIWave": 4,
+        "notes": "Cannot be delegated - intrinsic to self"
+      },
+      {
+        "activityId": "10.4.1",
+        "categoryId": "10.4",
+        "name": "Home laundry",
+        "description": "Washing, drying, and folding personal clothing",
+        "abstractionLevel": 4,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 2,
+        "socialComplexity": 0,
+        "currentAICapability": "partial",
+        "primaryBottleneck": "dexterity",
+        "estimatedAGIWave": 3
+      },
+      {
+        "activityId": "10.5.1",
+        "categoryId": "10.5",
+        "name": "Hobby crafting",
+        "description": "Engaging in creative hobbies (knitting, painting, etc.)",
+        "abstractionLevel": 4,
+        "errorTolerance": 1,
+        "feedbackLoopSpeed": 1,
+        "socialComplexity": 0,
+        "currentAICapability": "not_attempted",
+        "primaryBottleneck": "dexterity",
+        "estimatedAGIWave": 4,
+        "notes": "Value is in the doing, not the output"
+      }
+    ]
+  },
+  "populationGuidelines": {
+    "targetPerCategory": {
+      "min": 5,
+      "max": 15,
+      "average": 8
+    },
+    "prioritization": [
+      "Focus on high-frequency activities first",
+      "Include both professional and personal variants where applicable",
+      "Ensure global applicability (not Western-centric)",
+      "Include emerging activities (e.g., social media management)"
+    ],
+    "qualityChecks": [
+      "Each activity maps to exactly one category",
+      "Attribute scores are internally consistent",
+      "Examples are concrete and recognizable",
+      "No overlap with sibling activities in same category"
+    ]
+  }
+}
