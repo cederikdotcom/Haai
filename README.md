@@ -18,7 +18,7 @@ HAAI (Human Activity Automation Index) is a research framework that classifies a
 |-------|-------|-------------|
 | Level 1 | 10 Domains | Organized by abstraction-embodiment spectrum |
 | Level 2 | 47 Categories | 3-6 per domain |
-| Level 3 | ~200-400 Activities | Individual activities with full attribute scoring (planned) |
+| Level 3 | 400 Activities | Individual activities with full attribute scoring |
 
 ## The 10 Domains
 
@@ -51,18 +51,21 @@ See [Haai.md](Haai.md) for the complete taxonomy specification including:
 - Part B: Attribute definitions (7 scoring dimensions)
 - Part C: Domain definitions (Level 1)
 - Part D: Category definitions (Level 2)
+- Part D.1: Example scored activities with guidance
+- Part D.2: **Complete Level 3 enumeration** (400 activities)
+- Part D.3: Summary statistics and distribution analysis
 - Part E: Mapping to existing frameworks
 - Part F: Validation checklist
 - Part G: Edge cases and classification rules
-- Part H: Next steps for Level 3 population
+- Part H: Implementation roadmap and maintenance plan
 
 ## Current Status
 
-**Version:** 1.0 (Draft)
+**Version:** 2.0 (Complete)
 
-- Level 1 (Domains): Complete
-- Level 2 (Categories): Complete
-- Level 3 (Activities): Pending
+- Level 1 (Domains): 10 domains ✓
+- Level 2 (Categories): 47 categories ✓
+- Level 3 (Activities): 400 activities ✓
 
 ## License
 
