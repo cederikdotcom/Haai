@@ -2,6 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 2,
   "domainName": "Information Synthesis",
+  "quarterlyScoresSource": "../quarterly.json",
+  "quarterlyScoresNote": "The aiCapability, bottleneck, and agiWave scores are quarterly-changing values. The authoritative source is quarterly.json (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "2.1.1",
