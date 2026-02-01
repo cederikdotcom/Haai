@@ -1,0 +1,425 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "title": "Human Activity Scoring System",
+  "description": "Attribute definitions and scoring scales for predicting AI automation timelines",
+  "lastUpdated": "2026-02-01",
+  "attributes": [
+    {
+      "id": 1,
+      "name": "Abstraction Level",
+      "shortName": "abstraction",
+      "description": "Measures the degree to which an activity operates in symbolic vs physical space",
+      "scale": {
+        "min": 1,
+        "max": 5
+      },
+      "rationale": "High-abstraction activities require only software; low-abstraction activities require physical sensing, planning, and actuation",
+      "levels": [
+        {
+          "level": 1,
+          "name": "Pure Abstract",
+          "definition": "Operates entirely in symbol space. No physical grounding required.",
+          "signal": "Input/output are text, numbers, code",
+          "examples": ["Mathematical computation", "Code compilation", "Data transformation"]
+        },
+        {
+          "level": 2,
+          "name": "Grounded Abstract",
+          "definition": "Reasons about physical world but acts through digital intermediaries.",
+          "signal": "Interprets sensor data, outputs decisions",
+          "examples": ["Remote monitoring", "Data analysis with physical implications", "Digital design"]
+        },
+        {
+          "level": 3,
+          "name": "Supervised Physical",
+          "definition": "Physical action in structured, predictable environments.",
+          "signal": "Repeatable motions, known objects",
+          "examples": ["Assembly line work", "Warehouse picking", "Machine operation"]
+        },
+        {
+          "level": 4,
+          "name": "Adaptive Physical",
+          "definition": "Physical action requiring real-time adaptation to variability.",
+          "signal": "Novel objects, changing conditions",
+          "examples": ["Vehicle navigation", "Equipment repair", "Field work"]
+        },
+        {
+          "level": 5,
+          "name": "Deeply Embodied",
+          "definition": "Full sensorimotor integration, social presence, human-like dexterity.",
+          "signal": "Touch sensitivity, emotional attunement",
+          "examples": ["Caregiving", "Surgery", "Artisan crafts"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Error Tolerance",
+      "shortName": "errorTolerance",
+      "description": "Measures the consequences and recoverability of mistakes",
+      "scale": {
+        "min": 1,
+        "max": 4
+      },
+      "rationale": "Within any domain, low-error-tolerance activities automate later. Error tolerance interacts with abstraction (physical errors often irreversible).",
+      "levels": [
+        {
+          "level": 1,
+          "name": "High",
+          "definition": "Errors easily corrected, low stakes, iteration expected.",
+          "examples": ["Drafting", "Brainstorming", "Prototyping"]
+        },
+        {
+          "level": 2,
+          "name": "Medium",
+          "definition": "Errors costly but recoverable, moderate stakes.",
+          "examples": ["Cooking", "Scheduling", "Routine maintenance"]
+        },
+        {
+          "level": 3,
+          "name": "Low",
+          "definition": "Errors expensive or harmful, limited recovery.",
+          "examples": ["Surgery", "Vehicle repair", "Legal filing"]
+        },
+        {
+          "level": 4,
+          "name": "Very Low",
+          "definition": "Errors potentially catastrophic or irreversible.",
+          "examples": ["Emergency response", "Childcare safety", "Critical infrastructure"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Feedback Loop Speed",
+      "shortName": "feedbackSpeed",
+      "description": "Time between action and observable outcome",
+      "scale": {
+        "min": 1,
+        "max": 4
+      },
+      "rationale": "Faster feedback enables rapid learning and correction; slower feedback requires longer-term planning and prediction",
+      "levels": [
+        {
+          "level": 1,
+          "name": "Immediate",
+          "timeframe": "Seconds to minutes",
+          "examples": ["Conversation", "Object manipulation", "Typing"]
+        },
+        {
+          "level": 2,
+          "name": "Short-term",
+          "timeframe": "Minutes to hours",
+          "examples": ["Task completion", "Cooking", "Meeting outcomes"]
+        },
+        {
+          "level": 3,
+          "name": "Medium-term",
+          "timeframe": "Hours to days",
+          "examples": ["Project work", "Analysis", "Document creation"]
+        },
+        {
+          "level": 4,
+          "name": "Long-term",
+          "timeframe": "Days to months",
+          "examples": ["Strategy", "Research", "Relationship building"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Social Complexity",
+      "shortName": "socialComplexity",
+      "description": "Degree and type of human interaction required",
+      "scale": {
+        "min": 0,
+        "max": 4
+      },
+      "rationale": "Social complexity adds requirements for theory of mind, emotional intelligence, and interpersonal dynamics",
+      "levels": [
+        {
+          "level": 0,
+          "name": "None",
+          "definition": "Solo task, no human interaction",
+          "examples": ["Data processing", "Solitary cleaning", "Personal exercise"]
+        },
+        {
+          "level": 1,
+          "name": "Informational",
+          "definition": "Exchange information with humans",
+          "examples": ["Customer service Q&A", "Technical support", "Status reporting"]
+        },
+        {
+          "level": 2,
+          "name": "Coordinative",
+          "definition": "Synchronize actions with humans",
+          "examples": ["Team projects", "Assembly coordination", "Scheduling"]
+        },
+        {
+          "level": 3,
+          "name": "Persuasive",
+          "definition": "Influence human beliefs or behavior",
+          "examples": ["Sales", "Negotiation", "Teaching", "Marketing"]
+        },
+        {
+          "level": 4,
+          "name": "Relational",
+          "definition": "Build trust, provide emotional support",
+          "examples": ["Counseling", "Caregiving", "Leadership", "Friendship"]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Current AI Capability",
+      "shortName": "aiCapability",
+      "description": "Current state of AI capability for this activity",
+      "type": "categorical",
+      "values": [
+        {
+          "value": "solved",
+          "definition": "AI matches or exceeds median human performance",
+          "examples": ["Arithmetic", "Chess", "Image classification"]
+        },
+        {
+          "value": "near_solved",
+          "definition": "AI approaches human performance, deployment underway",
+          "examples": ["Language translation", "Code generation", "Highway driving"]
+        },
+        {
+          "value": "partial",
+          "definition": "AI assists but cannot fully replace humans",
+          "examples": ["Legal research", "Medical diagnosis", "Creative writing"]
+        },
+        {
+          "value": "early",
+          "definition": "Research prototypes only",
+          "examples": ["General manipulation", "Open-domain dialogue", "Complex reasoning"]
+        },
+        {
+          "value": "not_attempted",
+          "definition": "No serious AI efforts yet",
+          "examples": ["Intimate relationships", "Spiritual guidance", "Novel crisis response"]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Primary Bottleneck",
+      "shortName": "bottleneck",
+      "description": "Main technical or social barrier to AI automation",
+      "type": "categorical",
+      "values": [
+        {
+          "value": "none",
+          "description": "Solved - no remaining bottleneck"
+        },
+        {
+          "value": "sensing",
+          "description": "Perception limitations (vision, touch, proprioception)"
+        },
+        {
+          "value": "reasoning",
+          "description": "Cognitive complexity (planning, abstraction, causality)"
+        },
+        {
+          "value": "dexterity",
+          "description": "Fine motor control and manipulation"
+        },
+        {
+          "value": "mobility",
+          "description": "Locomotion and navigation"
+        },
+        {
+          "value": "adaptation",
+          "description": "Handling novel situations and edge cases"
+        },
+        {
+          "value": "social",
+          "description": "Human interaction requirements (empathy, trust, rapport)"
+        },
+        {
+          "value": "safety",
+          "description": "Risk tolerance and fail-safe requirements"
+        },
+        {
+          "value": "regulation",
+          "description": "Legal, policy, or certification barriers"
+        },
+        {
+          "value": "data",
+          "description": "Insufficient training data availability"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Estimated AGI Wave",
+      "shortName": "agiWave",
+      "description": "Predicted timeframe for AI to achieve human-level capability",
+      "scale": {
+        "min": 1,
+        "max": 4
+      },
+      "waves": [
+        {
+          "wave": 1,
+          "timeline": "2024-2026",
+          "characteristics": "Current LLM capabilities + basic robotics",
+          "typicalDomains": ["Symbolic Computation", "Information Synthesis", "Creative Generation"],
+          "keyCapabilities": [
+            "Text generation and analysis",
+            "Code completion and generation",
+            "Image and video generation",
+            "Structured data processing"
+          ]
+        },
+        {
+          "wave": 2,
+          "timeline": "2026-2028",
+          "characteristics": "Multimodal AI + structured environments",
+          "typicalDomains": ["Interpersonal Communication", "Procedural Service Delivery", "Structured Physical Operations"],
+          "keyCapabilities": [
+            "Advanced conversational AI",
+            "Warehouse and logistics automation",
+            "Structured environment navigation",
+            "Routine service automation"
+          ]
+        },
+        {
+          "wave": 3,
+          "timeline": "2028-2032",
+          "characteristics": "Adaptive embodied AI + social modeling",
+          "typicalDomains": ["Care & Relational Support", "Skilled Physical Craft"],
+          "keyCapabilities": [
+            "Dexterous manipulation",
+            "Adaptive physical tasks",
+            "Emotional/social AI",
+            "Complex environment navigation"
+          ]
+        },
+        {
+          "wave": 4,
+          "timeline": "2032+",
+          "characteristics": "General-purpose embodied AI",
+          "typicalDomains": ["Environmental Navigation", "Personal Embodiment"],
+          "keyCapabilities": [
+            "General-purpose robotics",
+            "Full sensorimotor integration",
+            "Human-level social presence",
+            "Novel situation handling"
+          ]
+        }
+      ]
+    }
+  ],
+  "scoringMethodology": {
+    "approach": "Multi-stakeholder scoring with validation",
+    "scorers": [
+      {
+        "type": "Domain experts",
+        "responsibility": "Current AI capability assessment"
+      },
+      {
+        "type": "AI researchers",
+        "responsibility": "Bottleneck identification and wave prediction"
+      },
+      {
+        "type": "Time-use researchers",
+        "responsibility": "Validation against ATUS/HETUS data"
+      }
+    ],
+    "validationProtocol": {
+      "interRaterReliability": {
+        "metric": "Cohen's kappa",
+        "threshold": 0.7,
+        "description": "Two independent raters should achieve κ > 0.7"
+      },
+      "coverageAudit": {
+        "method": "Walk through 10 diverse occupations, ensure all tasks map",
+        "frequency": "Per major revision"
+      },
+      "predictiveValidation": {
+        "method": "Compare predictions to actual AI deployment timelines",
+        "frequency": "Annual review"
+      }
+    }
+  },
+  "activitySchema": {
+    "description": "Schema for Level 3 activity entries",
+    "requiredFields": [
+      "id",
+      "name",
+      "description",
+      "categoryId"
+    ],
+    "scoredFields": [
+      "abstraction",
+      "errorTolerance",
+      "feedbackSpeed",
+      "socialComplexity",
+      "aiCapability",
+      "bottleneck",
+      "agiWave"
+    ],
+    "optionalFields": [
+      "onetCodes",
+      "atusCodes",
+      "exampleTasks",
+      "notes"
+    ],
+    "exampleActivity": {
+      "id": "3.3.1",
+      "name": "Writing Unit Tests",
+      "description": "Creating automated tests for software components",
+      "categoryId": "3.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "onetCodes": ["15-1252.00"],
+      "exampleTasks": [
+        "Writing unit tests for functions",
+        "Creating integration test suites",
+        "Mocking dependencies"
+      ]
+    }
+  },
+  "compositeScores": {
+    "automationReadiness": {
+      "description": "Overall estimate of how ready an activity is for AI automation",
+      "formula": "((5 - abstraction) * 0.4) + ((4 - errorTolerance) * 0.3) + ((4 - socialComplexity) * 0.2) + (capabilityScore * 0.1)",
+      "capabilityMapping": {
+        "solved": 5,
+        "near_solved": 4,
+        "partial": 3,
+        "early": 2,
+        "not_attempted": 1
+      },
+      "range": {
+        "min": 0,
+        "max": 5
+      },
+      "interpretation": {
+        "4.0-5.0": "High automation readiness - Wave 1",
+        "3.0-3.9": "Moderate automation readiness - Wave 2",
+        "2.0-2.9": "Low automation readiness - Wave 3",
+        "0.0-1.9": "Very low automation readiness - Wave 4+"
+      }
+    },
+    "humanEssentiality": {
+      "description": "Degree to which human involvement provides irreplaceable value",
+      "factors": [
+        "Social complexity level 3-4",
+        "Error tolerance level 4",
+        "Activities in Domain 6 or 10"
+      ]
+    }
+  }
+}
