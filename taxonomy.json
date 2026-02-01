@@ -39,7 +39,7 @@
       {
         "id": 6,
         "name": "MECE compliant",
-        "description": "Mutually exclusive, collectively exhaustive—every activity fits exactly one category"
+        "description": "Mutually exclusive, collectively exhaustive\u2014every activity fits exactly one category"
       }
     ],
     "organizingPrinciple": "Abstraction-Embodiment Spectrum: Domains ordered from highest abstraction (earliest AI automation) to lowest abstraction (latest AI automation)"
@@ -69,381 +69,25 @@
           "id": "1.1",
           "name": "Numerical Computation",
           "description": "Arithmetic, statistical calculations, spreadsheet operations",
-          "activities": [
-            {
-              "id": "1.1.1",
-              "name": "Basic Arithmetic Operations",
-              "description": "Performing addition, subtraction, multiplication, and division on numbers",
-              "categoryId": "1.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Adding invoice totals", "Calculating percentages", "Computing averages"]
-            },
-            {
-              "id": "1.1.2",
-              "name": "Statistical Calculations",
-              "description": "Computing statistical measures such as mean, median, standard deviation, and correlations",
-              "categoryId": "1.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Calculating variance", "Computing regression coefficients", "Determining confidence intervals"]
-            },
-            {
-              "id": "1.1.3",
-              "name": "Spreadsheet Formula Evaluation",
-              "description": "Executing cell formulas and functions in spreadsheet applications",
-              "categoryId": "1.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Running VLOOKUP functions", "Evaluating nested IF statements", "Computing SUMIF aggregations"]
-            },
-            {
-              "id": "1.1.4",
-              "name": "Financial Calculations",
-              "description": "Computing interest rates, amortization schedules, and financial ratios",
-              "categoryId": "1.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Calculating compound interest", "Computing loan amortization", "Determining NPV and IRR"]
-            },
-            {
-              "id": "1.1.5",
-              "name": "Matrix and Linear Algebra Operations",
-              "description": "Performing matrix multiplication, inversion, eigenvalue decomposition, and vector operations",
-              "categoryId": "1.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Multiplying matrices", "Computing determinants", "Solving systems of linear equations"]
-            }
-          ]
+          "activities": []
         },
         {
           "id": "1.2",
           "name": "Data Transformation",
           "description": "ETL, format conversion, database operations",
-          "activities": [
-            {
-              "id": "1.2.1",
-              "name": "Data Format Conversion",
-              "description": "Converting data between formats such as JSON, XML, CSV, and proprietary formats",
-              "categoryId": "1.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Converting CSV to JSON", "Transforming XML to relational tables", "Parsing fixed-width to delimited"]
-            },
-            {
-              "id": "1.2.2",
-              "name": "Database Query Execution",
-              "description": "Running SQL or NoSQL queries to retrieve, filter, and aggregate data",
-              "categoryId": "1.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Executing SELECT statements", "Running aggregate queries", "Performing JOIN operations"]
-            },
-            {
-              "id": "1.2.3",
-              "name": "ETL Pipeline Execution",
-              "description": "Running extract, transform, and load processes to move data between systems",
-              "categoryId": "1.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Extracting data from source systems", "Applying transformation rules", "Loading into data warehouses"]
-            },
-            {
-              "id": "1.2.4",
-              "name": "Data Deduplication and Cleansing",
-              "description": "Identifying and removing duplicate records and correcting data inconsistencies",
-              "categoryId": "1.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Removing duplicate entries", "Standardizing address formats", "Correcting data type mismatches"]
-            },
-            {
-              "id": "1.2.5",
-              "name": "Schema Mapping and Migration",
-              "description": "Transforming data structures from one schema to another",
-              "categoryId": "1.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Mapping legacy schemas to new formats", "Converting database schemas", "Migrating API data structures"]
-            }
-          ]
+          "activities": []
         },
         {
           "id": "1.3",
           "name": "Formal Verification",
           "description": "Code compilation, syntax checking, validation",
-          "activities": [
-            {
-              "id": "1.3.1",
-              "name": "Code Compilation",
-              "description": "Translating source code into executable machine code or bytecode",
-              "categoryId": "1.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Compiling C++ to binary", "Transpiling TypeScript to JavaScript", "Building Java bytecode"]
-            },
-            {
-              "id": "1.3.2",
-              "name": "Syntax Validation",
-              "description": "Checking code or data for syntactic correctness against grammar rules",
-              "categoryId": "1.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Linting source code", "Validating JSON syntax", "Checking XML well-formedness"]
-            },
-            {
-              "id": "1.3.3",
-              "name": "Schema Validation",
-              "description": "Verifying data conforms to a defined schema or specification",
-              "categoryId": "1.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Validating JSON against JSON Schema", "Checking XML against XSD", "Verifying API payloads"]
-            },
-            {
-              "id": "1.3.4",
-              "name": "Type Checking",
-              "description": "Verifying type correctness in statically or dynamically typed programs",
-              "categoryId": "1.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Running TypeScript type checker", "Executing mypy for Python", "Performing Rust borrow checking"]
-            },
-            {
-              "id": "1.3.5",
-              "name": "Formal Proof Verification",
-              "description": "Checking mathematical or logical proofs for correctness using proof assistants",
-              "categoryId": "1.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Verifying Coq proofs", "Checking Isabelle theorems", "Validating Lean proofs"]
-            },
-            {
-              "id": "1.3.6",
-              "name": "Checksum and Hash Verification",
-              "description": "Computing and comparing cryptographic hashes to verify data integrity",
-              "categoryId": "1.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Verifying file checksums", "Computing SHA-256 hashes", "Validating digital signatures"]
-            }
-          ]
+          "activities": []
         },
         {
           "id": "1.4",
           "name": "Algorithmic Execution",
           "description": "Running defined procedures, sorting, searching",
-          "activities": [
-            {
-              "id": "1.4.1",
-              "name": "Sorting and Ordering",
-              "description": "Arranging data elements according to specified criteria",
-              "categoryId": "1.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Sorting lists alphabetically", "Ordering records by date", "Ranking items by score"]
-            },
-            {
-              "id": "1.4.2",
-              "name": "Search and Retrieval",
-              "description": "Finding specific items within data structures using search algorithms",
-              "categoryId": "1.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Binary search in arrays", "Hash table lookups", "Tree traversal searches"]
-            },
-            {
-              "id": "1.4.3",
-              "name": "Graph Traversal and Pathfinding",
-              "description": "Navigating graph structures to find paths or visit nodes",
-              "categoryId": "1.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Finding shortest paths", "Detecting graph cycles", "Computing minimum spanning trees"]
-            },
-            {
-              "id": "1.4.4",
-              "name": "Encryption and Decryption",
-              "description": "Applying cryptographic algorithms to encode or decode data",
-              "categoryId": "1.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["AES encryption of files", "RSA key operations", "Decrypting TLS traffic"]
-            },
-            {
-              "id": "1.4.5",
-              "name": "Compression and Decompression",
-              "description": "Reducing data size using compression algorithms and restoring original data",
-              "categoryId": "1.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["ZIP file compression", "GZIP stream encoding", "Video codec encoding"]
-            },
-            {
-              "id": "1.4.6",
-              "name": "Scheduling and Optimization",
-              "description": "Executing algorithms to find optimal arrangements or schedules",
-              "categoryId": "1.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Job shop scheduling", "Bin packing optimization", "Constraint satisfaction solving"]
-            }
-          ]
+          "activities": []
         }
       ]
     },
@@ -453,7 +97,10 @@
       "description": "Combining, analyzing, and transforming information from multiple sources to produce new informational outputs",
       "abstractionScore": 9,
       "typicalErrorTolerance": "medium-high",
-      "estimatedAgiWave": [1, 2],
+      "estimatedAgiWave": [
+        1,
+        2
+      ],
       "primaryAiSystemType": "Language models, RAG",
       "inclusionCriteria": [
         "Primary input/output are information (text, data, documents)",
@@ -471,468 +118,31 @@
           "id": "2.1",
           "name": "Research & Analysis",
           "description": "Literature review, market research, data analysis",
-          "activities": [
-            {
-              "id": "2.1.1",
-              "name": "Literature Review",
-              "description": "Systematically searching, reading, and synthesizing published research on a topic",
-              "categoryId": "2.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 3,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Searching academic databases", "Summarizing research papers", "Identifying research gaps"]
-            },
-            {
-              "id": "2.1.2",
-              "name": "Market Research",
-              "description": "Gathering and analyzing information about markets, competitors, and consumer behavior",
-              "categoryId": "2.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 3,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "data",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Competitor analysis", "Consumer trend identification", "Market sizing estimates"]
-            },
-            {
-              "id": "2.1.3",
-              "name": "Statistical Data Analysis",
-              "description": "Applying statistical methods to datasets to extract insights and test hypotheses",
-              "categoryId": "2.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Running regression analyses", "Hypothesis testing", "Creating statistical models"]
-            },
-            {
-              "id": "2.1.4",
-              "name": "Due Diligence Research",
-              "description": "Comprehensive investigation of companies, individuals, or assets for business decisions",
-              "categoryId": "2.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 3,
-                "feedbackSpeed": 3,
-                "socialComplexity": 0,
-                "aiCapability": "partial",
-                "bottleneck": "data",
-                "agiWave": 2
-              },
-              "exampleTasks": ["Background checks", "Financial record analysis", "Risk assessment compilation"]
-            },
-            {
-              "id": "2.1.5",
-              "name": "Survey Analysis",
-              "description": "Processing and interpreting responses from surveys and questionnaires",
-              "categoryId": "2.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Coding open-ended responses", "Cross-tabulation analysis", "Generating survey reports"]
-            }
-          ]
+          "activities": []
         },
         {
           "id": "2.2",
           "name": "Report Generation",
           "description": "Writing reports, summaries, documentation",
-          "activities": [
-            {
-              "id": "2.2.1",
-              "name": "Technical Documentation",
-              "description": "Creating written documentation explaining technical systems, processes, or products",
-              "categoryId": "2.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 3,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Writing API documentation", "Creating user manuals", "Documenting code"]
-            },
-            {
-              "id": "2.2.2",
-              "name": "Business Report Writing",
-              "description": "Composing formal reports on business performance, projects, or initiatives",
-              "categoryId": "2.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 3,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Quarterly performance reports", "Project status reports", "Annual reviews"]
-            },
-            {
-              "id": "2.2.3",
-              "name": "Executive Summary Creation",
-              "description": "Distilling lengthy documents or data into concise summaries for decision-makers",
-              "categoryId": "2.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Summarizing research findings", "Creating brief reports", "Abstracting long documents"]
-            },
-            {
-              "id": "2.2.4",
-              "name": "Meeting Minutes Documentation",
-              "description": "Recording and formatting key points, decisions, and action items from meetings",
-              "categoryId": "2.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Transcribing meetings", "Extracting action items", "Formatting meeting notes"]
-            },
-            {
-              "id": "2.2.5",
-              "name": "Research Paper Writing",
-              "description": "Drafting academic or scientific papers presenting research methodology and findings",
-              "categoryId": "2.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 4,
-                "socialComplexity": 0,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 2
-              },
-              "exampleTasks": ["Writing methodology sections", "Drafting literature reviews", "Formatting citations"]
-            }
-          ]
+          "activities": []
         },
         {
           "id": "2.3",
           "name": "Information Curation",
           "description": "Organizing, tagging, categorizing information",
-          "activities": [
-            {
-              "id": "2.3.1",
-              "name": "Content Tagging and Labeling",
-              "description": "Assigning descriptive tags, keywords, or labels to content for retrieval",
-              "categoryId": "2.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Tagging articles with keywords", "Labeling images", "Categorizing support tickets"]
-            },
-            {
-              "id": "2.3.2",
-              "name": "Document Classification",
-              "description": "Sorting documents into predefined categories based on content",
-              "categoryId": "2.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Email categorization", "Legal document sorting", "Filing records"]
-            },
-            {
-              "id": "2.3.3",
-              "name": "Knowledge Base Maintenance",
-              "description": "Organizing, updating, and maintaining repositories of organizational knowledge",
-              "categoryId": "2.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Updating wiki articles", "Organizing FAQ entries", "Linking related content"]
-            },
-            {
-              "id": "2.3.4",
-              "name": "Metadata Management",
-              "description": "Creating and maintaining descriptive information about data assets",
-              "categoryId": "2.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Data cataloging", "Schema documentation", "Asset tagging"]
-            },
-            {
-              "id": "2.3.5",
-              "name": "Content Deduplication",
-              "description": "Identifying and resolving duplicate or near-duplicate content across systems",
-              "categoryId": "2.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Finding duplicate records", "Merging similar entries", "Identifying redundant files"]
-            }
-          ]
+          "activities": []
         },
         {
           "id": "2.4",
           "name": "Pattern Recognition",
           "description": "Identifying trends, anomalies, correlations",
-          "activities": [
-            {
-              "id": "2.4.1",
-              "name": "Trend Analysis",
-              "description": "Identifying and interpreting patterns of change over time in data",
-              "categoryId": "2.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 3,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Sales trend forecasting", "Social media trend detection", "Economic indicator tracking"]
-            },
-            {
-              "id": "2.4.2",
-              "name": "Anomaly Detection",
-              "description": "Identifying unusual patterns, outliers, or deviations in data",
-              "categoryId": "2.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Fraud detection", "System error identification", "Quality control alerts"]
-            },
-            {
-              "id": "2.4.3",
-              "name": "Correlation Analysis",
-              "description": "Discovering and measuring relationships between variables in datasets",
-              "categoryId": "2.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Feature correlation in datasets", "Cause-effect hypothesis generation", "Variable relationship mapping"]
-            },
-            {
-              "id": "2.4.4",
-              "name": "Sentiment Analysis",
-              "description": "Determining emotional tone and opinion from text data",
-              "categoryId": "2.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Social media sentiment tracking", "Customer review analysis", "Brand perception monitoring"]
-            },
-            {
-              "id": "2.4.5",
-              "name": "Clustering and Segmentation",
-              "description": "Grouping data points or entities based on shared characteristics",
-              "categoryId": "2.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Customer segmentation", "Topic clustering", "Behavioral grouping"]
-            },
-            {
-              "id": "2.4.6",
-              "name": "Predictive Pattern Modeling",
-              "description": "Building models to predict future outcomes based on historical patterns",
-              "categoryId": "2.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 4,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "data",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Demand forecasting", "Churn prediction", "Risk scoring models"]
-            }
-          ]
+          "activities": []
         },
         {
           "id": "2.5",
           "name": "Recommendation Systems",
           "description": "Evaluating options, producing ranked suggestions",
-          "activities": [
-            {
-              "id": "2.5.1",
-              "name": "Product Recommendations",
-              "description": "Suggesting products or services based on user preferences and behavior",
-              "categoryId": "2.5",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["E-commerce product suggestions", "Cross-selling recommendations", "Personalized catalogs"]
-            },
-            {
-              "id": "2.5.2",
-              "name": "Content Recommendations",
-              "description": "Suggesting articles, videos, or media based on user interests",
-              "categoryId": "2.5",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["News article suggestions", "Video recommendations", "Reading lists"]
-            },
-            {
-              "id": "2.5.3",
-              "name": "Decision Support Analysis",
-              "description": "Providing ranked options and analysis to support human decision-making",
-              "categoryId": "2.5",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 1,
-                "aiCapability": "near_solved",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Vendor comparison matrices", "Investment option ranking", "Scenario analysis"]
-            },
-            {
-              "id": "2.5.4",
-              "name": "Resource Allocation Suggestions",
-              "description": "Recommending optimal distribution of resources based on constraints and goals",
-              "categoryId": "2.5",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 3,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Budget allocation recommendations", "Staff scheduling suggestions", "Inventory optimization"]
-            },
-            {
-              "id": "2.5.5",
-              "name": "Talent Matching",
-              "description": "Matching candidates to job requirements or team compositions",
-              "categoryId": "2.5",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 3,
-                "socialComplexity": 1,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 2
-              },
-              "exampleTasks": ["Resume-job matching", "Team composition suggestions", "Skill gap analysis"]
-            },
-            {
-              "id": "2.5.6",
-              "name": "Diagnostic Recommendations",
-              "description": "Suggesting likely diagnoses or solutions based on symptoms or indicators",
-              "categoryId": "2.5",
-              "scores": {
-                "abstraction": 2,
-                "errorTolerance": 3,
-                "feedbackSpeed": 2,
-                "socialComplexity": 1,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 2
-              },
-              "exampleTasks": ["Medical differential diagnosis support", "IT troubleshooting suggestions", "Equipment fault diagnosis"]
-            }
-          ]
+          "activities": []
         }
       ]
     },
@@ -942,7 +152,10 @@
       "description": "Producing novel artifacts (text, images, code, music, designs) that did not exist before",
       "abstractionScore": 8,
       "typicalErrorTolerance": "high",
-      "estimatedAgiWave": [1, 2],
+      "estimatedAgiWave": [
+        1,
+        2
+      ],
       "primaryAiSystemType": "Generative AI",
       "inclusionCriteria": [
         "Output is a novel artifact",
@@ -960,452 +173,31 @@
           "id": "3.1",
           "name": "Textual Creation",
           "description": "Writing fiction, copy, scripts, articles",
-          "activities": [
-            {
-              "id": "3.1.1",
-              "name": "Fiction Writing",
-              "description": "Creating original narrative prose including novels, short stories, and creative nonfiction",
-              "categoryId": "3.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 3,
-                "socialComplexity": 0,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Writing novel chapters", "Developing character arcs", "Crafting dialogue", "World-building"]
-            },
-            {
-              "id": "3.1.2",
-              "name": "Copywriting",
-              "description": "Writing persuasive marketing and advertising content for products, services, and brands",
-              "categoryId": "3.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 1,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Writing ad headlines", "Creating landing page copy", "Drafting email campaigns", "Writing product descriptions"]
-            },
-            {
-              "id": "3.1.3",
-              "name": "Screenwriting",
-              "description": "Writing scripts for film, television, video content, and stage productions",
-              "categoryId": "3.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 3,
-                "socialComplexity": 1,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Writing screenplay scenes", "Developing plot outlines", "Creating dialogue", "Writing stage directions"]
-            },
-            {
-              "id": "3.1.4",
-              "name": "Journalism",
-              "description": "Researching and writing news articles, features, and investigative pieces",
-              "categoryId": "3.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 1,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Writing news articles", "Conducting interviews", "Fact-checking stories", "Writing opinion pieces"]
-            },
-            {
-              "id": "3.1.5",
-              "name": "Technical Writing",
-              "description": "Creating documentation, manuals, specifications, and instructional content",
-              "categoryId": "3.1",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Writing user manuals", "Creating API documentation", "Drafting specifications", "Writing tutorials"]
-            }
-          ]
+          "activities": []
         },
         {
           "id": "3.2",
           "name": "Visual Design",
           "description": "Graphic design, UI/UX, illustration",
-          "activities": [
-            {
-              "id": "3.2.1",
-              "name": "Graphic Design",
-              "description": "Creating visual compositions for print and digital media including layouts, posters, and marketing materials",
-              "categoryId": "3.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 1,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Designing marketing materials", "Creating social media graphics", "Layout design", "Typography selection"]
-            },
-            {
-              "id": "3.2.2",
-              "name": "UI/UX Design",
-              "description": "Designing user interfaces and experiences for digital products including websites and applications",
-              "categoryId": "3.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 2,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Creating wireframes", "Designing interface mockups", "Prototyping interactions", "User flow mapping"]
-            },
-            {
-              "id": "3.2.3",
-              "name": "Digital Illustration",
-              "description": "Creating original artwork and illustrations using digital tools",
-              "categoryId": "3.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Creating character designs", "Drawing concept art", "Editorial illustration", "Icon design"]
-            },
-            {
-              "id": "3.2.4",
-              "name": "Brand Identity Design",
-              "description": "Developing comprehensive visual identity systems including logos, color palettes, and style guides",
-              "categoryId": "3.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 3,
-                "socialComplexity": 2,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Logo design", "Creating brand guidelines", "Color palette development", "Typography systems"]
-            },
-            {
-              "id": "3.2.5",
-              "name": "Motion Graphics",
-              "description": "Creating animated visual content for video, web, and interactive media",
-              "categoryId": "3.2",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 1,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Creating title sequences", "Animating infographics", "Video transitions", "Animated logos"]
-            }
-          ]
+          "activities": []
         },
         {
           "id": "3.3",
           "name": "Software Development",
           "description": "Writing code, system architecture, algorithms",
-          "activities": [
-            {
-              "id": "3.3.1",
-              "name": "Application Development",
-              "description": "Writing code for software applications including web, mobile, and desktop programs",
-              "categoryId": "3.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 1,
-                "aiCapability": "near_solved",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Writing application features", "Implementing business logic", "Building user interfaces", "Integrating APIs"]
-            },
-            {
-              "id": "3.3.2",
-              "name": "System Architecture Design",
-              "description": "Designing high-level structure of software systems including components, interfaces, and data flows",
-              "categoryId": "3.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 3,
-                "socialComplexity": 2,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Designing microservices architecture", "Creating system diagrams", "Defining API contracts", "Capacity planning"]
-            },
-            {
-              "id": "3.3.3",
-              "name": "Algorithm Development",
-              "description": "Designing and implementing computational algorithms and data structures",
-              "categoryId": "3.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "near_solved",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Implementing sorting algorithms", "Designing optimization routines", "Creating search algorithms", "Developing ML models"]
-            },
-            {
-              "id": "3.3.4",
-              "name": "Database Design",
-              "description": "Designing database schemas, data models, and query optimization",
-              "categoryId": "3.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 1,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Creating data models", "Writing database schemas", "Query optimization", "Data migration design"]
-            },
-            {
-              "id": "3.3.5",
-              "name": "DevOps & Infrastructure",
-              "description": "Designing and implementing deployment pipelines, cloud infrastructure, and automation",
-              "categoryId": "3.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 2,
-                "feedbackSpeed": 2,
-                "socialComplexity": 1,
-                "aiCapability": "partial",
-                "bottleneck": "adaptation",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Writing CI/CD pipelines", "Infrastructure as code", "Container orchestration", "Monitoring setup"]
-            },
-            {
-              "id": "3.3.6",
-              "name": "Code Review & Refactoring",
-              "description": "Reviewing code quality, identifying improvements, and restructuring existing code",
-              "categoryId": "3.3",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 1,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Reviewing pull requests", "Identifying code smells", "Refactoring legacy code", "Suggesting improvements"]
-            }
-          ]
+          "activities": []
         },
         {
           "id": "3.4",
           "name": "Musical Composition",
           "description": "Creating music, sound design, audio production",
-          "activities": [
-            {
-              "id": "3.4.1",
-              "name": "Song Composition",
-              "description": "Creating original musical compositions including melodies, harmonies, and arrangements",
-              "categoryId": "3.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 0,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Writing melodies", "Composing chord progressions", "Arranging instruments", "Writing lyrics"]
-            },
-            {
-              "id": "3.4.2",
-              "name": "Sound Design",
-              "description": "Creating and manipulating audio elements for media including synthesized sounds and effects",
-              "categoryId": "3.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 0,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Creating synthesizer patches", "Designing sound effects", "Foley creation", "Ambient soundscapes"]
-            },
-            {
-              "id": "3.4.3",
-              "name": "Audio Production & Mixing",
-              "description": "Recording, editing, mixing, and mastering audio tracks for release",
-              "categoryId": "3.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 1,
-                "socialComplexity": 1,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Mixing multitrack recordings", "Audio mastering", "EQ and compression", "Vocal processing"]
-            },
-            {
-              "id": "3.4.4",
-              "name": "Film & Game Scoring",
-              "description": "Composing original music for visual media including films, games, and advertisements",
-              "categoryId": "3.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 2,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Scoring film scenes", "Creating game music", "Writing jingles", "Composing background music"]
-            },
-            {
-              "id": "3.4.5",
-              "name": "Podcast & Audio Content Production",
-              "description": "Producing spoken-word audio content including editing, post-production, and publishing",
-              "categoryId": "3.4",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 2,
-                "socialComplexity": 1,
-                "aiCapability": "near_solved",
-                "bottleneck": "none",
-                "agiWave": 1
-              },
-              "exampleTasks": ["Editing podcast episodes", "Audio cleanup", "Adding intro/outro music", "Transcript generation"]
-            }
-          ]
+          "activities": []
         },
         {
           "id": "3.5",
           "name": "Strategic Innovation",
           "description": "Business strategy, product design, invention",
-          "activities": [
-            {
-              "id": "3.5.1",
-              "name": "Business Strategy Development",
-              "description": "Formulating organizational strategies including market positioning, competitive analysis, and growth planning",
-              "categoryId": "3.5",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 4,
-                "socialComplexity": 2,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 2
-              },
-              "exampleTasks": ["SWOT analysis", "Competitive positioning", "Growth strategy planning", "Market entry analysis"]
-            },
-            {
-              "id": "3.5.2",
-              "name": "Product Design",
-              "description": "Conceptualizing and designing new products including features, specifications, and user needs",
-              "categoryId": "3.5",
-              "scores": {
-                "abstraction": 2,
-                "errorTolerance": 1,
-                "feedbackSpeed": 3,
-                "socialComplexity": 2,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 2
-              },
-              "exampleTasks": ["Writing product requirements", "Feature prioritization", "User research synthesis", "Roadmap planning"]
-            },
-            {
-              "id": "3.5.3",
-              "name": "Innovation & Invention",
-              "description": "Generating novel ideas, concepts, and solutions for technical or business problems",
-              "categoryId": "3.5",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 4,
-                "socialComplexity": 1,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 2
-              },
-              "exampleTasks": ["Brainstorming sessions", "Patent development", "Technology scouting", "Concept validation"]
-            },
-            {
-              "id": "3.5.4",
-              "name": "Service Design",
-              "description": "Designing end-to-end service experiences including touchpoints, processes, and customer journeys",
-              "categoryId": "3.5",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 3,
-                "socialComplexity": 2,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 2
-              },
-              "exampleTasks": ["Customer journey mapping", "Service blueprinting", "Touchpoint design", "Process optimization"]
-            },
-            {
-              "id": "3.5.5",
-              "name": "Business Model Innovation",
-              "description": "Developing and iterating on business models including revenue streams, value propositions, and partnerships",
-              "categoryId": "3.5",
-              "scores": {
-                "abstraction": 1,
-                "errorTolerance": 1,
-                "feedbackSpeed": 4,
-                "socialComplexity": 2,
-                "aiCapability": "partial",
-                "bottleneck": "reasoning",
-                "agiWave": 2
-              },
-              "exampleTasks": ["Business model canvas development", "Revenue model design", "Partnership strategy", "Value proposition design"]
-            }
-          ]
+          "activities": []
         }
       ]
     },
@@ -1467,7 +259,10 @@
       "description": "Providing services to others by following established procedures and protocols",
       "abstractionScore": 6,
       "typicalErrorTolerance": "medium",
-      "estimatedAgiWave": [2, 3],
+      "estimatedAgiWave": [
+        2,
+        3
+      ],
       "primaryAiSystemType": "Multimodal AI + workflows",
       "inclusionCriteria": [
         "Follows defined procedures or protocols",
@@ -1519,7 +314,10 @@
       "description": "Activities primarily focused on human wellbeing, emotional support, and relationship maintenance",
       "abstractionScore": 5,
       "typicalErrorTolerance": "low",
-      "estimatedAgiWave": [3, 4],
+      "estimatedAgiWave": [
+        3,
+        4
+      ],
       "primaryAiSystemType": "Affective computing",
       "inclusionCriteria": [
         "Primary purpose is human wellbeing or relationship",
@@ -1577,7 +375,10 @@
       "description": "Physical manipulation and movement within controlled, predictable environments",
       "abstractionScore": 4,
       "typicalErrorTolerance": "variable",
-      "estimatedAgiWave": [2, 3],
+      "estimatedAgiWave": [
+        2,
+        3
+      ],
       "primaryAiSystemType": "Industrial robotics",
       "inclusionCriteria": [
         "Primary activity involves physical manipulation or operation",
@@ -1629,7 +430,10 @@
       "description": "Physical manipulation requiring expertise, dexterity, and judgment",
       "abstractionScore": 3,
       "typicalErrorTolerance": "low-medium",
-      "estimatedAgiWave": [3, 4],
+      "estimatedAgiWave": [
+        3,
+        4
+      ],
       "primaryAiSystemType": "Dexterous manipulation",
       "inclusionCriteria": [
         "Requires acquired physical skill and expertise",
@@ -1681,7 +485,10 @@
       "description": "Moving through and interacting with unstructured, dynamic environments",
       "abstractionScore": 2,
       "typicalErrorTolerance": "low",
-      "estimatedAgiWave": [2, 4],
+      "estimatedAgiWave": [
+        2,
+        4
+      ],
       "primaryAiSystemType": "Mobile robotics, AV",
       "inclusionCriteria": [
         "Primary activity is locomotion or navigation",
@@ -1733,7 +540,10 @@
       "description": "Activities for maintaining one's own body, meeting basic human needs, and personal self-expression through physical activity",
       "abstractionScore": 1,
       "typicalErrorTolerance": "variable",
-      "estimatedAgiWave": [3, 4],
+      "estimatedAgiWave": [
+        3,
+        4
+      ],
       "primaryAiSystemType": "General-purpose home robots",
       "inclusionCriteria": [
         "Activity is self-directed (for oneself)",

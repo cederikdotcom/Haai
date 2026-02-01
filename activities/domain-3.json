@@ -1,0 +1,553 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "domainId": 3,
+  "domainName": "Creative Generation",
+  "activities": [
+    {
+      "id": "3.1.1",
+      "name": "Fiction Writing",
+      "description": "Creating original narrative prose including novels, short stories, and creative nonfiction",
+      "categoryId": "3.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 3,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Writing novel chapters",
+        "Developing character arcs",
+        "Crafting dialogue",
+        "World-building"
+      ]
+    },
+    {
+      "id": "3.1.2",
+      "name": "Copywriting",
+      "description": "Writing persuasive marketing and advertising content for products, services, and brands",
+      "categoryId": "3.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Writing ad headlines",
+        "Creating landing page copy",
+        "Drafting email campaigns",
+        "Writing product descriptions"
+      ]
+    },
+    {
+      "id": "3.1.3",
+      "name": "Screenwriting",
+      "description": "Writing scripts for film, television, video content, and stage productions",
+      "categoryId": "3.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 3,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Writing screenplay scenes",
+        "Developing plot outlines",
+        "Creating dialogue",
+        "Writing stage directions"
+      ]
+    },
+    {
+      "id": "3.1.4",
+      "name": "Journalism",
+      "description": "Researching and writing news articles, features, and investigative pieces",
+      "categoryId": "3.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Writing news articles",
+        "Conducting interviews",
+        "Fact-checking stories",
+        "Writing opinion pieces"
+      ]
+    },
+    {
+      "id": "3.1.5",
+      "name": "Technical Writing",
+      "description": "Creating documentation, manuals, specifications, and instructional content",
+      "categoryId": "3.1",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Writing user manuals",
+        "Creating API documentation",
+        "Drafting specifications",
+        "Writing tutorials"
+      ]
+    },
+    {
+      "id": "3.2.1",
+      "name": "Graphic Design",
+      "description": "Creating visual compositions for print and digital media including layouts, posters, and marketing materials",
+      "categoryId": "3.2",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Designing marketing materials",
+        "Creating social media graphics",
+        "Layout design",
+        "Typography selection"
+      ]
+    },
+    {
+      "id": "3.2.2",
+      "name": "UI/UX Design",
+      "description": "Designing user interfaces and experiences for digital products including websites and applications",
+      "categoryId": "3.2",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Creating wireframes",
+        "Designing interface mockups",
+        "Prototyping interactions",
+        "User flow mapping"
+      ]
+    },
+    {
+      "id": "3.2.3",
+      "name": "Digital Illustration",
+      "description": "Creating original artwork and illustrations using digital tools",
+      "categoryId": "3.2",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Creating character designs",
+        "Drawing concept art",
+        "Editorial illustration",
+        "Icon design"
+      ]
+    },
+    {
+      "id": "3.2.4",
+      "name": "Brand Identity Design",
+      "description": "Developing comprehensive visual identity systems including logos, color palettes, and style guides",
+      "categoryId": "3.2",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 3,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Logo design",
+        "Creating brand guidelines",
+        "Color palette development",
+        "Typography systems"
+      ]
+    },
+    {
+      "id": "3.2.5",
+      "name": "Motion Graphics",
+      "description": "Creating animated visual content for video, web, and interactive media",
+      "categoryId": "3.2",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Creating title sequences",
+        "Animating infographics",
+        "Video transitions",
+        "Animated logos"
+      ]
+    },
+    {
+      "id": "3.3.1",
+      "name": "Application Development",
+      "description": "Writing code for software applications including web, mobile, and desktop programs",
+      "categoryId": "3.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Writing application features",
+        "Implementing business logic",
+        "Building user interfaces",
+        "Integrating APIs"
+      ]
+    },
+    {
+      "id": "3.3.2",
+      "name": "System Architecture Design",
+      "description": "Designing high-level structure of software systems including components, interfaces, and data flows",
+      "categoryId": "3.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 3,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Designing microservices architecture",
+        "Creating system diagrams",
+        "Defining API contracts",
+        "Capacity planning"
+      ]
+    },
+    {
+      "id": "3.3.3",
+      "name": "Algorithm Development",
+      "description": "Designing and implementing computational algorithms and data structures",
+      "categoryId": "3.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "near_solved",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Implementing sorting algorithms",
+        "Designing optimization routines",
+        "Creating search algorithms",
+        "Developing ML models"
+      ]
+    },
+    {
+      "id": "3.3.4",
+      "name": "Database Design",
+      "description": "Designing database schemas, data models, and query optimization",
+      "categoryId": "3.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Creating data models",
+        "Writing database schemas",
+        "Query optimization",
+        "Data migration design"
+      ]
+    },
+    {
+      "id": "3.3.5",
+      "name": "DevOps & Infrastructure",
+      "description": "Designing and implementing deployment pipelines, cloud infrastructure, and automation",
+      "categoryId": "3.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 2,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "adaptation",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Writing CI/CD pipelines",
+        "Infrastructure as code",
+        "Container orchestration",
+        "Monitoring setup"
+      ]
+    },
+    {
+      "id": "3.3.6",
+      "name": "Code Review & Refactoring",
+      "description": "Reviewing code quality, identifying improvements, and restructuring existing code",
+      "categoryId": "3.3",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Reviewing pull requests",
+        "Identifying code smells",
+        "Refactoring legacy code",
+        "Suggesting improvements"
+      ]
+    },
+    {
+      "id": "3.4.1",
+      "name": "Song Composition",
+      "description": "Creating original musical compositions including melodies, harmonies, and arrangements",
+      "categoryId": "3.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Writing melodies",
+        "Composing chord progressions",
+        "Arranging instruments",
+        "Writing lyrics"
+      ]
+    },
+    {
+      "id": "3.4.2",
+      "name": "Sound Design",
+      "description": "Creating and manipulating audio elements for media including synthesized sounds and effects",
+      "categoryId": "3.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 0,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Creating synthesizer patches",
+        "Designing sound effects",
+        "Foley creation",
+        "Ambient soundscapes"
+      ]
+    },
+    {
+      "id": "3.4.3",
+      "name": "Audio Production & Mixing",
+      "description": "Recording, editing, mixing, and mastering audio tracks for release",
+      "categoryId": "3.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 1,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Mixing multitrack recordings",
+        "Audio mastering",
+        "EQ and compression",
+        "Vocal processing"
+      ]
+    },
+    {
+      "id": "3.4.4",
+      "name": "Film & Game Scoring",
+      "description": "Composing original music for visual media including films, games, and advertisements",
+      "categoryId": "3.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Scoring film scenes",
+        "Creating game music",
+        "Writing jingles",
+        "Composing background music"
+      ]
+    },
+    {
+      "id": "3.4.5",
+      "name": "Podcast & Audio Content Production",
+      "description": "Producing spoken-word audio content including editing, post-production, and publishing",
+      "categoryId": "3.4",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 2,
+        "socialComplexity": 1,
+        "aiCapability": "near_solved",
+        "bottleneck": "none",
+        "agiWave": 1
+      },
+      "exampleTasks": [
+        "Editing podcast episodes",
+        "Audio cleanup",
+        "Adding intro/outro music",
+        "Transcript generation"
+      ]
+    },
+    {
+      "id": "3.5.1",
+      "name": "Business Strategy Development",
+      "description": "Formulating organizational strategies including market positioning, competitive analysis, and growth planning",
+      "categoryId": "3.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 4,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "SWOT analysis",
+        "Competitive positioning",
+        "Growth strategy planning",
+        "Market entry analysis"
+      ]
+    },
+    {
+      "id": "3.5.2",
+      "name": "Product Design",
+      "description": "Conceptualizing and designing new products including features, specifications, and user needs",
+      "categoryId": "3.5",
+      "scores": {
+        "abstraction": 2,
+        "errorTolerance": 1,
+        "feedbackSpeed": 3,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Writing product requirements",
+        "Feature prioritization",
+        "User research synthesis",
+        "Roadmap planning"
+      ]
+    },
+    {
+      "id": "3.5.3",
+      "name": "Innovation & Invention",
+      "description": "Generating novel ideas, concepts, and solutions for technical or business problems",
+      "categoryId": "3.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 4,
+        "socialComplexity": 1,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Brainstorming sessions",
+        "Patent development",
+        "Technology scouting",
+        "Concept validation"
+      ]
+    },
+    {
+      "id": "3.5.4",
+      "name": "Service Design",
+      "description": "Designing end-to-end service experiences including touchpoints, processes, and customer journeys",
+      "categoryId": "3.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 3,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Customer journey mapping",
+        "Service blueprinting",
+        "Touchpoint design",
+        "Process optimization"
+      ]
+    },
+    {
+      "id": "3.5.5",
+      "name": "Business Model Innovation",
+      "description": "Developing and iterating on business models including revenue streams, value propositions, and partnerships",
+      "categoryId": "3.5",
+      "scores": {
+        "abstraction": 1,
+        "errorTolerance": 1,
+        "feedbackSpeed": 4,
+        "socialComplexity": 2,
+        "aiCapability": "partial",
+        "bottleneck": "reasoning",
+        "agiWave": 2
+      },
+      "exampleTasks": [
+        "Business model canvas development",
+        "Revenue model design",
+        "Partnership strategy",
+        "Value proposition design"
+      ]
+    }
+  ]
+}
