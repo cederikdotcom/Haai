@@ -148,111 +148,203 @@
     ]
   },
   "atusMapping": {
-    "description": "Mapping ATUS activity codes to HAAI domains",
+    "description": "Mapping ATUS activity codes to HAAI domains with time-spent data",
+    "dataSource": "Bureau of Labor Statistics, American Time Use Survey 2023",
+    "dataUrl": "https://www.bls.gov/tus/",
+    "population": "Civilian noninstitutional population age 15+",
+    "timeUnit": "Average minutes per day",
     "mappings": [
       {
         "atusCode": "01",
         "atusCategory": "Personal Care Activities",
         "haaiCategories": ["10.1", "10.3"],
-        "notes": "Includes sleeping, grooming, health-related self-care"
+        "notes": "Includes sleeping, grooming, health-related self-care",
+        "avgMinutesPerDay": 570,
+        "participationRate": 1.0,
+        "breakdown": {
+          "sleeping": 525,
+          "grooming": 40,
+          "healthRelatedSelfCare": 5
+        }
       },
       {
         "atusCode": "02",
         "atusCategory": "Household Activities",
         "haaiCategories": ["10.2", "10.4"],
-        "notes": "Housework, cooking, lawn/garden, household management"
+        "notes": "Housework, cooking, lawn/garden, household management",
+        "avgMinutesPerDay": 108,
+        "participationRate": 0.82,
+        "breakdown": {
+          "foodPrepAndCleanup": 37,
+          "housework": 28,
+          "lawnAndGarden": 15,
+          "householdManagement": 10,
+          "interiorMaintenance": 8,
+          "other": 10
+        }
       },
       {
         "atusCode": "03",
         "atusCategory": "Caring for and Helping Household Members",
         "haaiCategories": ["6.1", "6.2"],
-        "notes": "Childcare, adult care within household"
+        "notes": "Childcare, adult care within household",
+        "avgMinutesPerDay": 30,
+        "participationRate": 0.22,
+        "breakdown": {
+          "childcare": 25,
+          "adultCare": 3,
+          "helpingOthers": 2
+        }
       },
       {
         "atusCode": "04",
         "atusCategory": "Caring for and Helping Non-Household Members",
         "haaiCategories": ["6.1", "6.2", "6.5"],
-        "notes": "Care for family/friends outside household"
+        "notes": "Care for family/friends outside household",
+        "avgMinutesPerDay": 12,
+        "participationRate": 0.10
       },
       {
         "atusCode": "05",
         "atusCategory": "Work and Work-Related Activities",
         "haaiCategories": ["1-8"],
-        "notes": "Mapped by occupation type"
+        "notes": "Mapped by occupation type. Time shown is for employed persons on workdays.",
+        "avgMinutesPerDay": 180,
+        "avgMinutesPerDayEmployed": 456,
+        "participationRate": 0.40,
+        "breakdown": {
+          "working": 168,
+          "workRelatedActivities": 10,
+          "otherIncomeGenerating": 2
+        }
       },
       {
         "atusCode": "06",
         "atusCategory": "Education",
         "haaiCategories": ["2.1", "4.1"],
-        "notes": "Taking classes, research, homework"
+        "notes": "Taking classes, research, homework",
+        "avgMinutesPerDay": 24,
+        "participationRate": 0.07
       },
       {
         "atusCode": "07",
         "atusCategory": "Consumer Purchases",
         "haaiCategories": ["5.2", "9.2"],
-        "notes": "Shopping, obtaining services"
+        "notes": "Shopping, obtaining services",
+        "avgMinutesPerDay": 42,
+        "participationRate": 0.43,
+        "breakdown": {
+          "groceryShopping": 11,
+          "otherShopping": 20,
+          "researchingPurchases": 6,
+          "waitingForServices": 5
+        }
       },
       {
         "atusCode": "08",
         "atusCategory": "Professional and Personal Care Services",
         "haaiCategories": ["5", "6.3", "6.4"],
-        "notes": "Using professional services (medical, legal, financial, personal care)"
+        "notes": "Using professional services (medical, legal, financial, personal care)",
+        "avgMinutesPerDay": 6,
+        "participationRate": 0.04
       },
       {
         "atusCode": "09",
         "atusCategory": "Household Services",
         "haaiCategories": ["5.1"],
-        "notes": "Using household services (home repair, cleaning services)"
+        "notes": "Using household services (home repair, cleaning services)",
+        "avgMinutesPerDay": 4,
+        "participationRate": 0.03
       },
       {
         "atusCode": "10",
         "atusCategory": "Government Services and Civic Obligations",
         "haaiCategories": ["5.5", "6.5"],
-        "notes": "Civic duties, government services, voting"
+        "notes": "Civic duties, government services, voting",
+        "avgMinutesPerDay": 6,
+        "participationRate": 0.04
       },
       {
         "atusCode": "11",
         "atusCategory": "Eating and Drinking",
         "haaiCategories": ["10.2"],
-        "notes": "Meals and snacks"
+        "notes": "Meals and snacks",
+        "avgMinutesPerDay": 66,
+        "participationRate": 0.96
       },
       {
         "atusCode": "12",
         "atusCategory": "Socializing, Relaxing, and Leisure",
         "haaiCategories": ["4.5", "6.6", "10.5"],
-        "notes": "Social activities, relaxation, arts/entertainment"
+        "notes": "Social activities, relaxation, arts/entertainment",
+        "avgMinutesPerDay": 312,
+        "participationRate": 0.96,
+        "breakdown": {
+          "watchingTV": 168,
+          "socializing": 42,
+          "relaxingThinking": 24,
+          "readingForPleasure": 18,
+          "playingGames": 24,
+          "artsAndEntertainment": 12,
+          "other": 24
+        }
       },
       {
         "atusCode": "13",
         "atusCategory": "Sports, Exercise, and Recreation",
         "haaiCategories": ["9.5", "10.3"],
-        "notes": "Physical activities, sports participation"
+        "notes": "Physical activities, sports participation",
+        "avgMinutesPerDay": 18,
+        "participationRate": 0.19
       },
       {
         "atusCode": "14",
         "atusCategory": "Religious and Spiritual Activities",
         "haaiCategories": ["6.5"],
-        "notes": "Religious practice, spiritual activities"
+        "notes": "Religious practice, spiritual activities",
+        "avgMinutesPerDay": 8,
+        "participationRate": 0.08
       },
       {
         "atusCode": "15",
         "atusCategory": "Volunteer Activities",
         "haaiCategories": ["6.5"],
-        "notes": "Volunteering for organizations"
+        "notes": "Volunteering for organizations",
+        "avgMinutesPerDay": 6,
+        "participationRate": 0.06
       },
       {
         "atusCode": "16",
         "atusCategory": "Telephone Calls",
         "haaiCategories": ["4"],
-        "notes": "Phone communication (classified by purpose)"
+        "notes": "Phone communication (classified by purpose)",
+        "avgMinutesPerDay": 12,
+        "participationRate": 0.35
       },
       {
         "atusCode": "18",
         "atusCategory": "Traveling",
         "haaiCategories": ["9.1", "9.2"],
-        "notes": "Travel related to other activities"
+        "notes": "Travel related to other activities",
+        "avgMinutesPerDay": 72,
+        "participationRate": 0.85,
+        "breakdown": {
+          "travelForWork": 24,
+          "travelForShopping": 12,
+          "travelForLeisure": 18,
+          "travelForOther": 18
+        }
       }
-    ]
+    ],
+    "summary": {
+      "totalMinutesPerDay": 1440,
+      "sleepAndPersonalCare": 570,
+      "work": 180,
+      "leisure": 312,
+      "householdAndCare": 150,
+      "travel": 72,
+      "other": 156
+    }
   },
   "behavior1kMapping": {
     "description": "Mapping BEHAVIOR-1K task categories to HAAI domains",
@@ -478,5 +570,189 @@
         "relevance": "Mapping emotional/social complexity"
       }
     ]
+  },
+  "economicImpact": {
+    "description": "Economic value and labor market data by HAAI domain",
+    "dataSources": [
+      "Bureau of Labor Statistics, Occupational Employment and Wage Statistics 2023",
+      "Bureau of Economic Analysis, GDP by Industry 2023",
+      "McKinsey Global Institute automation studies",
+      "World Bank labor statistics"
+    ],
+    "currency": "USD",
+    "year": 2023,
+    "usLaborMarket": {
+      "totalEmployment": 161000000,
+      "totalWages": 11500000000000,
+      "averageHourlyWage": 34.25
+    },
+    "domainEconomics": [
+      {
+        "domainId": 1,
+        "domainName": "Symbolic Computation",
+        "estimatedWorkers": 4200000,
+        "percentOfWorkforce": 2.6,
+        "medianHourlyWage": 48.50,
+        "annualValueBillions": 420,
+        "automationExposure": "high",
+        "sampleOccupations": ["Accountants", "Financial Analysts", "Data Entry Clerks", "Actuaries"],
+        "notes": "Core tasks largely automatable by current AI; workers shifting to oversight roles"
+      },
+      {
+        "domainId": 2,
+        "domainName": "Information Synthesis",
+        "estimatedWorkers": 8500000,
+        "percentOfWorkforce": 5.3,
+        "medianHourlyWage": 42.00,
+        "annualValueBillions": 735,
+        "automationExposure": "high",
+        "sampleOccupations": ["Market Research Analysts", "Technical Writers", "Paralegals", "Researchers"],
+        "notes": "LLMs directly impact core tasks; augmentation more common than replacement"
+      },
+      {
+        "domainId": 3,
+        "domainName": "Creative Generation",
+        "estimatedWorkers": 6200000,
+        "percentOfWorkforce": 3.8,
+        "medianHourlyWage": 45.00,
+        "annualValueBillions": 575,
+        "automationExposure": "medium-high",
+        "sampleOccupations": ["Software Developers", "Graphic Designers", "Writers", "Architects"],
+        "notes": "AI augments productivity; human judgment still valued for quality and originality"
+      },
+      {
+        "domainId": 4,
+        "domainName": "Interpersonal Communication",
+        "estimatedWorkers": 12000000,
+        "percentOfWorkforce": 7.4,
+        "medianHourlyWage": 38.00,
+        "annualValueBillions": 940,
+        "automationExposure": "medium",
+        "sampleOccupations": ["Sales Representatives", "Teachers", "Managers", "HR Specialists"],
+        "notes": "Routine communication automating; complex negotiation/instruction still human"
+      },
+      {
+        "domainId": 5,
+        "domainName": "Procedural Service Delivery",
+        "estimatedWorkers": 18500000,
+        "percentOfWorkforce": 11.5,
+        "medianHourlyWage": 28.00,
+        "annualValueBillions": 1070,
+        "automationExposure": "high",
+        "sampleOccupations": ["Retail Salespersons", "Bank Tellers", "Customer Service Reps", "Clerks"],
+        "notes": "Self-service and AI chatbots reducing headcount; some roles transforming"
+      },
+      {
+        "domainId": 6,
+        "domainName": "Care & Relational Support",
+        "estimatedWorkers": 22000000,
+        "percentOfWorkforce": 13.7,
+        "medianHourlyWage": 32.00,
+        "annualValueBillions": 1450,
+        "automationExposure": "low",
+        "sampleOccupations": ["Registered Nurses", "Home Health Aides", "Childcare Workers", "Therapists"],
+        "notes": "Human presence intrinsically valued; AI assists but doesn't replace",
+        "unpaidCareValue": {
+          "annualValueBillions": 648,
+          "notes": "Unpaid care work valued at replacement cost (ATUS data)"
+        }
+      },
+      {
+        "domainId": 7,
+        "domainName": "Structured Physical Operations",
+        "estimatedWorkers": 14000000,
+        "percentOfWorkforce": 8.7,
+        "medianHourlyWage": 24.00,
+        "annualValueBillions": 695,
+        "automationExposure": "medium-high",
+        "sampleOccupations": ["Manufacturing Workers", "Warehouse Workers", "Machine Operators"],
+        "notes": "Warehouse automation accelerating; manufacturing varies by complexity"
+      },
+      {
+        "domainId": 8,
+        "domainName": "Skilled Physical Craft",
+        "estimatedWorkers": 11500000,
+        "percentOfWorkforce": 7.1,
+        "medianHourlyWage": 28.00,
+        "annualValueBillions": 665,
+        "automationExposure": "low",
+        "sampleOccupations": ["Electricians", "Plumbers", "Mechanics", "Chefs", "Surgeons"],
+        "notes": "High dexterity requirements; robotics not yet capable of full replacement"
+      },
+      {
+        "domainId": 9,
+        "domainName": "Environmental Navigation",
+        "estimatedWorkers": 7800000,
+        "percentOfWorkforce": 4.8,
+        "medianHourlyWage": 25.00,
+        "annualValueBillions": 400,
+        "automationExposure": "medium",
+        "sampleOccupations": ["Truck Drivers", "Delivery Drivers", "Farm Workers", "Security Guards"],
+        "notes": "Autonomous vehicles progressing; last-mile delivery still challenging"
+      },
+      {
+        "domainId": 10,
+        "domainName": "Personal Embodiment",
+        "estimatedWorkers": 0,
+        "percentOfWorkforce": 0,
+        "medianHourlyWage": null,
+        "annualValueBillions": 0,
+        "automationExposure": "not_applicable",
+        "sampleOccupations": [],
+        "notes": "Personal activities (self-care, eating, leisure) - not part of paid labor",
+        "unpaidTimeValue": {
+          "avgMinutesPerDayUS": 876,
+          "description": "Non-work time including sleep, personal care, leisure per ATUS"
+        }
+      }
+    ],
+    "automationImpactProjections": {
+      "description": "Projected automation impact by AGI wave",
+      "waves": [
+        {
+          "wave": 1,
+          "timeline": "2024-2026",
+          "workersAffected": 25000000,
+          "percentOfWorkforce": 15.5,
+          "primaryDomains": [1, 2, 3],
+          "economicValueBillions": 1730,
+          "notes": "Knowledge work augmentation; productivity gains before displacement"
+        },
+        {
+          "wave": 2,
+          "timeline": "2026-2028",
+          "workersAffected": 40000000,
+          "percentOfWorkforce": 24.8,
+          "primaryDomains": [4, 5, 7],
+          "economicValueBillions": 2705,
+          "notes": "Service sector transformation; warehouse automation scaling"
+        },
+        {
+          "wave": 3,
+          "timeline": "2028-2032",
+          "workersAffected": 35000000,
+          "percentOfWorkforce": 21.7,
+          "primaryDomains": [6, 8],
+          "economicValueBillions": 2115,
+          "notes": "Care augmentation; skilled trades begin seeing robotic assistance"
+        },
+        {
+          "wave": 4,
+          "timeline": "2032+",
+          "workersAffected": 15000000,
+          "percentOfWorkforce": 9.3,
+          "primaryDomains": [9, 10],
+          "economicValueBillions": 400,
+          "notes": "Full autonomous navigation; home robotics emerging"
+        }
+      ]
+    },
+    "globalContext": {
+      "globalWorkforce": 3500000000,
+      "globalGdpTrillions": 105,
+      "laborShareOfGdp": 0.52,
+      "informalEconomyShare": 0.60,
+      "notes": "US data not representative of global labor markets; informal economy harder to automate"
+    }
   }
 }
