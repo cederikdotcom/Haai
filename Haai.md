@@ -1,8 +1,15 @@
 # Comprehensive Human Activity Taxonomy for AGI Progress Mapping
 
-**Version:** 1.0 (Draft)
+**Version:** 1.1 (Draft)
 **Date:** 2026-02-01
 **Purpose:** Predict AI automation timelines across all human activities
+
+### Changelog
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.1 | 2026-02-01 | Added example scored activities (Part D.1), expanded methodology rationale, clarified error tolerance components, added implementation roadmap (Part H.4-H.6) |
+| 1.0 | 2026-02-01 | Initial draft with Level 1-2 complete |
 
 ---
 
@@ -26,17 +33,17 @@ This taxonomy classifies all human activities—paid work and unpaid life—into
 
 ### 1. Design Principles
 
-1. **Predict, don't describe:** Optimize for attributes that predict AI capability timing, not occupational classification.
+1. **Predict, don't describe:** Optimize for attributes that predict AI capability timing, not occupational classification. The taxonomy prioritizes automation-relevant features over traditional occupational categories.
 
-2. **Task, not job:** A nurse performs dozens of tasks; each belongs in the taxonomy separately.
+2. **Task, not job:** A nurse performs dozens of tasks; each belongs in the taxonomy separately. Jobs are decomposed into constituent activities for more granular prediction.
 
-3. **Observable, not inferred:** Activities are objectively identifiable, not based on mental states.
+3. **Observable, not inferred:** Activities are objectively identifiable, not based on mental states. Classification relies on observable behaviors and outputs, not intentions.
 
-4. **Technology-agnostic:** Define by human capability required, not current technology.
+4. **Technology-agnostic:** Define by human capability required, not current technology. Descriptions should remain valid regardless of specific AI implementations.
 
-5. **Globally applicable:** Avoid Western/developed-world bias.
+5. **Globally applicable:** Avoid Western/developed-world bias. Activities should be recognizable across cultures and economic contexts.
 
-6. **MECE compliant:** Mutually exclusive, collectively exhaustive—every activity fits exactly one category.
+6. **MECE compliant:** Mutually exclusive, collectively exhaustive—every activity fits exactly one category. Boundary rules (Part G) resolve ambiguous cases.
 
 ### 2. Organizing Principle: Abstraction-Embodiment Spectrum
 
@@ -58,14 +65,20 @@ Domains are ordered from **highest abstraction** (earliest AI automation) to **l
 ### 3. Rationale for This Structure
 
 **Why abstraction predicts automation:**
-- High-abstraction activities (symbolic, informational) require only software
-- Low-abstraction activities require physical sensing, planning, and actuation
-- The software → hardware progression maps directly to AI development trajectory
+- High-abstraction activities (symbolic, informational) require only software—no physical embodiment, sensors, or actuators
+- Low-abstraction activities require physical sensing, planning, and actuation—hardware that must operate reliably in the real world
+- The software → hardware progression maps directly to AI development trajectory, as observed in the progression from chess (1997) to language (2022) to driving (2020s) to dexterous manipulation (2030s+)
+- Training data availability: Abstract tasks have abundant digital training data; physical tasks require expensive real-world data collection or simulation
 
 **Why error tolerance is secondary:**
-- Within any domain, low-error-tolerance activities automate later
-- Error tolerance interacts with abstraction (physical errors often irreversible)
-- Captures the "AI-in-the-loop vs. human-in-the-loop" dimension
+- Within any domain, low-error-tolerance activities automate later due to liability, regulatory, and safety concerns
+- Error tolerance interacts with abstraction: physical errors are often irreversible (surgery, construction) while digital errors can be undone (document editing, code changes)
+- Captures the "AI-in-the-loop vs. human-in-the-loop" dimension—high-stakes activities require human oversight longer
+
+**Supporting observations:**
+- AI progress has followed this pattern: calculators (1960s) → spell-check (1980s) → translation (2010s) → writing (2020s) → driving (2020s) → robotics (emerging)
+- Investment patterns show software AI receiving more funding and achieving faster progress than robotics/embodied AI
+- Current AI capabilities cluster in high-abstraction domains (Domains 1-4) with limited deployment in physical domains (7-10)
 
 ---
 
@@ -89,6 +102,14 @@ Domains are ordered from **highest abstraction** (earliest AI automation) to **l
 | 2 | Medium | Errors costly but recoverable, moderate stakes. | Cooking, scheduling, routine maintenance |
 | 3 | Low | Errors expensive or harmful, limited recovery. | Surgery, vehicle repair, legal filing |
 | 4 | Very Low | Errors potentially catastrophic or irreversible. | Emergency response, childcare safety |
+
+**Error Tolerance Components:**
+- **Reversibility:** Can the action be undone? (digital: usually yes; physical: often no)
+- **Stakes:** What is the cost of an error? (financial, reputational, health, life)
+- **Recovery time:** How long to correct an error? (seconds vs. months/years)
+- **Detection difficulty:** How quickly are errors noticed? (immediate vs. delayed)
+
+*Note: When components conflict, weight life/safety stakes most heavily, then financial stakes, then reversibility.*
 
 ### Attribute 3: Feedback Loop Speed (1-4 Scale)
 
@@ -479,6 +500,82 @@ Domains are ordered from **highest abstraction** (earliest AI automation) to **l
 
 ---
 
+## Part D.1: Example Scored Activities
+
+The following examples demonstrate how Level 3 activities should be scored using all seven attributes. These serve as reference cases for raters.
+
+### Example 1: Spreadsheet Formula Writing (Category 1.1)
+
+| Attribute | Score | Rationale |
+|-----------|-------|-----------|
+| Abstraction Level | 1 (Pure Abstract) | Input/output are numbers and formulas; no physical grounding |
+| Error Tolerance | 1 (High) | Errors easily caught and corrected; low stakes |
+| Feedback Loop Speed | 1 (Seconds) | Immediate feedback on formula results |
+| Social Complexity | 0 (None) | Solo task, no human interaction required |
+| Current AI Capability | Solved | LLMs can write formulas accurately |
+| Primary Bottleneck | None | Solved |
+| Estimated AGI Wave | 1 | Already automated |
+
+### Example 2: Market Research Report (Category 2.1)
+
+| Attribute | Score | Rationale |
+|-----------|-------|-----------|
+| Abstraction Level | 1 (Pure Abstract) | Information synthesis task; digital inputs/outputs |
+| Error Tolerance | 2 (Medium) | Errors costly in business decisions but correctable |
+| Feedback Loop Speed | 3 (Hours to days) | Report takes time to validate |
+| Social Complexity | 1 (Informational) | May require interviews/surveys |
+| Current AI Capability | Partial | AI assists but human judgment still needed for quality |
+| Primary Bottleneck | Reasoning | Complex multi-source synthesis |
+| Estimated AGI Wave | 2 | Improving rapidly |
+
+### Example 3: Warehouse Order Picking (Category 7.2)
+
+| Attribute | Score | Rationale |
+|-----------|-------|-----------|
+| Abstraction Level | 3 (Supervised Physical) | Physical manipulation in structured environment |
+| Error Tolerance | 2 (Medium) | Wrong items costly but fixable |
+| Feedback Loop Speed | 1 (Seconds) | Immediate per-item feedback |
+| Social Complexity | 0-1 (None to Informational) | Minimal interaction; system instructions |
+| Current AI Capability | Near-solved | Amazon/Ocado systems operational |
+| Primary Bottleneck | Dexterity | Varied item shapes and packaging |
+| Estimated AGI Wave | 2 | Deploying now |
+
+### Example 4: Elementary School Teaching (Category 4.1)
+
+| Attribute | Score | Rationale |
+|-----------|-------|-----------|
+| Abstraction Level | 2 (Grounded Abstract) | Interprets student behavior; acts through communication |
+| Error Tolerance | 3 (Low) | Developmental impact; limited recovery |
+| Feedback Loop Speed | 4 (Days to months) | Learning outcomes measured over time |
+| Social Complexity | 4 (Relational) | Trust, motivation, emotional support essential |
+| Current AI Capability | Partial | AI tutoring exists but lacks full social capability |
+| Primary Bottleneck | Social | Emotional attunement, classroom management |
+| Estimated AGI Wave | 3-4 | Requires social AI advances |
+
+### Example 5: Emergency Room Triage (Category 5.4)
+
+| Attribute | Score | Rationale |
+|-----------|-------|-----------|
+| Abstraction Level | 2 (Grounded Abstract) | Assesses symptoms; makes prioritization decisions |
+| Error Tolerance | 4 (Very Low) | Errors can be life-threatening |
+| Feedback Loop Speed | 1 (Seconds to minutes) | Immediate decisions required |
+| Social Complexity | 2 (Coordinative) | Coordinates patient flow and staff |
+| Current AI Capability | Partial | AI assists but human required for liability |
+| Primary Bottleneck | Safety | Error tolerance requirements |
+| Estimated AGI Wave | 3 | Requires proven safety track record |
+
+### Scoring Guidance Notes
+
+1. **When attributes conflict:** An activity with high abstraction but very low error tolerance (e.g., algorithmic trading) may automate later than its abstraction score suggests. Weight error tolerance more heavily when stakes are life/safety-related.
+
+2. **Context matters:** The same physical action scores differently based on context (see Part G.3). Always score the specific activity-in-context, not the abstract action.
+
+3. **Partial automation:** Many activities will see partial automation before full automation. "Current AI Capability: Partial" indicates AI assists but cannot fully replace humans—this is a stable state for Wave 2-3 activities.
+
+4. **Bottleneck stacking:** Activities may have multiple bottlenecks; list the primary one but note secondary bottlenecks in rationale if relevant.
+
+---
+
 ## Part E: Mapping Appendix
 
 ### E.1: O*NET Work Activities Mapping
@@ -645,18 +742,75 @@ The same physical action may classify differently based on context:
 
 For each Level 2 category, enumerate 5-15 specific activities with all attributes scored. Target: 200-400 total activities.
 
+**Population Strategy:**
+1. Start with high-frequency activities from ATUS data
+2. Add occupationally-important activities from O*NET
+3. Include edge cases that test boundary rules
+4. Ensure global representation (not just Western/developed economies)
+
 ### H.2: Scoring Methodology
 
 Each activity will be scored by:
-1. Domain experts (for current AI capability)
-2. AI researchers (for bottleneck identification)
-3. Time-use researchers (for validation against ATUS/HETUS)
+1. **Domain experts** (for current AI capability and realistic timeline estimates)
+2. **AI researchers** (for bottleneck identification and technical feasibility)
+3. **Time-use researchers** (for validation against ATUS/HETUS frequency data)
+
+**Rater Training Protocol:**
+1. Review Part D.1 example scored activities
+2. Complete calibration exercise (10 activities, compare to reference scores)
+3. Discuss disagreements to align interpretation
+4. Achieve κ > 0.7 on calibration set before proceeding
 
 ### H.3: Validation Protocol
 
-1. **Inter-rater reliability:** Two independent raters should achieve κ > 0.7
+1. **Inter-rater reliability:** Two independent raters should achieve κ > 0.7 on all attributes
 2. **Coverage audit:** Walk through 10 diverse occupations, ensure all tasks map
 3. **Predictive validation:** Compare predictions to actual AI deployment timelines
+4. **Retrospective validation:** Apply taxonomy to historically-automated tasks (typing, calculation, switchboard operation) to verify framework
+
+### H.4: Implementation Roadmap
+
+**Phase 1: Pilot (Domains 1-3)**
+- Enumerate 50-100 activities in Domains 1-3 (highest abstraction, most AI progress)
+- Score all attributes with 2+ raters
+- Calculate inter-rater reliability
+- Refine attribute definitions if κ < 0.7
+
+**Phase 2: Expansion (Domains 4-7)**
+- Enumerate 100-150 activities in Domains 4-7
+- Include activities at domain boundaries to test boundary rules
+- Update scoring guidance based on Phase 1 learnings
+
+**Phase 3: Completion (Domains 8-10)**
+- Enumerate remaining 50-100 activities in Domains 8-10
+- Focus on physical/embodied activities with less AI progress
+- Validate against robotics research benchmarks
+
+**Phase 4: Validation and Publication**
+- Complete coverage audit across 10 occupations
+- Run predictive validation against AI deployment data
+- Prepare methodology paper for peer review
+- Publish taxonomy as structured data (JSON/CSV) with web interface
+
+### H.5: Maintenance Plan
+
+1. **Annual review:** Update "Current AI Capability" scores as technology advances
+2. **Wave recalibration:** Adjust timeline estimates based on observed progress
+3. **Activity additions:** Add new activities as work patterns change (e.g., new jobs)
+4. **Community contributions:** Establish process for external submissions
+
+### H.6: Known Limitations and Future Work
+
+**Current Limitations:**
+- Timeline predictions (Waves 1-4) are estimates without formal forecasting methodology
+- Single-attribute classification may oversimplify complex activities
+- Western bias in example activities and occupations
+
+**Future Research Directions:**
+- Develop formal forecasting model using attribute scores as inputs
+- Extend taxonomy to include automation *level* (not just timing)
+- Map economic impact (jobs, wages) to taxonomy categories
+- Integrate with labor economics models
 
 ---
 
@@ -680,4 +834,4 @@ Each activity will be scored by:
 
 ---
 
-*Document Status: Level 1-2 complete. Level 3 activity enumeration pending.*
+*Document Status: Level 1-2 complete. Example scored activities added (Part D.1). Level 3 full enumeration pending—see Part H for implementation roadmap.*
