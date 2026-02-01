@@ -61,7 +61,7 @@ See [Haai.md](Haai.md) for the complete taxonomy specification including:
 
 ## Current Status
 
-**Version:** 2.0 (Complete)
+**Version:** 2.1 (Complete, Future-Proofed)
 
 - Level 1 (Domains): 10 domains ✓
 - Level 2 (Categories): 47 categories ✓

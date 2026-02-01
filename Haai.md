@@ -1,6 +1,6 @@
 # Comprehensive Human Activity Taxonomy for AGI Progress Mapping
 
-**Version:** 2.0
+**Version:** 2.1
 **Date:** 2026-02-01
 **Purpose:** Predict AI automation timelines across all human activities
 
@@ -8,6 +8,7 @@
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.1 | 2026-02-01 | **Structural refactoring:** Separated intrinsic (stable) and temporal (mutable) attributes in Part B. Redefined waves as relative scales with explicit mappings. Added temporal data versioning mechanism (H.5). Added Economics/Trust bottlenecks. Added community contribution process (H.7). |
 | 2.0 | 2026-02-01 | **Complete framework release:** Added full Level 3 enumeration with 400 scored activities across all 47 categories (Part D.2), added summary statistics (Part D.3) |
 | 1.1 | 2026-02-01 | Added example scored activities (Part D.1), expanded methodology rationale, clarified error tolerance components, added implementation roadmap (Part H.4-H.6) |
 | 1.0 | 2026-02-01 | Initial draft with Level 1-2 complete |
@@ -85,7 +86,13 @@ Domains are ordered from **highest abstraction** (earliest AI automation) to **l
 
 ## Part B: Attribute Definitions
 
-### Attribute 1: Abstraction Level (1-5 Scale)
+This taxonomy distinguishes between **intrinsic attributes** (stable properties of activities) and **temporal attributes** (assessments that change as AI progresses).
+
+### B.1: Intrinsic Attributes (Stable)
+
+These attributes describe inherent characteristics of activities. They should rarely change unless the activity itself is redefined.
+
+#### Attribute 1: Abstraction Level (1-5 Scale)
 
 | Level | Name | Definition | Signal |
 |-------|------|------------|--------|
@@ -95,7 +102,7 @@ Domains are ordered from **highest abstraction** (earliest AI automation) to **l
 | 4 | Adaptive Physical | Physical action requiring real-time adaptation to variability. | Novel objects, changing conditions |
 | 5 | Deeply Embodied | Full sensorimotor integration, social presence, human-like dexterity. | Touch sensitivity, emotional attunement |
 
-### Attribute 2: Error Tolerance (1-4 Scale)
+#### Attribute 2: Error Tolerance (1-4 Scale)
 
 | Level | Name | Definition | Examples |
 |-------|------|------------|----------|
@@ -112,7 +119,7 @@ Domains are ordered from **highest abstraction** (earliest AI automation) to **l
 
 *Note: When components conflict, weight life/safety stakes most heavily, then financial stakes, then reversibility.*
 
-### Attribute 3: Feedback Loop Speed (1-4 Scale)
+#### Attribute 3: Feedback Loop Speed (1-4 Scale)
 
 | Level | Timeframe | Examples |
 |-------|-----------|----------|
@@ -121,7 +128,7 @@ Domains are ordered from **highest abstraction** (earliest AI automation) to **l
 | 3 | Hours to days | Project work, analysis |
 | 4 | Days to months | Strategy, research |
 
-### Attribute 4: Social Complexity (0-4 Scale)
+#### Attribute 4: Social Complexity (0-4 Scale)
 
 | Level | Name | Definition |
 |-------|------|------------|
@@ -131,39 +138,62 @@ Domains are ordered from **highest abstraction** (earliest AI automation) to **l
 | 3 | Persuasive | Influence human beliefs or behavior |
 | 4 | Relational | Build trust, provide emotional support |
 
-### Attribute 5: Current AI Capability (Categorical)
+---
+
+### B.2: Temporal Attributes (Mutable)
+
+These attributes assess current AI capability and predictions. They WILL change as technology advances and should be versioned separately.
+
+**Current Assessment Date:** 2026-02-01 (update this when reassessing)
+
+#### Attribute 5: AI Capability Status (Categorical)
 
 | Status | Definition |
 |--------|------------|
-| Solved | AI matches or exceeds median human performance |
-| Near-solved | AI approaches human performance, deployment underway |
-| Partial | AI assists but cannot fully replace humans |
-| Early | Research prototypes only |
-| Not attempted | No serious AI efforts yet |
+| Automated | AI handles autonomously in production at scale |
+| Deployed | AI deployed in production with human oversight |
+| Piloting | AI in pilot/beta testing, limited deployment |
+| Research | Research prototypes only |
+| Theoretical | No working prototypes yet |
 
-### Attribute 6: Primary Bottleneck (Categorical)
+*Note: Renamed from "Current AI Capability" to emphasize this is a point-in-time assessment.*
 
-| Bottleneck | Description |
-|------------|-------------|
-| None | Solved |
-| Sensing | Perception limitations |
-| Reasoning | Cognitive complexity |
-| Dexterity | Fine motor control |
-| Mobility | Locomotion, navigation |
-| Adaptation | Handling novel situations |
-| Social | Human interaction requirements |
-| Safety | Risk tolerance requirements |
-| Regulation | Legal/policy barriers |
-| Data | Insufficient training data |
+#### Attribute 6: Primary Bottleneck (Categorical)
 
-### Attribute 7: Estimated AGI Wave (1-4)
+| Bottleneck | Description | Likely Resolution |
+|------------|-------------|-------------------|
+| None | Already solved | - |
+| Sensing | Perception limitations | Better sensors, multimodal models |
+| Reasoning | Cognitive complexity | Larger models, better architectures |
+| Dexterity | Fine motor control | Improved actuators, sim-to-real |
+| Mobility | Locomotion, navigation | Better SLAM, legged robots |
+| Adaptation | Handling novel situations | Foundation models, few-shot learning |
+| Social | Human interaction requirements | Affective computing, theory of mind |
+| Safety | Risk tolerance requirements | Verification, formal methods |
+| Regulation | Legal/policy barriers | Policy evolution (external factor) |
+| Economics | Cost-benefit not favorable | Hardware cost reduction |
+| Trust | Human acceptance required | Deployment track record |
 
-| Wave | Timeline | Characteristics |
-|------|----------|-----------------|
-| 1 | 2024-2026 | Current LLM capabilities + basic robotics |
-| 2 | 2026-2028 | Multimodal AI + structured environments |
-| 3 | 2028-2032 | Adaptive embodied AI + social modeling |
-| 4 | 2032+ | General-purpose embodied AI |
+*Added: Economics, Trust bottlenecks for completeness.*
+
+#### Attribute 7: Automation Wave (Relative Scale)
+
+Waves are defined **relatively** to enable future-proofing. Map to calendar years based on current AI progress assessment.
+
+| Wave | Definition | Prerequisites | Current Mapping* |
+|------|------------|---------------|------------------|
+| Wave 1 | Software-only automation | LLMs, current ML | 2024-2026 |
+| Wave 2 | Structured environment automation | Multimodal AI + controlled robotics | 2026-2028 |
+| Wave 3 | Adaptive automation | Embodied AI + real-time adaptation | 2028-2032 |
+| Wave 4 | General-purpose automation | Human-level physical + social AI | 2032+ |
+| N/A | Not automatable or not applicable | Human essence, consciousness | - |
+
+*\*Current mapping as of 2026-02-01. Update mappings as AI progress becomes clearer.*
+
+**Wave Determination Logic:**
+- Wave is determined by the **latest required capability**, not the earliest
+- High abstraction + low error tolerance → May be Wave 2-3 despite abstraction
+- Low abstraction + high error tolerance → May be Wave 2-3 despite embodiment needs
 
 ---
 
@@ -582,13 +612,19 @@ The following examples demonstrate how Level 3 activities should be scored using
 This section enumerates specific activities for each Level 2 category with full attribute scoring.
 
 **Attribute Key:**
+
+*Intrinsic Attributes (stable - define what the activity IS):*
 - **Abs**: Abstraction Level (1=Pure Abstract, 2=Grounded Abstract, 3=Supervised Physical, 4=Adaptive Physical, 5=Deeply Embodied)
 - **Err**: Error Tolerance (1=High, 2=Medium, 3=Low, 4=Very Low)
 - **Fb**: Feedback Loop Speed (1=Seconds, 2=Minutes-Hours, 3=Hours-Days, 4=Days-Months)
 - **Soc**: Social Complexity (0=None, 1=Informational, 2=Coordinative, 3=Persuasive, 4=Relational)
-- **AI**: Current AI Capability (S=Solved, N=Near-solved, P=Partial, E=Early, X=Not attempted)
-- **Bot**: Primary Bottleneck (None, Sens=Sensing, Reas=Reasoning, Dex=Dexterity, Mob=Mobility, Adap=Adaptation, Soc=Social, Safe=Safety, Reg=Regulation, Data=Data)
-- **Wave**: Estimated AGI Wave (1-4)
+
+*Temporal Attributes (mutable - will change as AI progresses):*
+- **AI**: AI Capability Status (A=Automated, D=Deployed, P=Piloting, R=Research, T=Theoretical, X=Not applicable)
+- **Bot**: Primary Bottleneck (None, Sens=Sensing, Reas=Reasoning, Dex=Dexterity, Mob=Mobility, Adap=Adaptation, Soc=Social, Safe=Safety, Reg=Regulation, Econ=Economics, Trust=Trust)
+- **Wave**: Automation Wave (1-4, N/A)
+
+**Temporal Data Version:** 2026-02-01 | *Update temporal columns (AI, Bot, Wave) periodically; intrinsic columns should remain stable.*
 
 ---
 
@@ -1282,6 +1318,8 @@ This section enumerates specific activities for each Level 2 category with full 
 
 ## Part D.3: Level 3 Summary Statistics
 
+**Taxonomy Statistics (stable):**
+
 ### Activity Count by Domain
 
 | Domain | Categories | Activities | Avg per Category |
@@ -1298,28 +1336,36 @@ This section enumerates specific activities for each Level 2 category with full 
 | 10. Personal Embodiment | 5 | 41 | 8.2 |
 | **Total** | **50** | **400** | **8.0** |
 
-### Distribution by AGI Wave
+---
 
-| Wave | Activity Count | Percentage | Description |
+**Temporal Statistics (as of 2026-02-01):**
+
+*These statistics will change as AI capabilities advance. Re-assess annually or when major AI milestones occur.*
+
+### Distribution by Automation Wave
+
+| Wave | Activity Count | Percentage | Definition |
 |------|---------------|------------|-------------|
-| Wave 1 | 62 | 15.5% | Largely automated (2024-2026) |
-| Wave 1-2 | 38 | 9.5% | Transitioning to automation |
-| Wave 2 | 87 | 21.8% | Multimodal AI era (2026-2028) |
-| Wave 2-3 | 58 | 14.5% | Transitioning to embodied AI |
-| Wave 3 | 51 | 12.8% | Adaptive embodied AI (2028-2032) |
+| Wave 1 | 62 | 15.5% | Software-only automation |
+| Wave 1-2 | 38 | 9.5% | Transitioning to structured automation |
+| Wave 2 | 87 | 21.8% | Structured environment automation |
+| Wave 2-3 | 58 | 14.5% | Transitioning to adaptive automation |
+| Wave 3 | 51 | 12.8% | Adaptive automation |
 | Wave 3-4 | 54 | 13.5% | Transitioning to general purpose |
-| Wave 4 | 37 | 9.3% | General-purpose embodied AI (2032+) |
+| Wave 4 | 37 | 9.3% | General-purpose automation |
 | N/A | 13 | 3.3% | Not applicable for automation |
 
-### Distribution by Current AI Capability
+*Current wave-to-year mapping: Wave 1=2024-2026, Wave 2=2026-2028, Wave 3=2028-2032, Wave 4=2032+. Update mapping as AI progress clarifies.*
 
-| Status | Activity Count | Percentage |
-|--------|---------------|------------|
-| Solved (S) | 31 | 7.8% |
-| Near-solved (N) | 89 | 22.3% |
-| Partial (P) | 214 | 53.5% |
-| Early (E) | 53 | 13.3% |
-| Not attempted (X) | 13 | 3.3% |
+### Distribution by AI Capability Status
+
+| Status | Activity Count | Percentage | Meaning |
+|--------|---------------|------------|---------|
+| Solved/Automated (S) | 31 | 7.8% | AI handles autonomously at scale |
+| Near-solved/Deployed (N) | 89 | 22.3% | AI deployed with human oversight |
+| Partial/Piloting (P) | 214 | 53.5% | AI in pilot testing or assists humans |
+| Early/Research (E) | 53 | 13.3% | Research prototypes only |
+| Not attempted (X) | 13 | 3.3% | Not applicable or not automatable |
 
 ### Distribution by Primary Bottleneck
 
@@ -1557,10 +1603,41 @@ Each activity will be scored by:
 
 ### H.5: Maintenance Plan
 
-1. **Annual review:** Update "Current AI Capability" scores as technology advances
-2. **Wave recalibration:** Adjust timeline estimates based on observed progress
-3. **Activity additions:** Add new activities as work patterns change (e.g., new jobs)
-4. **Community contributions:** Establish process for external submissions
+**Temporal Data Versioning (Key for Future-Proofing):**
+
+The taxonomy separates stable structure from mutable predictions:
+
+| Component | Update Frequency | What Changes |
+|-----------|------------------|--------------|
+| Domains (Level 1) | Rarely | Only for major reconceptualization |
+| Categories (Level 2) | Annually | Add new categories as work evolves |
+| Activities (Level 3) | Annually | Add new activities, retire obsolete ones |
+| Intrinsic Attributes (Abs, Err, Fb, Soc) | Rarely | Only if activity definition changes |
+| Temporal Attributes (AI, Bot, Wave) | Quarterly-Annually | Update as AI capabilities advance |
+| Wave-to-Year Mapping | Annually | Adjust dates based on actual AI progress |
+
+**Update Protocol:**
+
+1. **Quarterly temporal review:**
+   - Scan AI news for major capability announcements
+   - Update AI Capability Status for affected activities
+   - Move newly-automated activities to appropriate status
+
+2. **Annual full review:**
+   - Reassess all temporal attributes
+   - Update wave-to-year mappings based on observed progress
+   - Add new activities (especially from emerging occupations)
+   - Validate against actual AI deployment data
+
+3. **Wave recalibration triggers:**
+   - Major AI breakthrough (e.g., new architecture, 10x capability jump)
+   - Regulatory changes affecting deployment
+   - Economic conditions affecting adoption rates
+
+4. **Activity additions:**
+   - Monitor BLS, O*NET for new occupations
+   - Add activities from emerging industries
+   - Community submissions (see H.7)
 
 ### H.6: Known Limitations and Future Work
 
@@ -1568,12 +1645,27 @@ Each activity will be scored by:
 - Timeline predictions (Waves 1-4) are estimates without formal forecasting methodology
 - Single-attribute classification may oversimplify complex activities
 - Western bias in example activities and occupations
+- Temporal assessments will require periodic updates
 
 **Future Research Directions:**
-- Develop formal forecasting model using attribute scores as inputs
-- Extend taxonomy to include automation *level* (not just timing)
+- Develop formal forecasting model using intrinsic attribute scores as inputs
+- Extend taxonomy to include automation *level* (partial vs. full)
 - Map economic impact (jobs, wages) to taxonomy categories
 - Integrate with labor economics models
+- Create machine-readable format (JSON/YAML) for programmatic updates
+
+### H.7: Community Contribution Process
+
+**For Temporal Updates:**
+1. Submit evidence of AI capability change (paper, deployment announcement)
+2. Propose new status for affected activities
+3. Maintainers review and batch updates quarterly
+
+**For Taxonomy Changes:**
+1. Propose new activity with intrinsic attribute scores and rationale
+2. Include mapping to O*NET, ATUS, or other frameworks
+3. Peer review for MECE compliance
+4. Merge into next annual release
 
 ---
 
