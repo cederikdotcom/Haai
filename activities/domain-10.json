@@ -14,7 +14,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "not_attempted",
         "bottleneck": "none",
         "agiWave": 4
@@ -35,7 +35,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "not_attempted",
         "bottleneck": "dexterity",
         "agiWave": 4
@@ -56,7 +56,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "not_attempted",
         "bottleneck": "dexterity",
         "agiWave": 4
@@ -77,7 +77,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "not_attempted",
         "bottleneck": "dexterity",
         "agiWave": 4
@@ -98,7 +98,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "not_attempted",
         "bottleneck": "dexterity",
         "agiWave": 4
@@ -119,7 +119,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "not_attempted",
         "bottleneck": "none",
         "agiWave": 4
@@ -140,7 +140,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "early",
         "bottleneck": "dexterity",
         "agiWave": 3
@@ -161,7 +161,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "not_attempted",
         "bottleneck": "none",
         "agiWave": 4
@@ -182,7 +182,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 1,
+        "interpersonalComplexity": 1,
         "aiCapability": "partial",
         "bottleneck": "mobility",
         "agiWave": 3
@@ -203,7 +203,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "early",
         "bottleneck": "dexterity",
         "agiWave": 3
@@ -224,7 +224,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "not_attempted",
         "bottleneck": "none",
         "agiWave": 4
@@ -245,7 +245,7 @@
         "abstraction": 4,
         "errorTolerance": 3,
         "feedbackSpeed": 2,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "partial",
         "bottleneck": "safety",
         "agiWave": 3
@@ -266,7 +266,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "near_solved",
         "bottleneck": "sensing",
         "agiWave": 2
@@ -287,7 +287,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "not_attempted",
         "bottleneck": "none",
         "agiWave": 4
@@ -308,7 +308,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "socialComplexity": 2,
+        "interpersonalComplexity": 2,
         "aiCapability": "not_attempted",
         "bottleneck": "social",
         "agiWave": 4
@@ -329,7 +329,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "partial",
         "bottleneck": "dexterity",
         "agiWave": 3
@@ -350,7 +350,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "partial",
         "bottleneck": "dexterity",
         "agiWave": 3
@@ -371,7 +371,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "partial",
         "bottleneck": "dexterity",
         "agiWave": 3
@@ -392,7 +392,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "early",
         "bottleneck": "reasoning",
         "agiWave": 3
@@ -413,7 +413,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "early",
         "bottleneck": "dexterity",
         "agiWave": 3
@@ -434,7 +434,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "not_attempted",
         "bottleneck": "none",
         "agiWave": 4
@@ -455,7 +455,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "not_attempted",
         "bottleneck": "none",
         "agiWave": 4
@@ -476,7 +476,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "partial",
         "bottleneck": "none",
         "agiWave": 2
@@ -497,7 +497,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "early",
         "bottleneck": "dexterity",
         "agiWave": 4
@@ -518,7 +518,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 3,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "early",
         "bottleneck": "dexterity",
         "agiWave": 3

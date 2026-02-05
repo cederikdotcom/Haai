@@ -62,7 +62,7 @@
     "automationReadiness": {
       "abstraction": 0.4,
       "errorTolerance": 0.3,
-      "socialComplexity": 0.2,
+      "interpersonalComplexity": 0.2,
       "aiCapability": 0.1
     },
     "capabilityMapping": {

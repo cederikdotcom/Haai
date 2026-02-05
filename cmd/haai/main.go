@@ -110,7 +110,7 @@ type Scores struct {
 	Abstraction      int    `json:"abstraction"`
 	ErrorTolerance   int    `json:"errorTolerance"`
 	FeedbackSpeed    int    `json:"feedbackSpeed"`
-	SocialComplexity int    `json:"socialComplexity"`
+	InterpersonalComplexity int    `json:"interpersonalComplexity"`
 	Purpose          int    `json:"purpose"`
 	AICapability     string `json:"aiCapability"`
 	Bottleneck       string `json:"bottleneck"`
@@ -234,10 +234,10 @@ func loadActivities() ([]Activity, error) {
 		assessment, _ := loadLatestAssessment()
 
 		// For feedbackSpeed and socialComplexity, we need the old domain files
-		feedbackMap, socialMap := loadLegacyScores()
+		feedbackMap, interpersonalMap := loadLegacyScores()
 
 		// Merge scores into activities
-		mergeScores(activities, indices, assessment, feedbackMap, socialMap)
+		mergeScores(activities, indices, assessment, feedbackMap, interpersonalMap)
 
 		return activities, nil
 	}
@@ -309,7 +309,7 @@ func loadLatestAssessment() (*AssessmentFile, error) {
 // loadLegacyScores loads feedbackSpeed and socialComplexity from old domain files
 func loadLegacyScores() (map[string]int, map[string]int) {
 	feedbackMap := make(map[string]int)
-	socialMap := make(map[string]int)
+	interpersonalMap := make(map[string]int)
 
 	for i := 1; i <= 10; i++ {
 		var df DomainFile
@@ -319,15 +319,15 @@ func loadLegacyScores() (map[string]int, map[string]int) {
 		}
 		for _, a := range df.Activities {
 			feedbackMap[a.ID] = a.Scores.FeedbackSpeed
-			socialMap[a.ID] = a.Scores.SocialComplexity
+			interpersonalMap[a.ID] = a.Scores.InterpersonalComplexity
 		}
 	}
 
-	return feedbackMap, socialMap
+	return feedbackMap, interpersonalMap
 }
 
 // mergeScores merges index values and assessment data into activity Scores structs
-func mergeScores(activities []Activity, indices map[string]*IndexFile, assessment *AssessmentFile, feedbackMap, socialMap map[string]int) {
+func mergeScores(activities []Activity, indices map[string]*IndexFile, assessment *AssessmentFile, feedbackMap, interpersonalMap map[string]int) {
 	for i := range activities {
 		id := activities[i].ID
 
@@ -356,8 +356,8 @@ func mergeScores(activities []Activity, indices map[string]*IndexFile, assessmen
 		if val, ok := feedbackMap[id]; ok {
 			activities[i].Scores.FeedbackSpeed = val
 		}
-		if val, ok := socialMap[id]; ok {
-			activities[i].Scores.SocialComplexity = val
+		if val, ok := interpersonalMap[id]; ok {
+			activities[i].Scores.InterpersonalComplexity = val
 		}
 
 		// Merge assessment data
@@ -556,7 +556,7 @@ func cmdActivity(id string) {
 	fmt.Printf("  Abstraction:       %d\n", activity.Scores.Abstraction)
 	fmt.Printf("  Error Tolerance:   %d\n", activity.Scores.ErrorTolerance)
 	fmt.Printf("  Feedback Speed:    %d\n", activity.Scores.FeedbackSpeed)
-	fmt.Printf("  Social Complexity: %d\n", activity.Scores.SocialComplexity)
+	fmt.Printf("  Interpersonal Complexity: %d\n", activity.Scores.InterpersonalComplexity)
 	fmt.Printf("  Purpose:           %d (%s)\n", activity.Scores.Purpose, getPurposeName(activity.Scores.Purpose))
 	fmt.Printf("  AI Capability:     %s\n", activity.Scores.AICapability)
 	fmt.Printf("  Bottleneck:        %s\n", activity.Scores.Bottleneck)
