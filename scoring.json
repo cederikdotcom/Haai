@@ -25,6 +25,16 @@
         "indexId": "purpose",
         "file": "indices/purpose.json",
         "description": "Purpose Index - classifies fundamental human intent/goal"
+      },
+      {
+        "indexId": "feedback-speed",
+        "file": "indices/feedback-speed.json",
+        "description": "Feedback Loop Speed Index - measures time between action and outcome"
+      },
+      {
+        "indexId": "interpersonal-complexity",
+        "file": "indices/interpersonal-complexity.json",
+        "description": "Interpersonal Complexity Index - measures degree of human interaction"
       }
     ],
     "intrinsicScores": {
@@ -135,6 +145,7 @@
       "id": 3,
       "name": "Feedback Loop Speed",
       "shortName": "feedbackSpeed",
+      "indexFile": "indices/feedback-speed.json",
       "description": "Time between action and observable outcome",
       "scale": {
         "min": 1,
@@ -172,6 +183,7 @@
       "id": 4,
       "name": "Interpersonal Complexity",
       "shortName": "interpersonalComplexity",
+      "indexFile": "indices/interpersonal-complexity.json",
       "description": "Degree and type of human interaction required",
       "scale": {
         "min": 0,
