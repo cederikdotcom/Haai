@@ -1,0 +1,2050 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "2.0.0",
+  "title": "Human Activities Index - Activities Table",
+  "description": "Base table of all human activities. Indicator scores are stored separately in the indices/ directory.",
+  "lastUpdated": "2026-02-05",
+  "activitiesCount": 256,
+  "activities": [
+    {
+      "id": "1.1.1",
+      "name": "Basic Arithmetic Operations",
+      "description": "Performing addition, subtraction, multiplication, and division on numbers",
+      "domainId": 1,
+      "categoryId": "1.1",
+      "exampleTasks": ["Adding invoice totals", "Calculating percentages", "Computing averages"]
+    },
+    {
+      "id": "1.1.2",
+      "name": "Statistical Calculations",
+      "description": "Computing statistical measures such as mean, median, standard deviation, and correlations",
+      "domainId": 1,
+      "categoryId": "1.1",
+      "exampleTasks": ["Calculating variance", "Computing regression coefficients", "Determining confidence intervals"]
+    },
+    {
+      "id": "1.1.3",
+      "name": "Spreadsheet Formula Evaluation",
+      "description": "Executing cell formulas and functions in spreadsheet applications",
+      "domainId": 1,
+      "categoryId": "1.1",
+      "exampleTasks": ["Running VLOOKUP functions", "Evaluating nested IF statements", "Computing SUMIF aggregations"]
+    },
+    {
+      "id": "1.1.4",
+      "name": "Financial Calculations",
+      "description": "Computing interest rates, amortization schedules, and financial ratios",
+      "domainId": 1,
+      "categoryId": "1.1",
+      "exampleTasks": ["Calculating compound interest", "Computing loan amortization", "Determining NPV and IRR"]
+    },
+    {
+      "id": "1.1.5",
+      "name": "Matrix and Linear Algebra Operations",
+      "description": "Performing matrix multiplication, inversion, eigenvalue decomposition, and vector operations",
+      "domainId": 1,
+      "categoryId": "1.1",
+      "exampleTasks": ["Multiplying matrices", "Computing determinants", "Solving systems of linear equations"]
+    },
+    {
+      "id": "1.2.1",
+      "name": "Data Format Conversion",
+      "description": "Converting data between formats such as JSON, XML, CSV, and proprietary formats",
+      "domainId": 1,
+      "categoryId": "1.2",
+      "exampleTasks": ["Converting CSV to JSON", "Transforming XML to relational tables", "Parsing fixed-width to delimited"]
+    },
+    {
+      "id": "1.2.2",
+      "name": "Database Query Execution",
+      "description": "Running SQL or NoSQL queries to retrieve, filter, and aggregate data",
+      "domainId": 1,
+      "categoryId": "1.2",
+      "exampleTasks": ["Executing SELECT statements", "Running aggregate queries", "Performing JOIN operations"]
+    },
+    {
+      "id": "1.2.3",
+      "name": "ETL Pipeline Execution",
+      "description": "Running extract, transform, and load processes to move data between systems",
+      "domainId": 1,
+      "categoryId": "1.2",
+      "exampleTasks": ["Extracting data from source systems", "Applying transformation rules", "Loading into data warehouses"]
+    },
+    {
+      "id": "1.2.4",
+      "name": "Data Deduplication and Cleansing",
+      "description": "Identifying and removing duplicate records and correcting data inconsistencies",
+      "domainId": 1,
+      "categoryId": "1.2",
+      "exampleTasks": ["Removing duplicate entries", "Standardizing address formats", "Correcting data type mismatches"]
+    },
+    {
+      "id": "1.2.5",
+      "name": "Schema Mapping and Migration",
+      "description": "Transforming data structures from one schema to another",
+      "domainId": 1,
+      "categoryId": "1.2",
+      "exampleTasks": ["Mapping legacy schemas to new formats", "Converting database schemas", "Migrating API data structures"]
+    },
+    {
+      "id": "1.3.1",
+      "name": "Code Compilation",
+      "description": "Translating source code into executable machine code or bytecode",
+      "domainId": 1,
+      "categoryId": "1.3",
+      "exampleTasks": ["Compiling C++ to binary", "Transpiling TypeScript to JavaScript", "Building Java bytecode"]
+    },
+    {
+      "id": "1.3.2",
+      "name": "Syntax Validation",
+      "description": "Checking code or data for syntactic correctness against grammar rules",
+      "domainId": 1,
+      "categoryId": "1.3",
+      "exampleTasks": ["Linting source code", "Validating JSON syntax", "Checking XML well-formedness"]
+    },
+    {
+      "id": "1.3.3",
+      "name": "Schema Validation",
+      "description": "Verifying data conforms to a defined schema or specification",
+      "domainId": 1,
+      "categoryId": "1.3",
+      "exampleTasks": ["Validating JSON against JSON Schema", "Checking XML against XSD", "Verifying API payloads"]
+    },
+    {
+      "id": "1.3.4",
+      "name": "Type Checking",
+      "description": "Verifying type correctness in statically or dynamically typed programs",
+      "domainId": 1,
+      "categoryId": "1.3",
+      "exampleTasks": ["Running TypeScript type checker", "Executing mypy for Python", "Performing Rust borrow checking"]
+    },
+    {
+      "id": "1.3.5",
+      "name": "Formal Proof Verification",
+      "description": "Checking mathematical or logical proofs for correctness using proof assistants",
+      "domainId": 1,
+      "categoryId": "1.3",
+      "exampleTasks": ["Verifying Coq proofs", "Checking Isabelle theorems", "Validating Lean proofs"]
+    },
+    {
+      "id": "1.3.6",
+      "name": "Checksum and Hash Verification",
+      "description": "Computing and comparing cryptographic hashes to verify data integrity",
+      "domainId": 1,
+      "categoryId": "1.3",
+      "exampleTasks": ["Verifying file checksums", "Computing SHA-256 hashes", "Validating digital signatures"]
+    },
+    {
+      "id": "1.4.1",
+      "name": "Sorting and Ordering",
+      "description": "Arranging data elements according to specified criteria",
+      "domainId": 1,
+      "categoryId": "1.4",
+      "exampleTasks": ["Sorting lists alphabetically", "Ordering records by date", "Ranking items by score"]
+    },
+    {
+      "id": "1.4.2",
+      "name": "Search and Retrieval",
+      "description": "Finding specific items within data structures using search algorithms",
+      "domainId": 1,
+      "categoryId": "1.4",
+      "exampleTasks": ["Binary search in arrays", "Hash table lookups", "Tree traversal searches"]
+    },
+    {
+      "id": "1.4.3",
+      "name": "Graph Traversal and Pathfinding",
+      "description": "Navigating graph structures to find paths or visit nodes",
+      "domainId": 1,
+      "categoryId": "1.4",
+      "exampleTasks": ["Finding shortest paths", "Detecting graph cycles", "Computing minimum spanning trees"]
+    },
+    {
+      "id": "1.4.4",
+      "name": "Encryption and Decryption",
+      "description": "Applying cryptographic algorithms to encode or decode data",
+      "domainId": 1,
+      "categoryId": "1.4",
+      "exampleTasks": ["AES encryption of files", "RSA key operations", "Decrypting TLS traffic"]
+    },
+    {
+      "id": "1.4.5",
+      "name": "Compression and Decompression",
+      "description": "Reducing data size using compression algorithms and restoring original data",
+      "domainId": 1,
+      "categoryId": "1.4",
+      "exampleTasks": ["ZIP file compression", "GZIP stream encoding", "Video codec encoding"]
+    },
+    {
+      "id": "1.4.6",
+      "name": "Scheduling and Optimization",
+      "description": "Executing algorithms to find optimal arrangements or schedules",
+      "domainId": 1,
+      "categoryId": "1.4",
+      "exampleTasks": ["Job shop scheduling", "Bin packing optimization", "Constraint satisfaction solving"]
+    },
+    {
+      "id": "2.1.1",
+      "name": "Literature Review",
+      "description": "Systematically searching, reading, and synthesizing published research on a topic",
+      "domainId": 2,
+      "categoryId": "2.1",
+      "exampleTasks": ["Searching academic databases", "Summarizing research papers", "Identifying research gaps"]
+    },
+    {
+      "id": "2.1.2",
+      "name": "Market Research",
+      "description": "Gathering and analyzing information about markets, competitors, and consumer behavior",
+      "domainId": 2,
+      "categoryId": "2.1",
+      "exampleTasks": ["Competitor analysis", "Consumer trend identification", "Market sizing estimates"]
+    },
+    {
+      "id": "2.1.3",
+      "name": "Statistical Data Analysis",
+      "description": "Applying statistical methods to datasets to extract insights and test hypotheses",
+      "domainId": 2,
+      "categoryId": "2.1",
+      "exampleTasks": ["Running regression analyses", "Hypothesis testing", "Creating statistical models"]
+    },
+    {
+      "id": "2.1.4",
+      "name": "Due Diligence Research",
+      "description": "Comprehensive investigation of companies, individuals, or assets for business decisions",
+      "domainId": 2,
+      "categoryId": "2.1",
+      "exampleTasks": ["Background checks", "Financial record analysis", "Risk assessment compilation"]
+    },
+    {
+      "id": "2.1.5",
+      "name": "Survey Analysis",
+      "description": "Processing and interpreting responses from surveys and questionnaires",
+      "domainId": 2,
+      "categoryId": "2.1",
+      "exampleTasks": ["Coding open-ended responses", "Cross-tabulation analysis", "Generating survey reports"]
+    },
+    {
+      "id": "2.2.1",
+      "name": "Technical Documentation",
+      "description": "Creating written documentation explaining technical systems, processes, or products",
+      "domainId": 2,
+      "categoryId": "2.2",
+      "exampleTasks": ["Writing API documentation", "Creating user manuals", "Documenting code"]
+    },
+    {
+      "id": "2.2.2",
+      "name": "Business Report Writing",
+      "description": "Composing formal reports on business performance, projects, or initiatives",
+      "domainId": 2,
+      "categoryId": "2.2",
+      "exampleTasks": ["Quarterly performance reports", "Project status reports", "Annual reviews"]
+    },
+    {
+      "id": "2.2.3",
+      "name": "Executive Summary Creation",
+      "description": "Distilling lengthy documents or data into concise summaries for decision-makers",
+      "domainId": 2,
+      "categoryId": "2.2",
+      "exampleTasks": ["Summarizing research findings", "Creating brief reports", "Abstracting long documents"]
+    },
+    {
+      "id": "2.2.4",
+      "name": "Meeting Minutes Documentation",
+      "description": "Recording and formatting key points, decisions, and action items from meetings",
+      "domainId": 2,
+      "categoryId": "2.2",
+      "exampleTasks": ["Transcribing meetings", "Extracting action items", "Formatting meeting notes"]
+    },
+    {
+      "id": "2.2.5",
+      "name": "Research Paper Writing",
+      "description": "Drafting academic or scientific papers presenting research methodology and findings",
+      "domainId": 2,
+      "categoryId": "2.2",
+      "exampleTasks": ["Writing methodology sections", "Drafting literature reviews", "Formatting citations"]
+    },
+    {
+      "id": "2.3.1",
+      "name": "Content Tagging and Labeling",
+      "description": "Assigning descriptive tags, keywords, or labels to content for retrieval",
+      "domainId": 2,
+      "categoryId": "2.3",
+      "exampleTasks": ["Tagging articles with keywords", "Labeling images", "Categorizing support tickets"]
+    },
+    {
+      "id": "2.3.2",
+      "name": "Document Classification",
+      "description": "Sorting documents into predefined categories based on content",
+      "domainId": 2,
+      "categoryId": "2.3",
+      "exampleTasks": ["Email categorization", "Legal document sorting", "Filing records"]
+    },
+    {
+      "id": "2.3.3",
+      "name": "Knowledge Base Maintenance",
+      "description": "Organizing, updating, and maintaining repositories of organizational knowledge",
+      "domainId": 2,
+      "categoryId": "2.3",
+      "exampleTasks": ["Updating wiki articles", "Organizing FAQ entries", "Linking related content"]
+    },
+    {
+      "id": "2.3.4",
+      "name": "Metadata Management",
+      "description": "Creating and maintaining descriptive information about data assets",
+      "domainId": 2,
+      "categoryId": "2.3",
+      "exampleTasks": ["Data cataloging", "Schema documentation", "Asset tagging"]
+    },
+    {
+      "id": "2.3.5",
+      "name": "Content Deduplication",
+      "description": "Identifying and resolving duplicate or near-duplicate content across systems",
+      "domainId": 2,
+      "categoryId": "2.3",
+      "exampleTasks": ["Finding duplicate records", "Merging similar entries", "Identifying redundant files"]
+    },
+    {
+      "id": "2.4.1",
+      "name": "Trend Analysis",
+      "description": "Identifying and interpreting patterns of change over time in data",
+      "domainId": 2,
+      "categoryId": "2.4",
+      "exampleTasks": ["Sales trend forecasting", "Social media trend detection", "Economic indicator tracking"]
+    },
+    {
+      "id": "2.4.2",
+      "name": "Anomaly Detection",
+      "description": "Identifying unusual patterns, outliers, or deviations in data",
+      "domainId": 2,
+      "categoryId": "2.4",
+      "exampleTasks": ["Fraud detection", "System error identification", "Quality control alerts"]
+    },
+    {
+      "id": "2.4.3",
+      "name": "Correlation Analysis",
+      "description": "Discovering and measuring relationships between variables in datasets",
+      "domainId": 2,
+      "categoryId": "2.4",
+      "exampleTasks": ["Feature correlation in datasets", "Cause-effect hypothesis generation", "Variable relationship mapping"]
+    },
+    {
+      "id": "2.4.4",
+      "name": "Sentiment Analysis",
+      "description": "Determining emotional tone and opinion from text data",
+      "domainId": 2,
+      "categoryId": "2.4",
+      "exampleTasks": ["Social media sentiment tracking", "Customer review analysis", "Brand perception monitoring"]
+    },
+    {
+      "id": "2.4.5",
+      "name": "Clustering and Segmentation",
+      "description": "Grouping data points or entities based on shared characteristics",
+      "domainId": 2,
+      "categoryId": "2.4",
+      "exampleTasks": ["Customer segmentation", "Topic clustering", "Behavioral grouping"]
+    },
+    {
+      "id": "2.4.6",
+      "name": "Predictive Pattern Modeling",
+      "description": "Building models to predict future outcomes based on historical patterns",
+      "domainId": 2,
+      "categoryId": "2.4",
+      "exampleTasks": ["Demand forecasting", "Churn prediction", "Risk scoring models"]
+    },
+    {
+      "id": "2.5.1",
+      "name": "Product Recommendations",
+      "description": "Suggesting products or services based on user preferences and behavior",
+      "domainId": 2,
+      "categoryId": "2.5",
+      "exampleTasks": ["E-commerce product suggestions", "Cross-selling recommendations", "Personalized catalogs"]
+    },
+    {
+      "id": "2.5.2",
+      "name": "Content Recommendations",
+      "description": "Suggesting articles, videos, or media based on user interests",
+      "domainId": 2,
+      "categoryId": "2.5",
+      "exampleTasks": ["News article suggestions", "Video recommendations", "Reading lists"]
+    },
+    {
+      "id": "2.5.3",
+      "name": "Decision Support Analysis",
+      "description": "Providing ranked options and analysis to support human decision-making",
+      "domainId": 2,
+      "categoryId": "2.5",
+      "exampleTasks": ["Vendor comparison matrices", "Investment option ranking", "Scenario analysis"]
+    },
+    {
+      "id": "2.5.4",
+      "name": "Resource Allocation Suggestions",
+      "description": "Recommending optimal distribution of resources based on constraints and goals",
+      "domainId": 2,
+      "categoryId": "2.5",
+      "exampleTasks": ["Budget allocation recommendations", "Staff scheduling suggestions", "Inventory optimization"]
+    },
+    {
+      "id": "2.5.5",
+      "name": "Talent Matching",
+      "description": "Matching candidates to job requirements or team compositions",
+      "domainId": 2,
+      "categoryId": "2.5",
+      "exampleTasks": ["Resume-job matching", "Team composition suggestions", "Skill gap analysis"]
+    },
+    {
+      "id": "2.5.6",
+      "name": "Diagnostic Recommendations",
+      "description": "Suggesting likely diagnoses or solutions based on symptoms or indicators",
+      "domainId": 2,
+      "categoryId": "2.5",
+      "exampleTasks": ["Medical differential diagnosis support", "IT troubleshooting suggestions", "Equipment fault diagnosis"]
+    },
+    {
+      "id": "3.1.1",
+      "name": "Fiction Writing",
+      "description": "Creating original narrative prose including novels, short stories, and creative nonfiction",
+      "domainId": 3,
+      "categoryId": "3.1",
+      "exampleTasks": ["Writing novel chapters", "Developing character arcs", "Crafting dialogue", "World-building"]
+    },
+    {
+      "id": "3.1.2",
+      "name": "Copywriting",
+      "description": "Writing persuasive marketing and advertising content for products, services, and brands",
+      "domainId": 3,
+      "categoryId": "3.1",
+      "exampleTasks": ["Writing ad headlines", "Creating landing page copy", "Drafting email campaigns", "Writing product descriptions"]
+    },
+    {
+      "id": "3.1.3",
+      "name": "Screenwriting",
+      "description": "Writing scripts for film, television, video content, and stage productions",
+      "domainId": 3,
+      "categoryId": "3.1",
+      "exampleTasks": ["Writing screenplay scenes", "Developing plot outlines", "Creating dialogue", "Writing stage directions"]
+    },
+    {
+      "id": "3.1.4",
+      "name": "Journalism",
+      "description": "Researching and writing news articles, features, and investigative pieces",
+      "domainId": 3,
+      "categoryId": "3.1",
+      "exampleTasks": ["Writing news articles", "Conducting interviews", "Fact-checking stories", "Writing opinion pieces"]
+    },
+    {
+      "id": "3.1.5",
+      "name": "Technical Writing",
+      "description": "Creating documentation, manuals, specifications, and instructional content",
+      "domainId": 3,
+      "categoryId": "3.1",
+      "exampleTasks": ["Writing user manuals", "Creating API documentation", "Drafting specifications", "Writing tutorials"]
+    },
+    {
+      "id": "3.2.1",
+      "name": "Graphic Design",
+      "description": "Creating visual compositions for print and digital media including layouts, posters, and marketing materials",
+      "domainId": 3,
+      "categoryId": "3.2",
+      "exampleTasks": ["Designing marketing materials", "Creating social media graphics", "Layout design", "Typography selection"]
+    },
+    {
+      "id": "3.2.2",
+      "name": "UI/UX Design",
+      "description": "Designing user interfaces and experiences for digital products including websites and applications",
+      "domainId": 3,
+      "categoryId": "3.2",
+      "exampleTasks": ["Creating wireframes", "Designing interface mockups", "Prototyping interactions", "User flow mapping"]
+    },
+    {
+      "id": "3.2.3",
+      "name": "Digital Illustration",
+      "description": "Creating original artwork and illustrations using digital tools",
+      "domainId": 3,
+      "categoryId": "3.2",
+      "exampleTasks": ["Creating character designs", "Drawing concept art", "Editorial illustration", "Icon design"]
+    },
+    {
+      "id": "3.2.4",
+      "name": "Brand Identity Design",
+      "description": "Developing comprehensive visual identity systems including logos, color palettes, and style guides",
+      "domainId": 3,
+      "categoryId": "3.2",
+      "exampleTasks": ["Logo design", "Creating brand guidelines", "Color palette development", "Typography systems"]
+    },
+    {
+      "id": "3.2.5",
+      "name": "Motion Graphics",
+      "description": "Creating animated visual content for video, web, and interactive media",
+      "domainId": 3,
+      "categoryId": "3.2",
+      "exampleTasks": ["Creating title sequences", "Animating infographics", "Video transitions", "Animated logos"]
+    },
+    {
+      "id": "3.3.1",
+      "name": "Application Development",
+      "description": "Writing code for software applications including web, mobile, and desktop programs",
+      "domainId": 3,
+      "categoryId": "3.3",
+      "exampleTasks": ["Writing application features", "Implementing business logic", "Building user interfaces", "Integrating APIs"]
+    },
+    {
+      "id": "3.3.2",
+      "name": "System Architecture Design",
+      "description": "Designing high-level structure of software systems including components, interfaces, and data flows",
+      "domainId": 3,
+      "categoryId": "3.3",
+      "exampleTasks": ["Designing microservices architecture", "Creating system diagrams", "Defining API contracts", "Capacity planning"]
+    },
+    {
+      "id": "3.3.3",
+      "name": "Algorithm Development",
+      "description": "Designing and implementing computational algorithms and data structures",
+      "domainId": 3,
+      "categoryId": "3.3",
+      "exampleTasks": ["Implementing sorting algorithms", "Designing optimization routines", "Creating search algorithms", "Developing ML models"]
+    },
+    {
+      "id": "3.3.4",
+      "name": "Database Design",
+      "description": "Designing database schemas, data models, and query optimization",
+      "domainId": 3,
+      "categoryId": "3.3",
+      "exampleTasks": ["Creating data models", "Writing database schemas", "Query optimization", "Data migration design"]
+    },
+    {
+      "id": "3.3.5",
+      "name": "DevOps & Infrastructure",
+      "description": "Designing and implementing deployment pipelines, cloud infrastructure, and automation",
+      "domainId": 3,
+      "categoryId": "3.3",
+      "exampleTasks": ["Writing CI/CD pipelines", "Infrastructure as code", "Container orchestration", "Monitoring setup"]
+    },
+    {
+      "id": "3.3.6",
+      "name": "Code Review & Refactoring",
+      "description": "Reviewing code quality, identifying improvements, and restructuring existing code",
+      "domainId": 3,
+      "categoryId": "3.3",
+      "exampleTasks": ["Reviewing pull requests", "Identifying code smells", "Refactoring legacy code", "Suggesting improvements"]
+    },
+    {
+      "id": "3.4.1",
+      "name": "Song Composition",
+      "description": "Creating original musical compositions including melodies, harmonies, and arrangements",
+      "domainId": 3,
+      "categoryId": "3.4",
+      "exampleTasks": ["Writing melodies", "Composing chord progressions", "Arranging instruments", "Writing lyrics"]
+    },
+    {
+      "id": "3.4.2",
+      "name": "Sound Design",
+      "description": "Creating and manipulating audio elements for media including synthesized sounds and effects",
+      "domainId": 3,
+      "categoryId": "3.4",
+      "exampleTasks": ["Creating synthesizer patches", "Designing sound effects", "Foley creation", "Ambient soundscapes"]
+    },
+    {
+      "id": "3.4.3",
+      "name": "Audio Production & Mixing",
+      "description": "Recording, editing, mixing, and mastering audio tracks for release",
+      "domainId": 3,
+      "categoryId": "3.4",
+      "exampleTasks": ["Mixing multitrack recordings", "Audio mastering", "EQ and compression", "Vocal processing"]
+    },
+    {
+      "id": "3.4.4",
+      "name": "Film & Game Scoring",
+      "description": "Composing original music for visual media including films, games, and advertisements",
+      "domainId": 3,
+      "categoryId": "3.4",
+      "exampleTasks": ["Scoring film scenes", "Creating game music", "Writing jingles", "Composing background music"]
+    },
+    {
+      "id": "3.4.5",
+      "name": "Podcast & Audio Content Production",
+      "description": "Producing spoken-word audio content including editing, post-production, and publishing",
+      "domainId": 3,
+      "categoryId": "3.4",
+      "exampleTasks": ["Editing podcast episodes", "Audio cleanup", "Adding intro/outro music", "Transcript generation"]
+    },
+    {
+      "id": "3.5.1",
+      "name": "Business Strategy Development",
+      "description": "Formulating organizational strategies including market positioning, competitive analysis, and growth planning",
+      "domainId": 3,
+      "categoryId": "3.5",
+      "exampleTasks": ["SWOT analysis", "Competitive positioning", "Growth strategy planning", "Market entry analysis"]
+    },
+    {
+      "id": "3.5.2",
+      "name": "Product Design",
+      "description": "Conceptualizing and designing new products including features, specifications, and user needs",
+      "domainId": 3,
+      "categoryId": "3.5",
+      "exampleTasks": ["Writing product requirements", "Feature prioritization", "User research synthesis", "Roadmap planning"]
+    },
+    {
+      "id": "3.5.3",
+      "name": "Innovation & Invention",
+      "description": "Generating novel ideas, concepts, and solutions for technical or business problems",
+      "domainId": 3,
+      "categoryId": "3.5",
+      "exampleTasks": ["Brainstorming sessions", "Patent development", "Technology scouting", "Concept validation"]
+    },
+    {
+      "id": "3.5.4",
+      "name": "Service Design",
+      "description": "Designing end-to-end service experiences including touchpoints, processes, and customer journeys",
+      "domainId": 3,
+      "categoryId": "3.5",
+      "exampleTasks": ["Customer journey mapping", "Service blueprinting", "Touchpoint design", "Process optimization"]
+    },
+    {
+      "id": "3.5.5",
+      "name": "Business Model Innovation",
+      "description": "Developing and iterating on business models including revenue streams, value propositions, and partnerships",
+      "domainId": 3,
+      "categoryId": "3.5",
+      "exampleTasks": ["Business model canvas development", "Revenue model design", "Partnership strategy", "Value proposition design"]
+    },
+    {
+      "id": "4.1.1",
+      "name": "Lecture Delivery",
+      "description": "Presenting educational content to groups through structured verbal presentation",
+      "domainId": 4,
+      "categoryId": "4.1",
+      "exampleTasks": ["Delivering university lectures", "Presenting conference talks", "Conducting webinars", "Leading training sessions"]
+    },
+    {
+      "id": "4.1.2",
+      "name": "One-on-One Tutoring",
+      "description": "Providing personalized instruction adapted to individual learner needs and pace",
+      "domainId": 4,
+      "categoryId": "4.1",
+      "exampleTasks": ["Academic tutoring sessions", "Language instruction", "Music lessons", "Skill coaching"]
+    },
+    {
+      "id": "4.1.3",
+      "name": "Corporate Training",
+      "description": "Delivering professional development and skills training to employees",
+      "domainId": 4,
+      "categoryId": "4.1",
+      "exampleTasks": ["Onboarding new employees", "Software training sessions", "Compliance training", "Leadership development workshops"]
+    },
+    {
+      "id": "4.1.4",
+      "name": "Technical Explanation",
+      "description": "Explaining complex technical concepts to non-technical audiences",
+      "domainId": 4,
+      "categoryId": "4.1",
+      "exampleTasks": ["Explaining software features to users", "Translating scientific findings", "Simplifying technical documentation", "Demo presentations"]
+    },
+    {
+      "id": "4.1.5",
+      "name": "Procedural Instruction",
+      "description": "Teaching step-by-step processes and procedures for task completion",
+      "domainId": 4,
+      "categoryId": "4.1",
+      "exampleTasks": ["Teaching software workflows", "Explaining safety procedures", "Guiding process completion", "How-to demonstrations"]
+    },
+    {
+      "id": "4.2.1",
+      "name": "Sales Presentations",
+      "description": "Pitching products or services to potential customers to generate revenue",
+      "domainId": 4,
+      "categoryId": "4.2",
+      "exampleTasks": ["Product demonstrations", "Proposal presentations", "Cold calling pitches", "Trade show presentations"]
+    },
+    {
+      "id": "4.2.2",
+      "name": "Business Negotiation",
+      "description": "Reaching agreements through discussion on terms, prices, and conditions",
+      "domainId": 4,
+      "categoryId": "4.2",
+      "exampleTasks": ["Contract negotiations", "Salary discussions", "Vendor negotiations", "Partnership terms"]
+    },
+    {
+      "id": "4.2.3",
+      "name": "Political Advocacy",
+      "description": "Persuading stakeholders to support policies, causes, or positions",
+      "domainId": 4,
+      "categoryId": "4.2",
+      "exampleTasks": ["Lobbying officials", "Campaign messaging", "Community organizing", "Public testimony"]
+    },
+    {
+      "id": "4.2.4",
+      "name": "Legal Argumentation",
+      "description": "Presenting persuasive arguments in legal contexts to judges, juries, or opposing counsel",
+      "domainId": 4,
+      "categoryId": "4.2",
+      "exampleTasks": ["Courtroom arguments", "Mediation advocacy", "Settlement negotiations", "Written briefs presentation"]
+    },
+    {
+      "id": "4.2.5",
+      "name": "Fundraising Appeals",
+      "description": "Persuading donors and investors to provide financial support",
+      "domainId": 4,
+      "categoryId": "4.2",
+      "exampleTasks": ["Investor pitches", "Donor solicitation", "Grant presentations", "Crowdfunding campaigns"]
+    },
+    {
+      "id": "4.3.1",
+      "name": "Meeting Facilitation",
+      "description": "Leading group discussions to achieve objectives and manage participant dynamics",
+      "domainId": 4,
+      "categoryId": "4.3",
+      "exampleTasks": ["Running team meetings", "Facilitating workshops", "Leading brainstorming sessions", "Moderating discussions"]
+    },
+    {
+      "id": "4.3.2",
+      "name": "Project Status Communication",
+      "description": "Reporting on project progress, blockers, and updates to stakeholders",
+      "domainId": 4,
+      "categoryId": "4.3",
+      "exampleTasks": ["Daily standups", "Sprint reviews", "Executive updates", "Client status calls"]
+    },
+    {
+      "id": "4.3.3",
+      "name": "Schedule Coordination",
+      "description": "Arranging and confirming meeting times and resource availability across parties",
+      "domainId": 4,
+      "categoryId": "4.3",
+      "exampleTasks": ["Calendar management", "Meeting scheduling", "Resource booking", "Travel coordination"]
+    },
+    {
+      "id": "4.3.4",
+      "name": "Cross-Team Alignment",
+      "description": "Coordinating priorities and dependencies between different teams or departments",
+      "domainId": 4,
+      "categoryId": "4.3",
+      "exampleTasks": ["Inter-team syncs", "Dependency planning", "Cross-functional coordination", "Stakeholder alignment"]
+    },
+    {
+      "id": "4.3.5",
+      "name": "Delegation and Task Assignment",
+      "description": "Assigning work to team members and communicating expectations",
+      "domainId": 4,
+      "categoryId": "4.3",
+      "exampleTasks": ["Work assignment", "Task prioritization communication", "Deadline setting", "Responsibility clarification"]
+    },
+    {
+      "id": "4.4.1",
+      "name": "Customer Service Inquiries",
+      "description": "Answering customer questions about products, services, policies, and account issues",
+      "domainId": 4,
+      "categoryId": "4.4",
+      "exampleTasks": ["Answering product questions", "Explaining policies", "Account inquiries", "Order status updates"]
+    },
+    {
+      "id": "4.4.2",
+      "name": "Technical Support",
+      "description": "Diagnosing and resolving technical problems through communication with users",
+      "domainId": 4,
+      "categoryId": "4.4",
+      "exampleTasks": ["Troubleshooting software issues", "Hardware problem diagnosis", "Configuration assistance", "Error resolution"]
+    },
+    {
+      "id": "4.4.3",
+      "name": "Help Desk Triage",
+      "description": "Categorizing and routing incoming support requests to appropriate handlers",
+      "domainId": 4,
+      "categoryId": "4.4",
+      "exampleTasks": ["Ticket categorization", "Priority assessment", "Request routing", "Initial response"]
+    },
+    {
+      "id": "4.4.4",
+      "name": "Expert Consultation",
+      "description": "Providing specialized knowledge and advice in response to specific questions",
+      "domainId": 4,
+      "categoryId": "4.4",
+      "exampleTasks": ["Legal consultations", "Financial advice", "Medical information", "Technical consulting"]
+    },
+    {
+      "id": "4.4.5",
+      "name": "Information Booth Services",
+      "description": "Providing directions, information, and assistance at public venues",
+      "domainId": 4,
+      "categoryId": "4.4",
+      "exampleTasks": ["Giving directions", "Event information", "Visitor assistance", "FAQ responses"]
+    },
+    {
+      "id": "4.5.1",
+      "name": "Professional Networking",
+      "description": "Building and maintaining professional relationships for career and business purposes",
+      "domainId": 4,
+      "categoryId": "4.5",
+      "exampleTasks": ["Conference networking", "LinkedIn engagement", "Professional introductions", "Industry events"]
+    },
+    {
+      "id": "4.5.2",
+      "name": "Small Talk and Social Conversation",
+      "description": "Engaging in casual conversation to build rapport and maintain relationships",
+      "domainId": 4,
+      "categoryId": "4.5",
+      "exampleTasks": ["Office chitchat", "Social event conversations", "Icebreakers", "Casual check-ins"]
+    },
+    {
+      "id": "4.5.3",
+      "name": "Hosting and Entertainment",
+      "description": "Welcoming and engaging guests in social settings",
+      "domainId": 4,
+      "categoryId": "4.5",
+      "exampleTasks": ["Dinner party hosting", "Event emceeing", "Client entertainment", "Reception hosting"]
+    },
+    {
+      "id": "4.5.4",
+      "name": "Online Community Engagement",
+      "description": "Participating in and moderating online social spaces and forums",
+      "domainId": 4,
+      "categoryId": "4.5",
+      "exampleTasks": ["Forum moderation", "Social media engagement", "Community management", "Discord/Slack participation"]
+    },
+    {
+      "id": "4.5.5",
+      "name": "Relationship Check-ins",
+      "description": "Maintaining ongoing connections through periodic communication",
+      "domainId": 4,
+      "categoryId": "4.5",
+      "exampleTasks": ["Follow-up messages", "Birthday greetings", "Anniversary acknowledgments", "Reconnection outreach"]
+    },
+    {
+      "id": "5.1.1",
+      "name": "Form Processing",
+      "description": "Reviewing, validating, and processing submitted forms and applications",
+      "domainId": 5,
+      "categoryId": "5.1",
+      "exampleTasks": ["Processing permit applications", "Reviewing registration forms", "Validating application completeness", "Data entry from forms"]
+    },
+    {
+      "id": "5.1.2",
+      "name": "Document Filing and Retrieval",
+      "description": "Organizing, storing, and retrieving documents according to filing systems",
+      "domainId": 5,
+      "categoryId": "5.1",
+      "exampleTasks": ["Filing paperwork", "Document scanning", "Record retrieval", "Archive management"]
+    },
+    {
+      "id": "5.1.3",
+      "name": "Appointment Scheduling",
+      "description": "Booking, confirming, and managing appointments for services",
+      "domainId": 5,
+      "categoryId": "5.1",
+      "exampleTasks": ["Booking appointments", "Sending reminders", "Managing cancellations", "Waitlist management"]
+    },
+    {
+      "id": "5.1.4",
+      "name": "License and Permit Administration",
+      "description": "Processing applications for licenses, permits, and certifications",
+      "domainId": 5,
+      "categoryId": "5.1",
+      "exampleTasks": ["Driver's license processing", "Business permit issuance", "Professional certification", "Renewal processing"]
+    },
+    {
+      "id": "5.1.5",
+      "name": "Mail and Correspondence Handling",
+      "description": "Receiving, sorting, routing, and responding to incoming communications",
+      "domainId": 5,
+      "categoryId": "5.1",
+      "exampleTasks": ["Email triage", "Mail sorting", "Response drafting", "Communication routing"]
+    },
+    {
+      "id": "5.2.1",
+      "name": "Point-of-Sale Transactions",
+      "description": "Processing purchases, payments, and returns at retail locations",
+      "domainId": 5,
+      "categoryId": "5.2",
+      "exampleTasks": ["Cash register operation", "Payment processing", "Return handling", "Gift card transactions"]
+    },
+    {
+      "id": "5.2.2",
+      "name": "Order Taking",
+      "description": "Receiving and recording customer orders for products or services",
+      "domainId": 5,
+      "categoryId": "5.2",
+      "exampleTasks": ["Restaurant order taking", "Phone orders", "Custom order specifications", "Catering requests"]
+    },
+    {
+      "id": "5.2.3",
+      "name": "Hotel Check-in/Check-out",
+      "description": "Processing guest arrivals and departures including room assignment and billing",
+      "domainId": 5,
+      "categoryId": "5.2",
+      "exampleTasks": ["Guest registration", "Room key issuance", "Checkout processing", "Billing reconciliation"]
+    },
+    {
+      "id": "5.2.4",
+      "name": "Reservation Management",
+      "description": "Taking, modifying, and managing bookings for services and accommodations",
+      "domainId": 5,
+      "categoryId": "5.2",
+      "exampleTasks": ["Restaurant reservations", "Hotel bookings", "Event reservations", "Service appointments"]
+    },
+    {
+      "id": "5.2.5",
+      "name": "Food Service Counter Operations",
+      "description": "Serving customers at food counters including assembly and presentation",
+      "domainId": 5,
+      "categoryId": "5.2",
+      "exampleTasks": ["Deli counter service", "Cafeteria serving", "Bakery counter service", "Coffee bar operation"]
+    },
+    {
+      "id": "5.3.1",
+      "name": "Bank Teller Transactions",
+      "description": "Processing deposits, withdrawals, and basic banking services",
+      "domainId": 5,
+      "categoryId": "5.3",
+      "exampleTasks": ["Processing deposits", "Cash withdrawals", "Check cashing", "Account inquiries"]
+    },
+    {
+      "id": "5.3.2",
+      "name": "Insurance Claims Processing",
+      "description": "Reviewing and processing insurance claims according to policy terms",
+      "domainId": 5,
+      "categoryId": "5.3",
+      "exampleTasks": ["Claim documentation review", "Coverage verification", "Payment processing", "Claim status updates"]
+    },
+    {
+      "id": "5.3.3",
+      "name": "Loan Application Processing",
+      "description": "Reviewing loan applications and supporting documentation for approval",
+      "domainId": 5,
+      "categoryId": "5.3",
+      "exampleTasks": ["Document verification", "Credit check processing", "Application review", "Approval workflow"]
+    },
+    {
+      "id": "5.3.4",
+      "name": "Account Opening and Maintenance",
+      "description": "Setting up and maintaining customer accounts for financial services",
+      "domainId": 5,
+      "categoryId": "5.3",
+      "exampleTasks": ["New account setup", "Account modifications", "Address changes", "Beneficiary updates"]
+    },
+    {
+      "id": "5.3.5",
+      "name": "Tax Preparation Services",
+      "description": "Preparing and filing tax returns based on client information",
+      "domainId": 5,
+      "categoryId": "5.3",
+      "exampleTasks": ["Individual tax returns", "Business tax filing", "Deduction identification", "Tax form completion"]
+    },
+    {
+      "id": "5.4.1",
+      "name": "Patient Registration",
+      "description": "Collecting and recording patient information for healthcare visits",
+      "domainId": 5,
+      "categoryId": "5.4",
+      "exampleTasks": ["New patient intake", "Insurance verification", "Demographic updates", "Consent form collection"]
+    },
+    {
+      "id": "5.4.2",
+      "name": "Medical Scheduling",
+      "description": "Scheduling appointments with healthcare providers and procedures",
+      "domainId": 5,
+      "categoryId": "5.4",
+      "exampleTasks": ["Appointment booking", "Procedure scheduling", "Follow-up scheduling", "Referral coordination"]
+    },
+    {
+      "id": "5.4.3",
+      "name": "Medical Billing and Coding",
+      "description": "Translating healthcare services into billing codes and processing claims",
+      "domainId": 5,
+      "categoryId": "5.4",
+      "exampleTasks": ["ICD-10 coding", "CPT code assignment", "Claim submission", "Denial management"]
+    },
+    {
+      "id": "5.4.4",
+      "name": "Prescription Processing",
+      "description": "Receiving, verifying, and filling prescription orders",
+      "domainId": 5,
+      "categoryId": "5.4",
+      "exampleTasks": ["Prescription verification", "Drug interaction checking", "Refill processing", "Insurance authorization"]
+    },
+    {
+      "id": "5.4.5",
+      "name": "Medical Records Management",
+      "description": "Maintaining, updating, and sharing patient health records",
+      "domainId": 5,
+      "categoryId": "5.4",
+      "exampleTasks": ["Chart updates", "Record requests", "Information release", "Records archiving"]
+    },
+    {
+      "id": "5.5.1",
+      "name": "Legal Document Preparation",
+      "description": "Drafting and formatting legal documents based on templates and specifications",
+      "domainId": 5,
+      "categoryId": "5.5",
+      "exampleTasks": ["Contract drafting", "Will preparation", "Filing documents", "Legal correspondence"]
+    },
+    {
+      "id": "5.5.2",
+      "name": "Compliance Monitoring",
+      "description": "Checking organizational activities against regulatory requirements",
+      "domainId": 5,
+      "categoryId": "5.5",
+      "exampleTasks": ["Policy compliance audits", "Regulatory reporting", "Risk assessments", "Control testing"]
+    },
+    {
+      "id": "5.5.3",
+      "name": "Notarization Services",
+      "description": "Witnessing and authenticating document signatures",
+      "domainId": 5,
+      "categoryId": "5.5",
+      "exampleTasks": ["Document witnessing", "Identity verification", "Signature authentication", "Record keeping"]
+    },
+    {
+      "id": "5.5.4",
+      "name": "Background Check Processing",
+      "description": "Conducting and processing background verification checks",
+      "domainId": 5,
+      "categoryId": "5.5",
+      "exampleTasks": ["Criminal record checks", "Employment verification", "Education verification", "Reference checks"]
+    },
+    {
+      "id": "5.5.5",
+      "name": "Regulatory Filing",
+      "description": "Preparing and submitting required filings to regulatory agencies",
+      "domainId": 5,
+      "categoryId": "5.5",
+      "exampleTasks": ["SEC filings", "Environmental reports", "Business registration", "Annual reports"]
+    },
+    {
+      "id": "6.1.1",
+      "name": "Infant Care",
+      "description": "Meeting the physical and emotional needs of infants including feeding, changing, and soothing",
+      "domainId": 6,
+      "categoryId": "6.1",
+      "exampleTasks": ["Feeding and burping", "Diaper changing", "Soothing crying babies", "Sleep routines"]
+    },
+    {
+      "id": "6.1.2",
+      "name": "Early Childhood Education",
+      "description": "Facilitating learning and development for young children through play and structured activities",
+      "domainId": 6,
+      "categoryId": "6.1",
+      "exampleTasks": ["Leading educational activities", "Reading storytime", "Teaching basic concepts", "Facilitating social play"]
+    },
+    {
+      "id": "6.1.3",
+      "name": "Child Supervision",
+      "description": "Monitoring children's safety and wellbeing during activities and play",
+      "domainId": 6,
+      "categoryId": "6.1",
+      "exampleTasks": ["Playground supervision", "Monitoring activities", "Preventing hazards", "Emergency response"]
+    },
+    {
+      "id": "6.1.4",
+      "name": "Behavioral Guidance",
+      "description": "Teaching children appropriate behavior and managing disciplinary situations",
+      "domainId": 6,
+      "categoryId": "6.1",
+      "exampleTasks": ["Setting boundaries", "Conflict resolution", "Positive reinforcement", "Teaching social skills"]
+    },
+    {
+      "id": "6.1.5",
+      "name": "Special Needs Childcare",
+      "description": "Providing care and support for children with developmental or physical disabilities",
+      "domainId": 6,
+      "categoryId": "6.1",
+      "exampleTasks": ["Adaptive care routines", "Therapy exercises", "Communication assistance", "Sensory accommodations"]
+    },
+    {
+      "id": "6.2.1",
+      "name": "Activities of Daily Living Assistance",
+      "description": "Helping elderly or disabled individuals with bathing, dressing, eating, and toileting",
+      "domainId": 6,
+      "categoryId": "6.2",
+      "exampleTasks": ["Bathing assistance", "Dressing support", "Feeding help", "Toileting assistance"]
+    },
+    {
+      "id": "6.2.2",
+      "name": "Mobility Assistance",
+      "description": "Helping individuals move safely including transfers, walking, and wheelchair use",
+      "domainId": 6,
+      "categoryId": "6.2",
+      "exampleTasks": ["Transfer assistance", "Walking support", "Wheelchair navigation", "Fall prevention"]
+    },
+    {
+      "id": "6.2.3",
+      "name": "Companionship",
+      "description": "Providing social interaction, conversation, and emotional support to isolated individuals",
+      "domainId": 6,
+      "categoryId": "6.2",
+      "exampleTasks": ["Conversation and listening", "Shared activities", "Reading aloud", "Reminiscence activities"]
+    },
+    {
+      "id": "6.2.4",
+      "name": "Medication Management Support",
+      "description": "Reminding and assisting individuals with taking prescribed medications",
+      "domainId": 6,
+      "categoryId": "6.2",
+      "exampleTasks": ["Medication reminders", "Pill organization", "Monitoring adherence", "Side effect observation"]
+    },
+    {
+      "id": "6.2.5",
+      "name": "Dementia Care",
+      "description": "Providing specialized support for individuals with cognitive impairment",
+      "domainId": 6,
+      "categoryId": "6.2",
+      "exampleTasks": ["Orientation support", "Behavioral de-escalation", "Memory activities", "Safety monitoring"]
+    },
+    {
+      "id": "6.3.1",
+      "name": "Bedside Nursing Care",
+      "description": "Providing direct patient care including monitoring, treatments, and comfort measures",
+      "domainId": 6,
+      "categoryId": "6.3",
+      "exampleTasks": ["Vital signs monitoring", "Wound care", "IV management", "Patient comfort measures"]
+    },
+    {
+      "id": "6.3.2",
+      "name": "Physical Therapy Sessions",
+      "description": "Guiding patients through therapeutic exercises and rehabilitation activities",
+      "domainId": 6,
+      "categoryId": "6.3",
+      "exampleTasks": ["Exercise guidance", "Movement therapy", "Gait training", "Range of motion exercises"]
+    },
+    {
+      "id": "6.3.3",
+      "name": "Patient Education",
+      "description": "Teaching patients about their conditions, treatments, and self-care",
+      "domainId": 6,
+      "categoryId": "6.3",
+      "exampleTasks": ["Explaining diagnoses", "Demonstrating self-care", "Medication education", "Lifestyle counseling"]
+    },
+    {
+      "id": "6.3.4",
+      "name": "Pain Management Support",
+      "description": "Assessing and helping manage patient pain through various interventions",
+      "domainId": 6,
+      "categoryId": "6.3",
+      "exampleTasks": ["Pain assessment", "Positioning for comfort", "Non-pharmacological interventions", "Monitoring pain levels"]
+    },
+    {
+      "id": "6.3.5",
+      "name": "End-of-Life Care",
+      "description": "Providing comfort care and support for patients and families during dying process",
+      "domainId": 6,
+      "categoryId": "6.3",
+      "exampleTasks": ["Comfort measures", "Family support", "Symptom management", "Emotional presence"]
+    },
+    {
+      "id": "6.4.1",
+      "name": "Individual Therapy Sessions",
+      "description": "Conducting one-on-one therapeutic conversations to address mental health concerns",
+      "domainId": 6,
+      "categoryId": "6.4",
+      "exampleTasks": ["Cognitive behavioral therapy", "Talk therapy sessions", "Trauma processing", "Anxiety treatment"]
+    },
+    {
+      "id": "6.4.2",
+      "name": "Crisis Intervention",
+      "description": "Providing immediate support during mental health emergencies and acute distress",
+      "domainId": 6,
+      "categoryId": "6.4",
+      "exampleTasks": ["Suicide prevention", "De-escalation", "Emergency assessment", "Safety planning"]
+    },
+    {
+      "id": "6.4.3",
+      "name": "Life Coaching",
+      "description": "Supporting individuals in setting and achieving personal and professional goals",
+      "domainId": 6,
+      "categoryId": "6.4",
+      "exampleTasks": ["Goal setting", "Accountability check-ins", "Obstacle problem-solving", "Progress celebration"]
+    },
+    {
+      "id": "6.4.4",
+      "name": "Group Therapy Facilitation",
+      "description": "Leading therapeutic group sessions for shared healing and support",
+      "domainId": 6,
+      "categoryId": "6.4",
+      "exampleTasks": ["Support group facilitation", "Group dynamics management", "Peer connection building", "Shared experience processing"]
+    },
+    {
+      "id": "6.4.5",
+      "name": "Addiction Counseling",
+      "description": "Supporting individuals in recovery from substance abuse and behavioral addictions",
+      "domainId": 6,
+      "categoryId": "6.4",
+      "exampleTasks": ["Recovery planning", "Relapse prevention", "Motivational interviewing", "Trigger identification"]
+    },
+    {
+      "id": "6.5.1",
+      "name": "Community Organizing",
+      "description": "Mobilizing community members to address shared concerns and create change",
+      "domainId": 6,
+      "categoryId": "6.5",
+      "exampleTasks": ["Neighborhood organizing", "Coalition building", "Advocacy campaigns", "Community meetings"]
+    },
+    {
+      "id": "6.5.2",
+      "name": "Volunteer Coordination",
+      "description": "Recruiting, training, and managing volunteers for community service",
+      "domainId": 6,
+      "categoryId": "6.5",
+      "exampleTasks": ["Volunteer recruitment", "Assignment matching", "Training sessions", "Recognition activities"]
+    },
+    {
+      "id": "6.5.3",
+      "name": "Religious/Spiritual Guidance",
+      "description": "Providing spiritual counsel, rituals, and religious education",
+      "domainId": 6,
+      "categoryId": "6.5",
+      "exampleTasks": ["Pastoral counseling", "Religious ceremonies", "Spiritual direction", "Scripture teaching"]
+    },
+    {
+      "id": "6.5.4",
+      "name": "Social Work Case Management",
+      "description": "Coordinating services and support for individuals facing complex life challenges",
+      "domainId": 6,
+      "categoryId": "6.5",
+      "exampleTasks": ["Needs assessment", "Resource connection", "Care coordination", "Progress monitoring"]
+    },
+    {
+      "id": "6.5.5",
+      "name": "Youth Mentoring",
+      "description": "Building supportive relationships with young people to guide their development",
+      "domainId": 6,
+      "categoryId": "6.5",
+      "exampleTasks": ["One-on-one mentoring", "Role modeling", "Life skills guidance", "Goal encouragement"]
+    },
+    {
+      "id": "6.6.1",
+      "name": "Family Time Activities",
+      "description": "Engaging in shared activities that maintain and strengthen family bonds",
+      "domainId": 6,
+      "categoryId": "6.6",
+      "exampleTasks": ["Family meals", "Game nights", "Holiday celebrations", "Vacation activities"]
+    },
+    {
+      "id": "6.6.2",
+      "name": "Friendship Maintenance",
+      "description": "Investing time and effort to maintain close personal friendships",
+      "domainId": 6,
+      "categoryId": "6.6",
+      "exampleTasks": ["Friend outings", "Emotional support", "Celebration participation", "Regular communication"]
+    },
+    {
+      "id": "6.6.3",
+      "name": "Romantic Partnership",
+      "description": "Maintaining intimate relationships through communication, support, and shared experience",
+      "domainId": 6,
+      "categoryId": "6.6",
+      "exampleTasks": ["Date activities", "Relationship conversations", "Conflict resolution", "Intimacy"]
+    },
+    {
+      "id": "6.6.4",
+      "name": "Grief Support",
+      "description": "Providing presence and support to those experiencing loss and bereavement",
+      "domainId": 6,
+      "categoryId": "6.6",
+      "exampleTasks": ["Being present", "Active listening", "Practical assistance", "Memorial participation"]
+    },
+    {
+      "id": "6.6.5",
+      "name": "Conflict Mediation in Relationships",
+      "description": "Helping resolve interpersonal conflicts between family members or friends",
+      "domainId": 6,
+      "categoryId": "6.6",
+      "exampleTasks": ["Family mediation", "Couples counseling", "Sibling disputes", "Friend reconciliation"]
+    },
+    {
+      "id": "7.1.1",
+      "name": "Assembly Line Work",
+      "description": "Performing repetitive assembly tasks on production lines with standardized components",
+      "domainId": 7,
+      "categoryId": "7.1",
+      "exampleTasks": ["Component installation", "Fastening and securing", "Part positioning", "Sub-assembly completion"]
+    },
+    {
+      "id": "7.1.2",
+      "name": "Packaging Operations",
+      "description": "Placing products into containers and preparing for shipment",
+      "domainId": 7,
+      "categoryId": "7.1",
+      "exampleTasks": ["Box packing", "Shrink wrapping", "Label application", "Palletizing"]
+    },
+    {
+      "id": "7.1.3",
+      "name": "Material Handling",
+      "description": "Moving raw materials and components within manufacturing facilities",
+      "domainId": 7,
+      "categoryId": "7.1",
+      "exampleTasks": ["Loading production lines", "Moving materials between stations", "Staging components", "Waste removal"]
+    },
+    {
+      "id": "7.1.4",
+      "name": "Welding (Automated)",
+      "description": "Performing spot welding and seam welding in controlled factory settings",
+      "domainId": 7,
+      "categoryId": "7.1",
+      "exampleTasks": ["Spot welding", "Seam welding", "Robotic arc welding", "Weld verification"]
+    },
+    {
+      "id": "7.1.5",
+      "name": "Injection Molding Operation",
+      "description": "Operating and monitoring plastic injection molding machines",
+      "domainId": 7,
+      "categoryId": "7.1",
+      "exampleTasks": ["Machine setup", "Cycle monitoring", "Part extraction", "Quality sampling"]
+    },
+    {
+      "id": "7.2.1",
+      "name": "Order Picking",
+      "description": "Retrieving specific items from warehouse locations to fulfill orders",
+      "domainId": 7,
+      "categoryId": "7.2",
+      "exampleTasks": ["Single item picking", "Batch picking", "Zone picking", "Pick verification"]
+    },
+    {
+      "id": "7.2.2",
+      "name": "Inventory Stocking",
+      "description": "Placing received goods into designated storage locations",
+      "domainId": 7,
+      "categoryId": "7.2",
+      "exampleTasks": ["Shelf stocking", "Bin replenishment", "Pallet put-away", "Location scanning"]
+    },
+    {
+      "id": "7.2.3",
+      "name": "Goods Receiving",
+      "description": "Unloading, verifying, and processing incoming shipments",
+      "domainId": 7,
+      "categoryId": "7.2",
+      "exampleTasks": ["Truck unloading", "Shipment verification", "Damage inspection", "Receipt documentation"]
+    },
+    {
+      "id": "7.2.4",
+      "name": "Sortation",
+      "description": "Sorting packages and items by destination or category",
+      "domainId": 7,
+      "categoryId": "7.2",
+      "exampleTasks": ["Package sorting", "Mail sorting", "Returns processing", "Distribution routing"]
+    },
+    {
+      "id": "7.2.5",
+      "name": "Inventory Counting",
+      "description": "Counting and verifying stock levels in warehouse locations",
+      "domainId": 7,
+      "categoryId": "7.2",
+      "exampleTasks": ["Cycle counting", "Physical inventory", "SKU verification", "Discrepancy resolution"]
+    },
+    {
+      "id": "7.3.1",
+      "name": "CNC Machine Operation",
+      "description": "Operating computer-controlled machining equipment for precision manufacturing",
+      "domainId": 7,
+      "categoryId": "7.3",
+      "exampleTasks": ["Part loading/unloading", "Program execution", "Tool changes", "Process monitoring"]
+    },
+    {
+      "id": "7.3.2",
+      "name": "Printing Press Operation",
+      "description": "Operating commercial printing equipment for publications and packaging",
+      "domainId": 7,
+      "categoryId": "7.3",
+      "exampleTasks": ["Press setup", "Paper loading", "Color registration", "Quality monitoring"]
+    },
+    {
+      "id": "7.3.3",
+      "name": "Food Processing Equipment Operation",
+      "description": "Operating machinery for food processing, cooking, and packaging",
+      "domainId": 7,
+      "categoryId": "7.3",
+      "exampleTasks": ["Mixer operation", "Filling line operation", "Oven operation", "Packaging machine operation"]
+    },
+    {
+      "id": "7.3.4",
+      "name": "Textile Machine Operation",
+      "description": "Operating looms, knitting machines, and sewing equipment",
+      "domainId": 7,
+      "categoryId": "7.3",
+      "exampleTasks": ["Loom operation", "Thread changes", "Pattern monitoring", "Machine adjustment"]
+    },
+    {
+      "id": "7.3.5",
+      "name": "Semiconductor Equipment Operation",
+      "description": "Operating cleanroom equipment for chip manufacturing",
+      "domainId": 7,
+      "categoryId": "7.3",
+      "exampleTasks": ["Wafer handling", "Lithography operation", "Etching processes", "Cleanroom protocols"]
+    },
+    {
+      "id": "7.4.1",
+      "name": "Visual Product Inspection",
+      "description": "Examining products for defects, damage, or quality issues",
+      "domainId": 7,
+      "categoryId": "7.4",
+      "exampleTasks": ["Surface defect detection", "Cosmetic inspection", "Label verification", "Assembly completeness check"]
+    },
+    {
+      "id": "7.4.2",
+      "name": "Dimensional Measurement",
+      "description": "Measuring product dimensions against specifications using gauges and instruments",
+      "domainId": 7,
+      "categoryId": "7.4",
+      "exampleTasks": ["Caliper measurement", "Gauge checking", "CMM operation", "Tolerance verification"]
+    },
+    {
+      "id": "7.4.3",
+      "name": "Functional Testing",
+      "description": "Testing products to verify they work according to specifications",
+      "domainId": 7,
+      "categoryId": "7.4",
+      "exampleTasks": ["Electrical testing", "Pressure testing", "Operational checks", "Performance verification"]
+    },
+    {
+      "id": "7.4.4",
+      "name": "Sample Collection",
+      "description": "Collecting product samples for laboratory analysis and testing",
+      "domainId": 7,
+      "categoryId": "7.4",
+      "exampleTasks": ["Random sampling", "Batch sampling", "Sample preparation", "Chain of custody"]
+    },
+    {
+      "id": "7.4.5",
+      "name": "Documentation and Traceability",
+      "description": "Recording inspection results and maintaining quality records",
+      "domainId": 7,
+      "categoryId": "7.4",
+      "exampleTasks": ["Recording measurements", "Lot tracking", "Non-conformance reporting", "Certificate generation"]
+    },
+    {
+      "id": "7.5.1",
+      "name": "Floor Cleaning (Commercial)",
+      "description": "Cleaning floors in commercial and industrial facilities using equipment",
+      "domainId": 7,
+      "categoryId": "7.5",
+      "exampleTasks": ["Floor scrubbing", "Vacuuming", "Mopping", "Floor polishing"]
+    },
+    {
+      "id": "7.5.2",
+      "name": "Waste Management",
+      "description": "Collecting, sorting, and disposing of waste in facilities",
+      "domainId": 7,
+      "categoryId": "7.5",
+      "exampleTasks": ["Trash collection", "Recycling sorting", "Bin emptying", "Hazardous waste handling"]
+    },
+    {
+      "id": "7.5.3",
+      "name": "Restroom Maintenance",
+      "description": "Cleaning and restocking restroom facilities",
+      "domainId": 7,
+      "categoryId": "7.5",
+      "exampleTasks": ["Toilet cleaning", "Fixture sanitization", "Supply restocking", "Floor maintenance"]
+    },
+    {
+      "id": "7.5.4",
+      "name": "HVAC Filter Replacement",
+      "description": "Replacing air filters and performing basic HVAC maintenance tasks",
+      "domainId": 7,
+      "categoryId": "7.5",
+      "exampleTasks": ["Filter changes", "Vent cleaning", "Basic maintenance checks", "Air quality monitoring"]
+    },
+    {
+      "id": "7.5.5",
+      "name": "Light Maintenance",
+      "description": "Replacing bulbs and performing basic lighting maintenance",
+      "domainId": 7,
+      "categoryId": "7.5",
+      "exampleTasks": ["Bulb replacement", "Fixture cleaning", "Ballast checking", "Emergency light testing"]
+    },
+    {
+      "id": "8.1.1",
+      "name": "Carpentry",
+      "description": "Constructing, installing, and repairing wooden structures and fixtures",
+      "domainId": 8,
+      "categoryId": "8.1",
+      "exampleTasks": ["Framing walls", "Cabinet installation", "Trim work", "Door hanging"]
+    },
+    {
+      "id": "8.1.2",
+      "name": "Electrical Wiring",
+      "description": "Installing and repairing electrical systems in buildings",
+      "domainId": 8,
+      "categoryId": "8.1",
+      "exampleTasks": ["Circuit installation", "Outlet wiring", "Panel upgrades", "Troubleshooting"]
+    },
+    {
+      "id": "8.1.3",
+      "name": "Plumbing",
+      "description": "Installing and repairing water supply and drainage systems",
+      "domainId": 8,
+      "categoryId": "8.1",
+      "exampleTasks": ["Pipe installation", "Fixture installation", "Leak repair", "Drain clearing"]
+    },
+    {
+      "id": "8.1.4",
+      "name": "Masonry",
+      "description": "Constructing structures using brick, stone, and concrete blocks",
+      "domainId": 8,
+      "categoryId": "8.1",
+      "exampleTasks": ["Brick laying", "Stone work", "Concrete finishing", "Tuckpointing"]
+    },
+    {
+      "id": "8.1.5",
+      "name": "Roofing",
+      "description": "Installing, repairing, and maintaining roof systems",
+      "domainId": 8,
+      "categoryId": "8.1",
+      "exampleTasks": ["Shingle installation", "Flashing work", "Leak repair", "Gutter installation"]
+    },
+    {
+      "id": "8.2.1",
+      "name": "Automotive Repair",
+      "description": "Diagnosing and repairing mechanical issues in vehicles",
+      "domainId": 8,
+      "categoryId": "8.2",
+      "exampleTasks": ["Engine repair", "Brake replacement", "Transmission work", "Diagnostic troubleshooting"]
+    },
+    {
+      "id": "8.2.2",
+      "name": "HVAC Repair",
+      "description": "Servicing and repairing heating, ventilation, and air conditioning systems",
+      "domainId": 8,
+      "categoryId": "8.2",
+      "exampleTasks": ["Compressor replacement", "Refrigerant charging", "Ductwork repair", "Thermostat installation"]
+    },
+    {
+      "id": "8.2.3",
+      "name": "Appliance Repair",
+      "description": "Diagnosing and fixing household and commercial appliances",
+      "domainId": 8,
+      "categoryId": "8.2",
+      "exampleTasks": ["Washer/dryer repair", "Refrigerator repair", "Dishwasher service", "Oven repair"]
+    },
+    {
+      "id": "8.2.4",
+      "name": "Industrial Equipment Maintenance",
+      "description": "Maintaining and repairing industrial machinery and systems",
+      "domainId": 8,
+      "categoryId": "8.2",
+      "exampleTasks": ["Preventive maintenance", "Breakdown repair", "Parts replacement", "System calibration"]
+    },
+    {
+      "id": "8.2.5",
+      "name": "Electronics Repair",
+      "description": "Diagnosing and repairing electronic devices and circuit boards",
+      "domainId": 8,
+      "categoryId": "8.2",
+      "exampleTasks": ["Component soldering", "Board repair", "Device diagnostics", "Micro-soldering"]
+    },
+    {
+      "id": "8.3.1",
+      "name": "General Surgery",
+      "description": "Performing surgical procedures to treat diseases, injuries, and deformities",
+      "domainId": 8,
+      "categoryId": "8.3",
+      "exampleTasks": ["Incision and suturing", "Tissue manipulation", "Organ procedures", "Laparoscopic surgery"]
+    },
+    {
+      "id": "8.3.2",
+      "name": "Dental Procedures",
+      "description": "Performing dental treatments including extractions, fillings, and restorations",
+      "domainId": 8,
+      "categoryId": "8.3",
+      "exampleTasks": ["Tooth extractions", "Filling placement", "Crown preparation", "Root canals"]
+    },
+    {
+      "id": "8.3.3",
+      "name": "Ophthalmic Surgery",
+      "description": "Performing surgical procedures on the eye",
+      "domainId": 8,
+      "categoryId": "8.3",
+      "exampleTasks": ["Cataract surgery", "LASIK procedures", "Retinal surgery", "Glaucoma treatment"]
+    },
+    {
+      "id": "8.3.4",
+      "name": "Phlebotomy and Injections",
+      "description": "Drawing blood and administering injections and IV lines",
+      "domainId": 8,
+      "categoryId": "8.3",
+      "exampleTasks": ["Blood draws", "IV insertion", "Intramuscular injections", "Subcutaneous injections"]
+    },
+    {
+      "id": "8.3.5",
+      "name": "Wound Care",
+      "description": "Cleaning, treating, and dressing wounds and surgical sites",
+      "domainId": 8,
+      "categoryId": "8.3",
+      "exampleTasks": ["Wound cleaning", "Dressing changes", "Suture removal", "Debridement"]
+    },
+    {
+      "id": "8.4.1",
+      "name": "Professional Line Cooking",
+      "description": "Preparing dishes in commercial kitchen environments during service",
+      "domainId": 8,
+      "categoryId": "8.4",
+      "exampleTasks": ["Saute station work", "Grill cooking", "Plating dishes", "Sauce preparation"]
+    },
+    {
+      "id": "8.4.2",
+      "name": "Pastry and Baking",
+      "description": "Creating baked goods, pastries, and desserts requiring precision",
+      "domainId": 8,
+      "categoryId": "8.4",
+      "exampleTasks": ["Dough preparation", "Pastry shaping", "Cake decorating", "Chocolate work"]
+    },
+    {
+      "id": "8.4.3",
+      "name": "Butchery",
+      "description": "Breaking down and preparing meat products for cooking",
+      "domainId": 8,
+      "categoryId": "8.4",
+      "exampleTasks": ["Carcass breakdown", "Portion cutting", "Trimming and cleaning", "Specialty cuts"]
+    },
+    {
+      "id": "8.4.4",
+      "name": "Garde Manger",
+      "description": "Cold food preparation including salads, appetizers, and charcuterie",
+      "domainId": 8,
+      "categoryId": "8.4",
+      "exampleTasks": ["Salad preparation", "Charcuterie plating", "Cold appetizers", "Garnish preparation"]
+    },
+    {
+      "id": "8.4.5",
+      "name": "Sushi and Specialized Cuisine",
+      "description": "Preparing cuisine requiring specialized training and knife skills",
+      "domainId": 8,
+      "categoryId": "8.4",
+      "exampleTasks": ["Fish preparation", "Sushi rolling", "Sashimi cutting", "Specialty presentations"]
+    },
+    {
+      "id": "8.5.1",
+      "name": "Fine Woodworking",
+      "description": "Creating furniture and wooden objects with detailed craftsmanship",
+      "domainId": 8,
+      "categoryId": "8.5",
+      "exampleTasks": ["Joinery work", "Furniture making", "Wood carving", "Finishing and restoration"]
+    },
+    {
+      "id": "8.5.2",
+      "name": "Metalsmithing",
+      "description": "Shaping and forming metal into functional or decorative objects",
+      "domainId": 8,
+      "categoryId": "8.5",
+      "exampleTasks": ["Forging", "Welding fabrication", "Metal forming", "Tool making"]
+    },
+    {
+      "id": "8.5.3",
+      "name": "Textile Arts",
+      "description": "Creating fabric goods through weaving, sewing, and other techniques",
+      "domainId": 8,
+      "categoryId": "8.5",
+      "exampleTasks": ["Tailoring", "Hand weaving", "Embroidery", "Leather working"]
+    },
+    {
+      "id": "8.5.4",
+      "name": "Pottery and Ceramics",
+      "description": "Creating ceramic objects through shaping, glazing, and firing clay",
+      "domainId": 8,
+      "categoryId": "8.5",
+      "exampleTasks": ["Wheel throwing", "Hand building", "Glazing", "Kiln firing"]
+    },
+    {
+      "id": "8.5.5",
+      "name": "Jewelry Making",
+      "description": "Crafting jewelry through metalwork, stone setting, and design",
+      "domainId": 8,
+      "categoryId": "8.5",
+      "exampleTasks": ["Stone setting", "Metal casting", "Soldering", "Polishing and finishing"]
+    },
+    {
+      "id": "9.1.1",
+      "name": "Highway Driving",
+      "description": "Operating vehicles on highways and major roads with structured traffic patterns",
+      "domainId": 9,
+      "categoryId": "9.1",
+      "exampleTasks": ["Interstate driving", "Lane changes", "Highway merging", "Long-haul trucking"]
+    },
+    {
+      "id": "9.1.2",
+      "name": "Urban Driving",
+      "description": "Operating vehicles in complex city environments with pedestrians and obstacles",
+      "domainId": 9,
+      "categoryId": "9.1",
+      "exampleTasks": ["City street navigation", "Pedestrian interaction", "Parallel parking", "Traffic congestion"]
+    },
+    {
+      "id": "9.1.3",
+      "name": "Forklift Operation",
+      "description": "Operating forklifts and industrial vehicles in warehouse environments",
+      "domainId": 9,
+      "categoryId": "9.1",
+      "exampleTasks": ["Pallet lifting", "Stack positioning", "Aisle navigation", "Loading dock work"]
+    },
+    {
+      "id": "9.1.4",
+      "name": "Taxi and Ride-share Driving",
+      "description": "Providing passenger transportation services with customer interaction",
+      "domainId": 9,
+      "categoryId": "9.1",
+      "exampleTasks": ["Passenger pickup", "Route optimization", "Customer service", "Airport navigation"]
+    },
+    {
+      "id": "9.1.5",
+      "name": "Bus Operation",
+      "description": "Operating buses on fixed routes with passenger boarding and safety",
+      "domainId": 9,
+      "categoryId": "9.1",
+      "exampleTasks": ["Route navigation", "Stop management", "Passenger assistance", "Schedule adherence"]
+    },
+    {
+      "id": "9.2.1",
+      "name": "Package Delivery to Doors",
+      "description": "Delivering packages to residential and commercial addresses",
+      "domainId": 9,
+      "categoryId": "9.2",
+      "exampleTasks": ["Doorstep delivery", "Signature collection", "Package placement", "Building access"]
+    },
+    {
+      "id": "9.2.2",
+      "name": "Food Delivery",
+      "description": "Transporting prepared food from restaurants to customers",
+      "domainId": 9,
+      "categoryId": "9.2",
+      "exampleTasks": ["Restaurant pickup", "Time-sensitive delivery", "Customer handoff", "Order verification"]
+    },
+    {
+      "id": "9.2.3",
+      "name": "Mail Carrier Routes",
+      "description": "Delivering mail to homes and businesses on established routes",
+      "domainId": 9,
+      "categoryId": "9.2",
+      "exampleTasks": ["Mailbox delivery", "Package sorting", "Route walking", "Address verification"]
+    },
+    {
+      "id": "9.2.4",
+      "name": "Grocery Delivery",
+      "description": "Delivering groceries including perishables to customer locations",
+      "domainId": 9,
+      "categoryId": "9.2",
+      "exampleTasks": ["Cold chain maintenance", "Heavy item handling", "Substitution communication", "Doorstep placement"]
+    },
+    {
+      "id": "9.2.5",
+      "name": "Courier and Messenger Services",
+      "description": "Time-critical delivery of documents and small packages",
+      "domainId": 9,
+      "categoryId": "9.2",
+      "exampleTasks": ["Document delivery", "Same-day service", "Secure handoff", "Multi-stop routing"]
+    },
+    {
+      "id": "9.3.1",
+      "name": "Farm Equipment Operation",
+      "description": "Operating tractors and agricultural machinery in fields",
+      "domainId": 9,
+      "categoryId": "9.3",
+      "exampleTasks": ["Tractor driving", "Plowing fields", "Harvesting crops", "Implement operation"]
+    },
+    {
+      "id": "9.3.2",
+      "name": "Land Surveying",
+      "description": "Measuring and mapping land features using surveying equipment",
+      "domainId": 9,
+      "categoryId": "9.3",
+      "exampleTasks": ["Boundary marking", "Elevation measurement", "GPS mapping", "Site assessment"]
+    },
+    {
+      "id": "9.3.3",
+      "name": "Utility Line Inspection",
+      "description": "Inspecting power lines, pipelines, and infrastructure in outdoor environments",
+      "domainId": 9,
+      "categoryId": "9.3",
+      "exampleTasks": ["Power line inspection", "Pipeline patrol", "Right-of-way clearing", "Damage assessment"]
+    },
+    {
+      "id": "9.3.4",
+      "name": "Landscaping and Grounds Maintenance",
+      "description": "Maintaining outdoor spaces including mowing, trimming, and planting",
+      "domainId": 9,
+      "categoryId": "9.3",
+      "exampleTasks": ["Lawn mowing", "Hedge trimming", "Leaf blowing", "Seasonal planting"]
+    },
+    {
+      "id": "9.3.5",
+      "name": "Forestry Operations",
+      "description": "Working in forest environments for logging, conservation, or management",
+      "domainId": 9,
+      "categoryId": "9.3",
+      "exampleTasks": ["Tree felling", "Log transport", "Trail maintenance", "Fire prevention"]
+    },
+    {
+      "id": "9.4.1",
+      "name": "Search and Rescue",
+      "description": "Locating and assisting people in emergency outdoor situations",
+      "domainId": 9,
+      "categoryId": "9.4",
+      "exampleTasks": ["Missing person searches", "Wilderness rescue", "Water rescue", "Disaster response"]
+    },
+    {
+      "id": "9.4.2",
+      "name": "Building Inspection",
+      "description": "Inspecting buildings and structures for safety and code compliance",
+      "domainId": 9,
+      "categoryId": "9.4",
+      "exampleTasks": ["Construction inspection", "Safety assessment", "Code compliance", "Damage evaluation"]
+    },
+    {
+      "id": "9.4.3",
+      "name": "Underground Exploration",
+      "description": "Navigating caves, tunnels, and underground spaces",
+      "domainId": 9,
+      "categoryId": "9.4",
+      "exampleTasks": ["Cave exploration", "Tunnel inspection", "Mine survey", "Confined space entry"]
+    },
+    {
+      "id": "9.4.4",
+      "name": "Marine Navigation",
+      "description": "Operating boats and ships in various water conditions",
+      "domainId": 9,
+      "categoryId": "9.4",
+      "exampleTasks": ["Coastal navigation", "Harbor maneuvering", "Open water transit", "Docking operations"]
+    },
+    {
+      "id": "9.4.5",
+      "name": "Aerial Inspection",
+      "description": "Using drones or aircraft to inspect infrastructure and environments",
+      "domainId": 9,
+      "categoryId": "9.4",
+      "exampleTasks": ["Drone inspection", "Aerial photography", "Infrastructure survey", "Environmental monitoring"]
+    },
+    {
+      "id": "9.5.1",
+      "name": "Hiking and Trail Walking",
+      "description": "Walking through natural terrain on established or unmarked trails",
+      "domainId": 9,
+      "categoryId": "9.5",
+      "exampleTasks": ["Trail navigation", "Terrain crossing", "Elevation changes", "Backcountry travel"]
+    },
+    {
+      "id": "9.5.2",
+      "name": "Cycling",
+      "description": "Riding bicycles on roads, paths, and trails",
+      "domainId": 9,
+      "categoryId": "9.5",
+      "exampleTasks": ["Road cycling", "Mountain biking", "Urban cycling", "Trail riding"]
+    },
+    {
+      "id": "9.5.3",
+      "name": "Water Sports",
+      "description": "Engaging in recreational activities on water",
+      "domainId": 9,
+      "categoryId": "9.5",
+      "exampleTasks": ["Swimming", "Kayaking", "Surfing", "Sailing"]
+    },
+    {
+      "id": "9.5.4",
+      "name": "Winter Sports Navigation",
+      "description": "Moving through snow and ice environments for recreation",
+      "domainId": 9,
+      "categoryId": "9.5",
+      "exampleTasks": ["Skiing", "Snowboarding", "Snowshoeing", "Ice skating"]
+    },
+    {
+      "id": "9.5.5",
+      "name": "Running and Jogging",
+      "description": "Moving at speed on foot for exercise or sport",
+      "domainId": 9,
+      "categoryId": "9.5",
+      "exampleTasks": ["Street running", "Trail running", "Track running", "Cross-country"]
+    },
+    {
+      "id": "10.1.1",
+      "name": "Sleeping",
+      "description": "Resting in a sleep state for physical and mental recovery",
+      "domainId": 10,
+      "categoryId": "10.1",
+      "exampleTasks": ["Nighttime sleep", "Napping", "Rest periods", "Sleep preparation"]
+    },
+    {
+      "id": "10.1.2",
+      "name": "Bathing and Showering",
+      "description": "Cleaning one's body through washing, bathing, or showering",
+      "domainId": 10,
+      "categoryId": "10.1",
+      "exampleTasks": ["Taking showers", "Bath soaking", "Body washing", "Hair washing"]
+    },
+    {
+      "id": "10.1.3",
+      "name": "Personal Grooming",
+      "description": "Maintaining personal appearance through grooming activities",
+      "domainId": 10,
+      "categoryId": "10.1",
+      "exampleTasks": ["Hair styling", "Shaving", "Skincare routine", "Nail care"]
+    },
+    {
+      "id": "10.1.4",
+      "name": "Dressing",
+      "description": "Selecting and putting on clothing appropriate for activities and conditions",
+      "domainId": 10,
+      "categoryId": "10.1",
+      "exampleTasks": ["Selecting outfits", "Getting dressed", "Changing clothes", "Adjusting appearance"]
+    },
+    {
+      "id": "10.1.5",
+      "name": "Oral Hygiene",
+      "description": "Maintaining dental health through brushing, flossing, and oral care",
+      "domainId": 10,
+      "categoryId": "10.1",
+      "exampleTasks": ["Brushing teeth", "Flossing", "Mouthwash use", "Dental appliance care"]
+    },
+    {
+      "id": "10.2.1",
+      "name": "Eating Meals",
+      "description": "Consuming food for nourishment and sustenance",
+      "domainId": 10,
+      "categoryId": "10.2",
+      "exampleTasks": ["Breakfast eating", "Lunch consumption", "Dinner eating", "Snacking"]
+    },
+    {
+      "id": "10.2.2",
+      "name": "Home Cooking for Self",
+      "description": "Preparing meals for personal consumption",
+      "domainId": 10,
+      "categoryId": "10.2",
+      "exampleTasks": ["Simple meal preparation", "Following recipes", "Reheating food", "Basic cooking"]
+    },
+    {
+      "id": "10.2.3",
+      "name": "Drinking and Hydration",
+      "description": "Consuming beverages for hydration and enjoyment",
+      "domainId": 10,
+      "categoryId": "10.2",
+      "exampleTasks": ["Drinking water", "Beverage preparation", "Coffee/tea making", "Smoothie preparation"]
+    },
+    {
+      "id": "10.2.4",
+      "name": "Grocery Shopping for Self",
+      "description": "Purchasing food and household items for personal use",
+      "domainId": 10,
+      "categoryId": "10.2",
+      "exampleTasks": ["Store navigation", "Item selection", "Checkout process", "Bag carrying"]
+    },
+    {
+      "id": "10.2.5",
+      "name": "Food Storage and Organization",
+      "description": "Storing purchased food and managing pantry and refrigerator",
+      "domainId": 10,
+      "categoryId": "10.2",
+      "exampleTasks": ["Refrigerator organization", "Pantry stocking", "Expiration monitoring", "Leftover storage"]
+    },
+    {
+      "id": "10.3.1",
+      "name": "Physical Exercise",
+      "description": "Engaging in physical activities for fitness and health",
+      "domainId": 10,
+      "categoryId": "10.3",
+      "exampleTasks": ["Home workouts", "Gym exercises", "Stretching", "Yoga practice"]
+    },
+    {
+      "id": "10.3.2",
+      "name": "Medication Self-Administration",
+      "description": "Taking prescribed and over-the-counter medications",
+      "domainId": 10,
+      "categoryId": "10.3",
+      "exampleTasks": ["Taking pills", "Applying topical medications", "Using inhalers", "Self-injection"]
+    },
+    {
+      "id": "10.3.3",
+      "name": "Health Monitoring",
+      "description": "Tracking personal health metrics and symptoms",
+      "domainId": 10,
+      "categoryId": "10.3",
+      "exampleTasks": ["Blood pressure checks", "Weight tracking", "Sleep monitoring", "Symptom logging"]
+    },
+    {
+      "id": "10.3.4",
+      "name": "Rest and Relaxation",
+      "description": "Taking time to rest and recover from physical or mental exertion",
+      "domainId": 10,
+      "categoryId": "10.3",
+      "exampleTasks": ["Relaxation time", "Meditation", "Deep breathing", "Recovery periods"]
+    },
+    {
+      "id": "10.3.5",
+      "name": "Medical Appointment Attendance",
+      "description": "Traveling to and participating in medical appointments",
+      "domainId": 10,
+      "categoryId": "10.3",
+      "exampleTasks": ["Doctor visits", "Dental checkups", "Lab appointments", "Specialist consultations"]
+    },
+    {
+      "id": "10.4.1",
+      "name": "House Cleaning",
+      "description": "Cleaning living spaces including dusting, vacuuming, and tidying",
+      "domainId": 10,
+      "categoryId": "10.4",
+      "exampleTasks": ["Vacuuming", "Dusting", "Mopping", "Surface wiping"]
+    },
+    {
+      "id": "10.4.2",
+      "name": "Laundry",
+      "description": "Washing, drying, and managing personal clothing and linens",
+      "domainId": 10,
+      "categoryId": "10.4",
+      "exampleTasks": ["Washing clothes", "Drying clothes", "Folding laundry", "Ironing"]
+    },
+    {
+      "id": "10.4.3",
+      "name": "Dish Washing",
+      "description": "Cleaning dishes, cookware, and kitchen items",
+      "domainId": 10,
+      "categoryId": "10.4",
+      "exampleTasks": ["Hand washing dishes", "Loading dishwasher", "Pot scrubbing", "Drying and putting away"]
+    },
+    {
+      "id": "10.4.4",
+      "name": "Home Organization",
+      "description": "Organizing and decluttering living spaces and belongings",
+      "domainId": 10,
+      "categoryId": "10.4",
+      "exampleTasks": ["Closet organization", "Decluttering", "Storage arrangement", "Room tidying"]
+    },
+    {
+      "id": "10.4.5",
+      "name": "Basic Home Repairs",
+      "description": "Performing simple maintenance and repairs around the home",
+      "domainId": 10,
+      "categoryId": "10.4",
+      "exampleTasks": ["Hanging pictures", "Tightening screws", "Changing batteries", "Basic assembly"]
+    },
+    {
+      "id": "10.5.1",
+      "name": "Reading for Pleasure",
+      "description": "Reading books, articles, and content for enjoyment",
+      "domainId": 10,
+      "categoryId": "10.5",
+      "exampleTasks": ["Book reading", "Magazine browsing", "Article reading", "E-book consumption"]
+    },
+    {
+      "id": "10.5.2",
+      "name": "Media Consumption",
+      "description": "Watching television, movies, and streaming content",
+      "domainId": 10,
+      "categoryId": "10.5",
+      "exampleTasks": ["Watching TV shows", "Movie viewing", "Streaming content", "Video watching"]
+    },
+    {
+      "id": "10.5.3",
+      "name": "Gaming",
+      "description": "Playing video games and digital entertainment",
+      "domainId": 10,
+      "categoryId": "10.5",
+      "exampleTasks": ["Video game playing", "Mobile gaming", "Online gaming", "Console gaming"]
+    },
+    {
+      "id": "10.5.4",
+      "name": "Creative Hobbies",
+      "description": "Engaging in creative activities for personal enjoyment",
+      "domainId": 10,
+      "categoryId": "10.5",
+      "exampleTasks": ["Drawing/painting", "Crafting", "Musical instrument practice", "Writing for pleasure"]
+    },
+    {
+      "id": "10.5.5",
+      "name": "Gardening for Personal Enjoyment",
+      "description": "Cultivating plants and maintaining personal gardens",
+      "domainId": 10,
+      "categoryId": "10.5",
+      "exampleTasks": ["Planting flowers", "Vegetable gardening", "Plant care", "Yard maintenance"]
+    }
+  ]
+}
