@@ -585,6 +585,62 @@ func getPurposeName(level int) string {
 	return "Unknown"
 }
 
+// cmdTable shows all activities with index values, grouped by domain
+func cmdTable() {
+	activities, err := loadActivities()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		os.Exit(1)
+	}
+
+	tax, err := loadTaxonomy()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		os.Exit(1)
+	}
+
+	// Group activities by domain
+	byDomain := make(map[int][]Activity)
+	for _, a := range activities {
+		domainID := getDomainFromID(a.ID)
+		byDomain[domainID] = append(byDomain[domainID], a)
+	}
+
+	// Print by domain
+	for domainID := 1; domainID <= 10; domainID++ {
+		domainActivities, ok := byDomain[domainID]
+		if !ok || len(domainActivities) == 0 {
+			continue
+		}
+
+		// Find domain name
+		domainName := fmt.Sprintf("Domain %d", domainID)
+		for _, d := range tax.Domains {
+			if d.ID == domainID {
+				domainName = d.Name
+				break
+			}
+		}
+
+		fmt.Printf("\n%s %d: %s %s\n", "═══", domainID, domainName, strings.Repeat("═", 60-len(domainName)))
+		fmt.Printf("%-8s %-36s %5s %5s %5s\n", "ID", "Name", "Abstr", "Error", "Purp")
+		fmt.Println(strings.Repeat("─", 70))
+
+		for _, a := range domainActivities {
+			name := a.Name
+			if len(name) > 36 {
+				name = name[:33] + "..."
+			}
+			fmt.Printf("%-8s %-36s %5d %5d %5d\n",
+				a.ID, name,
+				a.Scores.Abstraction,
+				a.Scores.ErrorTolerance,
+				a.Scores.Purpose)
+		}
+	}
+	fmt.Println()
+}
+
 func cmdWave(wave int) {
 	activities, err := loadActivities()
 	if err != nil {
@@ -1006,6 +1062,8 @@ func main() {
 		cmdEcon()
 	case "stats":
 		cmdStats()
+	case "table":
+		cmdTable()
 	case "help", "-h", "--help":
 		printUsage()
 	default:
