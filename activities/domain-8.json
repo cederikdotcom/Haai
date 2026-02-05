@@ -2,8 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 8,
   "domainName": "Skilled Physical Craft",
-  "assessmentsDir": "../assessments/",
-  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments/ (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "8.1.1",
@@ -14,10 +12,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Framing walls",
@@ -35,10 +30,7 @@
         "abstraction": 4,
         "errorTolerance": 4,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "safety",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Circuit installation",
@@ -56,10 +48,7 @@
         "abstraction": 4,
         "errorTolerance": 3,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Pipe installation",
@@ -77,10 +66,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Brick laying",
@@ -98,10 +84,7 @@
         "abstraction": 4,
         "errorTolerance": 3,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "safety",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Shingle installation",
@@ -119,10 +102,7 @@
         "abstraction": 4,
         "errorTolerance": 3,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Engine repair",
@@ -140,10 +120,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "adaptation",
-        "agiWave": 3
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Compressor replacement",
@@ -161,10 +138,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "adaptation",
-        "agiWave": 3
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Washer/dryer repair",
@@ -182,10 +156,7 @@
         "abstraction": 4,
         "errorTolerance": 3,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "adaptation",
-        "agiWave": 3
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Preventive maintenance",
@@ -203,10 +174,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Component soldering",
@@ -224,10 +192,7 @@
         "abstraction": 5,
         "errorTolerance": 4,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Incision and suturing",
@@ -245,10 +210,7 @@
         "abstraction": 5,
         "errorTolerance": 3,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Tooth extractions",
@@ -266,10 +228,7 @@
         "abstraction": 5,
         "errorTolerance": 4,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Cataract surgery",
@@ -287,10 +246,7 @@
         "abstraction": 4,
         "errorTolerance": 3,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Blood draws",
@@ -308,10 +264,7 @@
         "abstraction": 5,
         "errorTolerance": 3,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 2,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Wound cleaning",
@@ -329,10 +282,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Saute station work",
@@ -350,10 +300,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Dough preparation",
@@ -371,10 +318,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Carcass breakdown",
@@ -392,10 +336,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Salad preparation",
@@ -413,10 +354,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Fish preparation",
@@ -434,10 +372,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Joinery work",
@@ -455,10 +390,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Forging",
@@ -476,10 +408,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Tailoring",
@@ -497,10 +426,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Wheel throwing",
@@ -518,10 +444,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Stone setting",

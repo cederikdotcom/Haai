@@ -2,8 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 6,
   "domainName": "Care & Relational Support",
-  "assessmentsDir": "../assessments/",
-  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments/ (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "6.1.1",
@@ -14,10 +12,7 @@
         "abstraction": 5,
         "errorTolerance": 4,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Feeding and burping",
@@ -35,10 +30,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "social",
-        "agiWave": 3
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Leading educational activities",
@@ -56,10 +48,7 @@
         "abstraction": 4,
         "errorTolerance": 4,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 3,
-        "aiCapability": "early",
-        "bottleneck": "safety",
-        "agiWave": 4
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Playground supervision",
@@ -77,10 +66,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "social",
-        "agiWave": 3
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Setting boundaries",
@@ -98,10 +84,7 @@
         "abstraction": 5,
         "errorTolerance": 3,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 4,
-        "aiCapability": "not_attempted",
-        "bottleneck": "adaptation",
-        "agiWave": 4
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Adaptive care routines",
@@ -119,10 +102,7 @@
         "abstraction": 5,
         "errorTolerance": 3,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Bathing assistance",
@@ -140,10 +120,7 @@
         "abstraction": 5,
         "errorTolerance": 4,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 3,
-        "aiCapability": "early",
-        "bottleneck": "safety",
-        "agiWave": 4
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Transfer assistance",
@@ -161,10 +138,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 4,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 3
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Conversation and listening",
@@ -182,10 +156,7 @@
         "abstraction": 3,
         "errorTolerance": 4,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "safety",
-        "agiWave": 3
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Medication reminders",
@@ -203,10 +174,7 @@
         "abstraction": 5,
         "errorTolerance": 3,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "adaptation",
-        "agiWave": 4
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Orientation support",
@@ -224,10 +192,7 @@
         "abstraction": 5,
         "errorTolerance": 4,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Vital signs monitoring",
@@ -245,10 +210,7 @@
         "abstraction": 4,
         "errorTolerance": 3,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 3,
-        "aiCapability": "early",
-        "bottleneck": "adaptation",
-        "agiWave": 3
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Exercise guidance",
@@ -266,10 +228,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Explaining diagnoses",
@@ -287,10 +246,7 @@
         "abstraction": 4,
         "errorTolerance": 3,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "adaptation",
-        "agiWave": 3
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Pain assessment",
@@ -308,10 +264,7 @@
         "abstraction": 5,
         "errorTolerance": 3,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 4,
-        "aiCapability": "not_attempted",
-        "bottleneck": "social",
-        "agiWave": 4
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Comfort measures",
@@ -329,10 +282,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 4,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 3
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Cognitive behavioral therapy",
@@ -350,10 +300,7 @@
         "abstraction": 4,
         "errorTolerance": 4,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "safety",
-        "agiWave": 3
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Suicide prevention",
@@ -371,10 +318,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Goal setting",
@@ -392,10 +336,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "social",
-        "agiWave": 3
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Support group facilitation",
@@ -413,10 +354,7 @@
         "abstraction": 3,
         "errorTolerance": 3,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 4,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 3
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Recovery planning",
@@ -434,10 +372,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "social",
-        "agiWave": 3
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Neighborhood organizing",
@@ -455,10 +390,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Volunteer recruitment",
@@ -476,10 +408,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 4,
-        "aiCapability": "not_attempted",
-        "bottleneck": "social",
-        "agiWave": 4
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Pastoral counseling",
@@ -497,10 +426,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 4,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 3
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Needs assessment",
@@ -518,10 +444,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "social",
-        "agiWave": 3
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "One-on-one mentoring",
@@ -539,10 +462,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 4,
-        "aiCapability": "not_attempted",
-        "bottleneck": "social",
-        "agiWave": 4
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Family meals",
@@ -560,10 +480,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 4,
-        "aiCapability": "not_attempted",
-        "bottleneck": "social",
-        "agiWave": 4
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Friend outings",
@@ -581,10 +498,7 @@
         "abstraction": 5,
         "errorTolerance": 2,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 4,
-        "aiCapability": "not_attempted",
-        "bottleneck": "social",
-        "agiWave": 4
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Date activities",
@@ -602,10 +516,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "social",
-        "agiWave": 4
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Being present",
@@ -623,10 +534,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 4,
-        "aiCapability": "early",
-        "bottleneck": "social",
-        "agiWave": 3
+        "interpersonalComplexity": 4
       },
       "exampleTasks": [
         "Family mediation",

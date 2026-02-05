@@ -2,8 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 10,
   "domainName": "Personal Embodiment",
-  "assessmentsDir": "../assessments/",
-  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments/ (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "10.1.1",
@@ -14,10 +12,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "not_attempted",
-        "bottleneck": "none",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Nighttime sleep",
@@ -35,10 +30,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "not_attempted",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Taking showers",
@@ -56,10 +48,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "not_attempted",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Hair styling",
@@ -77,10 +66,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "not_attempted",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Selecting outfits",
@@ -98,10 +84,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "not_attempted",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Brushing teeth",
@@ -119,10 +102,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "not_attempted",
-        "bottleneck": "none",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Breakfast eating",
@@ -140,10 +120,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Simple meal preparation",
@@ -161,10 +138,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "not_attempted",
-        "bottleneck": "none",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Drinking water",
@@ -182,10 +156,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "mobility",
-        "agiWave": 3
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Store navigation",
@@ -203,10 +174,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Refrigerator organization",
@@ -224,10 +192,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 0,
-        "aiCapability": "not_attempted",
-        "bottleneck": "none",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Home workouts",
@@ -245,10 +210,7 @@
         "abstraction": 4,
         "errorTolerance": 3,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "safety",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Taking pills",
@@ -266,10 +228,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "sensing",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Blood pressure checks",
@@ -287,10 +246,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "not_attempted",
-        "bottleneck": "none",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Relaxation time",
@@ -308,10 +264,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 2,
-        "aiCapability": "not_attempted",
-        "bottleneck": "social",
-        "agiWave": 4
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Doctor visits",
@@ -329,10 +282,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Vacuuming",
@@ -350,10 +300,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Washing clothes",
@@ -371,10 +318,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Hand washing dishes",
@@ -392,10 +336,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "reasoning",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Closet organization",
@@ -413,10 +354,7 @@
         "abstraction": 4,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Hanging pictures",
@@ -434,10 +372,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "not_attempted",
-        "bottleneck": "none",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Book reading",
@@ -455,10 +390,7 @@
         "abstraction": 5,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "not_attempted",
-        "bottleneck": "none",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Watching TV shows",
@@ -476,10 +408,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "none",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Video game playing",
@@ -497,10 +426,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 4
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Drawing/painting",
@@ -518,10 +444,7 @@
         "abstraction": 4,
         "errorTolerance": 1,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "early",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Planting flowers",

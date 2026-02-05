@@ -2,8 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 2,
   "domainName": "Information Synthesis",
-  "assessmentsDir": "../assessments/",
-  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments/ (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "2.1.1",
@@ -14,10 +12,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Searching academic databases",
@@ -34,10 +29,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "data",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Competitor analysis",
@@ -54,10 +46,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Running regression analyses",
@@ -74,10 +63,7 @@
         "abstraction": 1,
         "errorTolerance": 3,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "data",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Background checks",
@@ -94,10 +80,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Coding open-ended responses",
@@ -114,10 +97,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Writing API documentation",
@@ -134,10 +114,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Quarterly performance reports",
@@ -154,10 +131,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Summarizing research findings",
@@ -174,10 +148,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Transcribing meetings",
@@ -194,10 +165,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Writing methodology sections",
@@ -214,10 +182,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Tagging articles with keywords",
@@ -234,10 +199,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Email categorization",
@@ -254,10 +216,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Updating wiki articles",
@@ -274,10 +233,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Data cataloging",
@@ -294,10 +250,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Finding duplicate records",
@@ -314,10 +267,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Sales trend forecasting",
@@ -334,10 +284,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Fraud detection",
@@ -354,10 +301,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Feature correlation in datasets",
@@ -374,10 +318,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Social media sentiment tracking",
@@ -394,10 +335,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Customer segmentation",
@@ -414,10 +352,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "data",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Demand forecasting",
@@ -434,10 +369,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "E-commerce product suggestions",
@@ -454,10 +386,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "News article suggestions",
@@ -474,10 +403,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Vendor comparison matrices",
@@ -494,10 +420,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Budget allocation recommendations",
@@ -514,10 +437,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Resume-job matching",
@@ -534,10 +454,7 @@
         "abstraction": 2,
         "errorTolerance": 3,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Medical differential diagnosis support",

@@ -2,8 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 1,
   "domainName": "Symbolic Computation",
-  "assessmentsDir": "../assessments/",
-  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments/ (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "1.1.1",
@@ -14,10 +12,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Adding invoice totals",
@@ -34,10 +29,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Calculating variance",
@@ -54,10 +46,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Running VLOOKUP functions",
@@ -74,10 +63,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Calculating compound interest",
@@ -94,10 +80,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Multiplying matrices",
@@ -114,10 +97,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Converting CSV to JSON",
@@ -134,10 +114,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Executing SELECT statements",
@@ -154,10 +131,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Extracting data from source systems",
@@ -174,10 +148,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Removing duplicate entries",
@@ -194,10 +165,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Mapping legacy schemas to new formats",
@@ -214,10 +182,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Compiling C++ to binary",
@@ -234,10 +199,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Linting source code",
@@ -254,10 +216,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Validating JSON against JSON Schema",
@@ -274,10 +233,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Running TypeScript type checker",
@@ -294,10 +250,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Verifying Coq proofs",
@@ -314,10 +267,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Verifying file checksums",
@@ -334,10 +284,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Sorting lists alphabetically",
@@ -354,10 +301,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Binary search in arrays",
@@ -374,10 +318,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Finding shortest paths",
@@ -394,10 +335,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "AES encryption of files",
@@ -414,10 +352,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "ZIP file compression",
@@ -434,10 +369,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Job shop scheduling",

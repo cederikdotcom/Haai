@@ -60,15 +60,21 @@ Ordered from **highest abstraction** (earliest AI automation) to **lowest abstra
 
 ### Scoring Attributes
 
-Each activity is scored on seven dimensions:
+Activities have two types of properties:
+
+**Intrinsic Properties** (stored in `activities/`): Inherent to the activity, do not change over time.
 
 1. **Abstraction Level** (1-5): Pure abstract → Deeply embodied
-2. **Error Tolerance** (1-4): High tolerance → Very low tolerance
+2. **Error Tolerance** (1-5): Very high → Critical
 3. **Feedback Loop Speed** (1-4): Immediate → Long-term
-4. **Social Complexity** (0-4): None → Relational
-5. **Current AI Capability**: solved | near_solved | partial | early | not_attempted
-6. **Primary Bottleneck**: sensing | reasoning | dexterity | mobility | adaptation | social | safety | regulation | data
-7. **Estimated AGI Wave** (1-4): 2024-2026 → 2032+
+4. **Interpersonal Complexity** (0-4): None → Relational
+5. **Purpose** (1-5): Productive → Restorative
+
+**Time-Dependent Assessments** (stored in `assessments/`): Change as AI technology evolves.
+
+6. **Current AI Capability**: solved | near_solved | partial | early | not_attempted
+7. **Primary Bottleneck**: sensing | reasoning | dexterity | mobility | adaptation | social | safety | regulation | data | none
+8. **Estimated AGI Wave** (1-4): 2024-2026 → 2032+
 
 ## Usage
 
@@ -150,9 +156,10 @@ See `mappings.json` for detailed crosswalks.
 
 When adding activities:
 1. Ensure MECE compliance (one category only)
-2. Score all seven attributes
-3. Add to validation test cases
-4. Map to external taxonomies where applicable
+2. Add intrinsic scores in `activities/domain-X.json` (abstraction, errorTolerance, feedbackSpeed, interpersonalComplexity, purpose)
+3. Add time-dependent assessments in `assessments/` (aiCapability, bottleneck, agiWave)
+4. Add to validation test cases
+5. Map to external taxonomies where applicable
 
 ## License
 

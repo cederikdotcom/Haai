@@ -2,8 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 3,
   "domainName": "Creative Generation",
-  "assessmentsDir": "../assessments/",
-  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments/ (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "3.1.1",
@@ -14,10 +12,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Writing novel chapters",
@@ -35,10 +30,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Writing ad headlines",
@@ -56,10 +48,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Writing screenplay scenes",
@@ -77,10 +66,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Writing news articles",
@@ -98,10 +84,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Writing user manuals",
@@ -119,10 +102,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Designing marketing materials",
@@ -140,10 +120,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Creating wireframes",
@@ -161,10 +138,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Creating character designs",
@@ -182,10 +156,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Logo design",
@@ -203,10 +174,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Creating title sequences",
@@ -224,10 +192,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Writing application features",
@@ -245,10 +210,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Designing microservices architecture",
@@ -266,10 +228,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Implementing sorting algorithms",
@@ -287,10 +246,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Creating data models",
@@ -308,10 +264,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "adaptation",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Writing CI/CD pipelines",
@@ -329,10 +282,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Reviewing pull requests",
@@ -350,10 +300,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Writing melodies",
@@ -371,10 +318,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Creating synthesizer patches",
@@ -392,10 +336,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Mixing multitrack recordings",
@@ -413,10 +354,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Scoring film scenes",
@@ -434,10 +372,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Editing podcast episodes",
@@ -455,10 +390,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "SWOT analysis",
@@ -476,10 +408,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Writing product requirements",
@@ -497,10 +426,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Brainstorming sessions",
@@ -518,10 +444,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Customer journey mapping",
@@ -539,10 +462,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Business model canvas development",

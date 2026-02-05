@@ -2,8 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 5,
   "domainName": "Procedural Service Delivery",
-  "assessmentsDir": "../assessments/",
-  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments/ (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "5.1.1",
@@ -14,10 +12,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Processing permit applications",
@@ -35,10 +30,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Filing paperwork",
@@ -56,10 +48,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Booking appointments",
@@ -77,10 +66,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "regulation",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Driver's license processing",
@@ -98,10 +84,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Email triage",
@@ -119,10 +102,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Cash register operation",
@@ -140,10 +120,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Restaurant order taking",
@@ -161,10 +138,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Guest registration",
@@ -182,10 +156,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Restaurant reservations",
@@ -203,10 +174,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Deli counter service",
@@ -224,10 +192,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "regulation",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Processing deposits",
@@ -245,10 +210,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Claim documentation review",
@@ -266,10 +228,7 @@
         "abstraction": 1,
         "errorTolerance": 3,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "regulation",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Document verification",
@@ -287,10 +246,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "regulation",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "New account setup",
@@ -308,10 +264,7 @@
         "abstraction": 1,
         "errorTolerance": 3,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "regulation",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Individual tax returns",
@@ -329,10 +282,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "regulation",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "New patient intake",
@@ -350,10 +300,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Appointment booking",
@@ -371,10 +318,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "ICD-10 coding",
@@ -392,10 +336,7 @@
         "abstraction": 2,
         "errorTolerance": 3,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "safety",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Prescription verification",
@@ -413,10 +354,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "regulation",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Chart updates",
@@ -434,10 +372,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Contract drafting",
@@ -455,10 +390,7 @@
         "abstraction": 1,
         "errorTolerance": 3,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 1,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Policy compliance audits",
@@ -476,10 +408,7 @@
         "abstraction": 2,
         "errorTolerance": 3,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "early",
-        "bottleneck": "regulation",
-        "agiWave": 3
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Document witnessing",
@@ -497,10 +426,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "data",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Criminal record checks",
@@ -518,10 +444,7 @@
         "abstraction": 1,
         "errorTolerance": 3,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "regulation",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "SEC filings",

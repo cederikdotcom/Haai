@@ -233,8 +233,8 @@ func loadActivities() ([]Activity, error) {
 		indices, _ := loadIndices()
 		assessment, _ := loadLatestAssessment()
 
-		// For feedbackSpeed and socialComplexity, we need the old domain files
-		feedbackMap, interpersonalMap := loadLegacyScores()
+		// Load intrinsic scores (feedbackSpeed, interpersonalComplexity) from domain files
+		feedbackMap, interpersonalMap := loadIntrinsicScoresFromDomainFiles()
 
 		// Merge scores into activities
 		mergeScores(activities, indices, assessment, feedbackMap, interpersonalMap)
@@ -242,7 +242,7 @@ func loadActivities() ([]Activity, error) {
 		return activities, nil
 	}
 
-	// Fall back to old domain-X.json files for backwards compatibility
+	// Fall back to loading directly from domain-X.json files
 	var all []Activity
 	for i := 1; i <= 10; i++ {
 		var df DomainFile
@@ -256,6 +256,23 @@ func loadActivities() ([]Activity, error) {
 		}
 		all = append(all, df.Activities...)
 	}
+
+	// Load time-dependent assessments (aiCapability, bottleneck, agiWave)
+	assessment, _ := loadLatestAssessment()
+	if assessment != nil {
+		for i := range all {
+			id := all[i].ID
+			if raw, ok := assessment.ActivityAssessments[id]; ok {
+				var aa ActivityAssessment
+				if err := json.Unmarshal(raw, &aa); err == nil {
+					all[i].Scores.AICapability = aa.AICapability
+					all[i].Scores.Bottleneck = aa.Bottleneck
+					all[i].Scores.AGIWave = aa.AGIWave
+				}
+			}
+		}
+	}
+
 	return all, nil
 }
 
@@ -306,8 +323,9 @@ func loadLatestAssessment() (*AssessmentFile, error) {
 	return &af, nil
 }
 
-// loadLegacyScores loads feedbackSpeed and socialComplexity from old domain files
-func loadLegacyScores() (map[string]int, map[string]int) {
+// loadIntrinsicScoresFromDomainFiles loads feedbackSpeed and interpersonalComplexity
+// which remain embedded in domain activity files as intrinsic properties
+func loadIntrinsicScoresFromDomainFiles() (map[string]int, map[string]int) {
 	feedbackMap := make(map[string]int)
 	interpersonalMap := make(map[string]int)
 
@@ -326,33 +344,32 @@ func loadLegacyScores() (map[string]int, map[string]int) {
 	return feedbackMap, interpersonalMap
 }
 
-// mergeScores merges index values and assessment data into activity Scores structs
+// mergeScores merges all score data into activity Scores structs:
+// - Intrinsic indices (abstraction, error-tolerance, purpose) from indices/
+// - Intrinsic scores (feedbackSpeed, interpersonalComplexity) from domain files
+// - Time-dependent assessments (aiCapability, bottleneck, agiWave) from assessments/
 func mergeScores(activities []Activity, indices map[string]*IndexFile, assessment *AssessmentFile, feedbackMap, interpersonalMap map[string]int) {
 	for i := range activities {
 		id := activities[i].ID
 
-		// Merge abstraction index
+		// Intrinsic indices from indices/
 		if idx, ok := indices["abstraction"]; ok {
 			if val, ok := idx.Values[id]; ok {
 				activities[i].Scores.Abstraction = val
 			}
 		}
-
-		// Merge error-tolerance index
 		if idx, ok := indices["error-tolerance"]; ok {
 			if val, ok := idx.Values[id]; ok {
 				activities[i].Scores.ErrorTolerance = val
 			}
 		}
-
-		// Merge purpose index
 		if idx, ok := indices["purpose"]; ok {
 			if val, ok := idx.Values[id]; ok {
 				activities[i].Scores.Purpose = val
 			}
 		}
 
-		// Merge feedbackSpeed and socialComplexity from legacy scores
+		// Intrinsic scores from domain activity files
 		if val, ok := feedbackMap[id]; ok {
 			activities[i].Scores.FeedbackSpeed = val
 		}
@@ -360,7 +377,7 @@ func mergeScores(activities []Activity, indices map[string]*IndexFile, assessmen
 			activities[i].Scores.InterpersonalComplexity = val
 		}
 
-		// Merge assessment data
+		// Time-dependent assessments from assessments/ (these change as AI evolves)
 		if assessment != nil {
 			if raw, ok := assessment.ActivityAssessments[id]; ok {
 				var aa ActivityAssessment
