@@ -2,8 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 4,
   "domainName": "Interpersonal Communication",
-  "assessmentsDir": "../assessments/",
-  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments/ (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "4.1.1",
@@ -14,10 +12,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Delivering university lectures",
@@ -35,10 +30,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Academic tutoring sessions",
@@ -56,10 +48,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Onboarding new employees",
@@ -77,10 +66,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Explaining software features to users",
@@ -98,10 +84,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Teaching software workflows",
@@ -119,10 +102,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Product demonstrations",
@@ -140,10 +120,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Contract negotiations",
@@ -161,10 +138,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Lobbying officials",
@@ -182,10 +156,7 @@
         "abstraction": 2,
         "errorTolerance": 3,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Courtroom arguments",
@@ -203,10 +174,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 3,
-        "interpersonalComplexity": 3,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Investor pitches",
@@ -224,10 +192,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Running team meetings",
@@ -245,10 +210,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 2,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Daily standups",
@@ -266,10 +228,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Calendar management",
@@ -287,10 +246,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Inter-team syncs",
@@ -308,10 +264,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Work assignment",
@@ -329,10 +282,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Answering product questions",
@@ -350,10 +300,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Troubleshooting software issues",
@@ -371,10 +318,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Ticket categorization",
@@ -392,10 +336,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "reasoning",
-        "agiWave": 2
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Legal consultations",
@@ -413,10 +354,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 1,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 1
       },
       "exampleTasks": [
         "Giving directions",
@@ -434,10 +372,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 3,
-        "aiCapability": "early",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Conference networking",
@@ -455,10 +390,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Office chitchat",
@@ -476,10 +408,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 3,
-        "aiCapability": "early",
-        "bottleneck": "social",
-        "agiWave": 3
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Dinner party hosting",
@@ -497,10 +426,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 2,
-        "aiCapability": "partial",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 2
       },
       "exampleTasks": [
         "Forum moderation",
@@ -518,10 +444,7 @@
         "abstraction": 2,
         "errorTolerance": 1,
         "feedbackSpeed": 4,
-        "interpersonalComplexity": 3,
-        "aiCapability": "early",
-        "bottleneck": "social",
-        "agiWave": 2
+        "interpersonalComplexity": 3
       },
       "exampleTasks": [
         "Follow-up messages",

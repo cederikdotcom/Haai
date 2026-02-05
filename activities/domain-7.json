@@ -2,8 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "domainId": 7,
   "domainName": "Structured Physical Operations",
-  "assessmentsDir": "../assessments/",
-  "assessmentsNote": "The aiCapability, bottleneck, and agiWave scores are periodically-updated values. The authoritative source is assessments/ (activityAssessments). Values here are kept in sync for convenience.",
   "activities": [
     {
       "id": "7.1.1",
@@ -14,10 +12,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "dexterity",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Component installation",
@@ -35,10 +30,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "dexterity",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Box packing",
@@ -56,10 +48,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "mobility",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Loading production lines",
@@ -77,10 +66,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Spot welding",
@@ -98,10 +84,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Machine setup",
@@ -119,10 +102,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "dexterity",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Single item picking",
@@ -140,10 +120,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "dexterity",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Shelf stocking",
@@ -161,10 +138,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Truck unloading",
@@ -182,10 +156,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Package sorting",
@@ -203,10 +174,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "sensing",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Cycle counting",
@@ -224,10 +192,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Part loading/unloading",
@@ -245,10 +210,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "sensing",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Press setup",
@@ -266,10 +228,7 @@
         "abstraction": 3,
         "errorTolerance": 3,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "safety",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Mixer operation",
@@ -287,10 +246,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Loom operation",
@@ -308,10 +264,7 @@
         "abstraction": 3,
         "errorTolerance": 4,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "sensing",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Wafer handling",
@@ -329,10 +282,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "sensing",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Surface defect detection",
@@ -350,10 +300,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Caliper measurement",
@@ -371,10 +318,7 @@
         "abstraction": 2,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Electrical testing",
@@ -392,10 +336,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Random sampling",
@@ -413,10 +354,7 @@
         "abstraction": 1,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "none",
-        "agiWave": 1
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Recording measurements",
@@ -434,10 +372,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "mobility",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Floor scrubbing",
@@ -455,10 +390,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Trash collection",
@@ -476,10 +408,7 @@
         "abstraction": 3,
         "errorTolerance": 1,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 2
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Toilet cleaning",
@@ -497,10 +426,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 2,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Filter changes",
@@ -518,10 +444,7 @@
         "abstraction": 3,
         "errorTolerance": 2,
         "feedbackSpeed": 1,
-        "interpersonalComplexity": 0,
-        "aiCapability": "partial",
-        "bottleneck": "dexterity",
-        "agiWave": 3
+        "interpersonalComplexity": 0
       },
       "exampleTasks": [
         "Bulb replacement",

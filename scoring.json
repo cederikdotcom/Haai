@@ -25,11 +25,25 @@
         "indexId": "purpose",
         "file": "indices/purpose.json",
         "description": "Purpose Index - classifies fundamental human intent/goal"
+      },
+      {
+        "indexId": "feedback-speed",
+        "file": "indices/feedback-speed.json",
+        "description": "Feedback Loop Speed Index - measures time between action and outcome"
+      },
+      {
+        "indexId": "interpersonal-complexity",
+        "file": "indices/interpersonal-complexity.json",
+        "description": "Interpersonal Complexity Index - measures degree of human interaction"
       }
     ],
-    "legacyScores": {
-      "note": "feedbackSpeed, interpersonalComplexity remain embedded in domain files for now",
-      "migrationStatus": "partial"
+    "intrinsicScores": {
+      "note": "Intrinsic properties (abstraction, errorTolerance, feedbackSpeed, interpersonalComplexity, purpose) are stored in domain activity files. These are inherent to the activity and do not change over time.",
+      "location": "activities/domain-*.json"
+    },
+    "timeDependent": {
+      "note": "Time-dependent assessments (aiCapability, bottleneck, agiWave) are stored separately in assessments/. These change as AI technology evolves.",
+      "location": "assessments/"
     }
   },
   "assessmentsDir": "assessments/",
@@ -131,6 +145,7 @@
       "id": 3,
       "name": "Feedback Loop Speed",
       "shortName": "feedbackSpeed",
+      "indexFile": "indices/feedback-speed.json",
       "description": "Time between action and observable outcome",
       "scale": {
         "min": 1,
@@ -168,6 +183,7 @@
       "id": 4,
       "name": "Interpersonal Complexity",
       "shortName": "interpersonalComplexity",
+      "indexFile": "indices/interpersonal-complexity.json",
       "description": "Degree and type of human interaction required",
       "scale": {
         "min": 0,
@@ -436,15 +452,17 @@
       "description",
       "categoryId"
     ],
-    "scoredFields": [
+    "intrinsicFields": [
       "abstraction",
       "errorTolerance",
       "feedbackSpeed",
       "interpersonalComplexity",
-      "aiCapability",
-      "bottleneck",
-      "agiWave"
+      "purpose"
     ],
+    "timeDependentFields": {
+      "note": "These fields are stored in assessments/, not in activity files",
+      "fields": ["aiCapability", "bottleneck", "agiWave"]
+    },
     "optionalFields": [
       "onetCodes",
       "atusCodes",
@@ -461,16 +479,15 @@
         "errorTolerance": 1,
         "feedbackSpeed": 2,
         "interpersonalComplexity": 0,
-        "aiCapability": "near_solved",
-        "bottleneck": "reasoning",
-        "agiWave": 1
+        "purpose": 1
       },
       "onetCodes": ["15-1252.00"],
       "exampleTasks": [
         "Writing unit tests for functions",
         "Creating integration test suites",
         "Mocking dependencies"
-      ]
+      ],
+      "_note": "Time-dependent fields (aiCapability, bottleneck, agiWave) are in assessments/"
     }
   },
   "compositeScores": {
