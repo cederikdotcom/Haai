@@ -28,7 +28,7 @@
       }
     ],
     "legacyScores": {
-      "note": "feedbackSpeed, socialComplexity remain embedded in domain files for now",
+      "note": "feedbackSpeed, interpersonalComplexity remain embedded in domain files for now",
       "migrationStatus": "partial"
     }
   },
@@ -166,8 +166,8 @@
     },
     {
       "id": 4,
-      "name": "Social Complexity",
-      "shortName": "socialComplexity",
+      "name": "Interpersonal Complexity",
+      "shortName": "interpersonalComplexity",
       "description": "Degree and type of human interaction required",
       "scale": {
         "min": 0,
@@ -440,7 +440,7 @@
       "abstraction",
       "errorTolerance",
       "feedbackSpeed",
-      "socialComplexity",
+      "interpersonalComplexity",
       "aiCapability",
       "bottleneck",
       "agiWave"
@@ -460,7 +460,7 @@
         "abstraction": 1,
         "errorTolerance": 1,
         "feedbackSpeed": 2,
-        "socialComplexity": 0,
+        "interpersonalComplexity": 0,
         "aiCapability": "near_solved",
         "bottleneck": "reasoning",
         "agiWave": 1
@@ -477,7 +477,7 @@
     "note": "Weights for these formulas are configurable in assessments/ (compositeWeights). Below uses default weights.",
     "automationReadiness": {
       "description": "Overall estimate of how ready an activity is for AI automation",
-      "formula": "((5 - abstraction) * weights.abstraction) + ((4 - errorTolerance) * weights.errorTolerance) + ((4 - socialComplexity) * weights.socialComplexity) + (capabilityScore * weights.aiCapability)",
+      "formula": "((5 - abstraction) * weights.abstraction) + ((4 - errorTolerance) * weights.errorTolerance) + ((4 - interpersonalComplexity) * weights.interpersonalComplexity) + (capabilityScore * weights.aiCapability)",
       "capabilityMapping": {
         "solved": 5,
         "near_solved": 4,
