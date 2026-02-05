@@ -4,7 +4,7 @@
   "title": "Human Activities Index - Activities Table",
   "description": "Base table of all human activities. Indicator scores are stored separately in the indices/ directory.",
   "lastUpdated": "2026-02-05",
-  "activitiesCount": 256,
+  "activitiesCount": 255,
   "activities": [
     {
       "id": "1.1.1",

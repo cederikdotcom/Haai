@@ -38,8 +38,8 @@
       }
     ],
     "intrinsicScores": {
-      "note": "Intrinsic properties (abstraction, errorTolerance, feedbackSpeed, interpersonalComplexity, purpose) are stored in domain activity files. These are inherent to the activity and do not change over time.",
-      "location": "activities/domain-*.json"
+      "note": "Intrinsic properties (abstraction, errorTolerance, feedbackSpeed, interpersonalComplexity, purpose) are stored in index files under indices/. These are inherent to the activity and do not change over time.",
+      "location": "indices/"
     },
     "timeDependent": {
       "note": "Time-dependent assessments (aiCapability, bottleneck, agiWave) are stored separately in assessments/. These change as AI technology evolves.",

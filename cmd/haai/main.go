@@ -223,63 +223,28 @@ func loadTaxonomy() (*Taxonomy, error) {
 }
 
 func loadActivities() ([]Activity, error) {
-	// First try to load from new activities.json format
+	// Load from activities.json (single source of truth for activity definitions)
 	var af ActivitiesFile
-	if err := loadJSON("activities.json", &af); err == nil && len(af.Activities) > 0 {
-		// Successfully loaded v2.0.0 format
-		activities := af.Activities
-
-		// Load indices and assessments to populate scores
-		indices, _ := loadIndices()
-		assessment, _ := loadLatestAssessment()
-
-		// Load intrinsic scores (feedbackSpeed, interpersonalComplexity) from domain files
-		feedbackMap, interpersonalMap := loadIntrinsicScoresFromDomainFiles()
-
-		// Merge scores into activities
-		mergeScores(activities, indices, assessment, feedbackMap, interpersonalMap)
-
-		return activities, nil
+	if err := loadJSON("activities.json", &af); err != nil {
+		return nil, fmt.Errorf("failed to load activities.json: %w", err)
 	}
 
-	// Fall back to loading directly from domain-X.json files
-	var all []Activity
-	for i := 1; i <= 10; i++ {
-		var df DomainFile
-		filename := fmt.Sprintf("activities/domain-%d.json", i)
-		if err := loadJSON(filename, &df); err != nil {
-			continue // Skip missing files
-		}
-		// Set DomainID for each activity from the domain file
-		for j := range df.Activities {
-			df.Activities[j].DomainID = df.DomainID
-		}
-		all = append(all, df.Activities...)
-	}
+	activities := af.Activities
 
-	// Load time-dependent assessments (aiCapability, bottleneck, agiWave)
+	// Load indices and assessments to populate scores
+	indices, _ := loadIndices()
 	assessment, _ := loadLatestAssessment()
-	if assessment != nil {
-		for i := range all {
-			id := all[i].ID
-			if raw, ok := assessment.ActivityAssessments[id]; ok {
-				var aa ActivityAssessment
-				if err := json.Unmarshal(raw, &aa); err == nil {
-					all[i].Scores.AICapability = aa.AICapability
-					all[i].Scores.Bottleneck = aa.Bottleneck
-					all[i].Scores.AGIWave = aa.AGIWave
-				}
-			}
-		}
-	}
 
-	return all, nil
+	// Merge scores into activities
+	mergeScores(activities, indices, assessment)
+
+	return activities, nil
 }
 
-// loadIndices loads abstraction.json, error-tolerance.json, and purpose.json from indices/
+// loadIndices loads all index files from indices/
 func loadIndices() (map[string]*IndexFile, error) {
 	indices := make(map[string]*IndexFile)
-	indexNames := []string{"abstraction", "error-tolerance", "purpose"}
+	indexNames := []string{"abstraction", "error-tolerance", "purpose", "feedback-speed", "interpersonal-complexity"}
 
 	for _, name := range indexNames {
 		var idx IndexFile
@@ -323,32 +288,10 @@ func loadLatestAssessment() (*AssessmentFile, error) {
 	return &af, nil
 }
 
-// loadIntrinsicScoresFromDomainFiles loads feedbackSpeed and interpersonalComplexity
-// which remain embedded in domain activity files as intrinsic properties
-func loadIntrinsicScoresFromDomainFiles() (map[string]int, map[string]int) {
-	feedbackMap := make(map[string]int)
-	interpersonalMap := make(map[string]int)
-
-	for i := 1; i <= 10; i++ {
-		var df DomainFile
-		filename := fmt.Sprintf("activities/domain-%d.json", i)
-		if err := loadJSON(filename, &df); err != nil {
-			continue
-		}
-		for _, a := range df.Activities {
-			feedbackMap[a.ID] = a.Scores.FeedbackSpeed
-			interpersonalMap[a.ID] = a.Scores.InterpersonalComplexity
-		}
-	}
-
-	return feedbackMap, interpersonalMap
-}
-
 // mergeScores merges all score data into activity Scores structs:
-// - Intrinsic indices (abstraction, error-tolerance, purpose) from indices/
-// - Intrinsic scores (feedbackSpeed, interpersonalComplexity) from domain files
+// - Intrinsic indices (abstraction, error-tolerance, purpose, feedback-speed, interpersonal-complexity) from indices/
 // - Time-dependent assessments (aiCapability, bottleneck, agiWave) from assessments/
-func mergeScores(activities []Activity, indices map[string]*IndexFile, assessment *AssessmentFile, feedbackMap, interpersonalMap map[string]int) {
+func mergeScores(activities []Activity, indices map[string]*IndexFile, assessment *AssessmentFile) {
 	for i := range activities {
 		id := activities[i].ID
 
@@ -368,13 +311,15 @@ func mergeScores(activities []Activity, indices map[string]*IndexFile, assessmen
 				activities[i].Scores.Purpose = val
 			}
 		}
-
-		// Intrinsic scores from domain activity files
-		if val, ok := feedbackMap[id]; ok {
-			activities[i].Scores.FeedbackSpeed = val
+		if idx, ok := indices["feedback-speed"]; ok {
+			if val, ok := idx.Values[id]; ok {
+				activities[i].Scores.FeedbackSpeed = val
+			}
 		}
-		if val, ok := interpersonalMap[id]; ok {
-			activities[i].Scores.InterpersonalComplexity = val
+		if idx, ok := indices["interpersonal-complexity"]; ok {
+			if val, ok := idx.Values[id]; ok {
+				activities[i].Scores.InterpersonalComplexity = val
+			}
 		}
 
 		// Time-dependent assessments from assessments/ (these change as AI evolves)
