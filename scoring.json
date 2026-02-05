@@ -1,15 +1,44 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "title": "Human Activity Scoring System",
-  "description": "Attribute definitions and scoring scales for predicting AI automation timelines. NOTE: Periodically-updated values (wave timelines, composite weights, activity assessments) are in assessments/",
-  "lastUpdated": "2026-02-01",
+  "description": "Index definitions and scoring scales for predicting AI automation timelines. Activities are stored in activities.json. Index values are stored in indices/. Periodically-updated values (wave timelines, composite weights, activity assessments) are in assessments/",
+  "lastUpdated": "2026-02-05",
+  "dataModel": {
+    "version": "2.0.0",
+    "description": "Refactored data model separating activities from indicators",
+    "activitiesFile": "activities.json",
+    "indicesDir": "indices/",
+    "assessmentsDir": "assessments/",
+    "indices": [
+      {
+        "indexId": "abstraction",
+        "file": "indices/abstraction.json",
+        "description": "Abstraction Level Index - measures symbolic vs physical operation"
+      },
+      {
+        "indexId": "error-tolerance",
+        "file": "indices/error-tolerance.json",
+        "description": "Error Tolerance Index - measures consequences of mistakes"
+      },
+      {
+        "indexId": "purpose",
+        "file": "indices/purpose.json",
+        "description": "Purpose Index - classifies fundamental human intent/goal"
+      }
+    ],
+    "legacyScores": {
+      "note": "feedbackSpeed, socialComplexity remain embedded in domain files for now",
+      "migrationStatus": "partial"
+    }
+  },
   "assessmentsDir": "assessments/",
   "attributes": [
     {
       "id": 1,
       "name": "Abstraction Level",
       "shortName": "abstraction",
+      "indexFile": "indices/abstraction.json",
       "description": "Measures the degree to which an activity operates in symbolic vs physical space",
       "scale": {
         "min": 1,
@@ -58,35 +87,42 @@
       "id": 2,
       "name": "Error Tolerance",
       "shortName": "errorTolerance",
+      "indexFile": "indices/error-tolerance.json",
       "description": "Measures the consequences and recoverability of mistakes",
       "scale": {
         "min": 1,
-        "max": 4
+        "max": 5
       },
       "rationale": "Within any domain, low-error-tolerance activities automate later. Error tolerance interacts with abstraction (physical errors often irreversible).",
       "levels": [
         {
           "level": 1,
-          "name": "High",
-          "definition": "Errors easily corrected, low stakes, iteration expected.",
-          "examples": ["Drafting", "Brainstorming", "Prototyping"]
+          "name": "Very High",
+          "definition": "Errors trivial to correct, no real stakes, rapid iteration expected.",
+          "examples": ["Brainstorming", "Sketching", "Casual conversation"]
         },
         {
           "level": 2,
+          "name": "High",
+          "definition": "Errors easily corrected, low stakes, iteration expected.",
+          "examples": ["Drafting", "Prototyping", "Practice exercises"]
+        },
+        {
+          "level": 3,
           "name": "Medium",
           "definition": "Errors costly but recoverable, moderate stakes.",
           "examples": ["Cooking", "Scheduling", "Routine maintenance"]
         },
         {
-          "level": 3,
+          "level": 4,
           "name": "Low",
-          "definition": "Errors expensive or harmful, limited recovery.",
+          "definition": "Errors expensive or harmful, limited recovery options.",
           "examples": ["Surgery", "Vehicle repair", "Legal filing"]
         },
         {
-          "level": 4,
-          "name": "Very Low",
-          "definition": "Errors potentially catastrophic or irreversible.",
+          "level": 5,
+          "name": "Critical",
+          "definition": "Errors potentially catastrophic, irreversible, or life-threatening.",
           "examples": ["Emergency response", "Childcare safety", "Critical infrastructure"]
         }
       ]
@@ -168,6 +204,50 @@
           "name": "Relational",
           "definition": "Build trust, provide emotional support",
           "examples": ["Counseling", "Caregiving", "Leadership", "Friendship"]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Purpose",
+      "shortName": "purpose",
+      "indexFile": "indices/purpose.json",
+      "description": "Classifies activities by their fundamental human intent and the type of value they create",
+      "scale": {
+        "min": 1,
+        "max": 5
+      },
+      "rationale": "Understanding the fundamental purpose of an activity provides insight into why humans do it and how AI might augment or replace it. Productive activities are most amenable to efficiency-based automation. Relational and restorative activities center on intrinsic human value.",
+      "levels": [
+        {
+          "level": 1,
+          "name": "Productive",
+          "definition": "Creates tangible output, economic value, or new artifacts. Focus is on generating measurable results.",
+          "examples": ["Manufacturing", "Writing", "Software development", "Cooking"]
+        },
+        {
+          "level": 2,
+          "name": "Operational",
+          "definition": "Maintains, sustains, or supports existing systems and processes. Focus is on keeping things running.",
+          "examples": ["Maintenance", "Administration", "Quality control", "Scheduling"]
+        },
+        {
+          "level": 3,
+          "name": "Developmental",
+          "definition": "Builds skills, knowledge, or capabilities. Focus is on growth and learning.",
+          "examples": ["Teaching", "Tutoring", "Training", "Coaching"]
+        },
+        {
+          "level": 4,
+          "name": "Relational",
+          "definition": "Builds, maintains, or deepens human connections. Focus is on interpersonal bonds.",
+          "examples": ["Caregiving", "Counseling", "Community organizing", "Friendship"]
+        },
+        {
+          "level": 5,
+          "name": "Restorative",
+          "definition": "Recovers, heals, or maintains personal wellbeing. Focus is on self-care and restoration.",
+          "examples": ["Healthcare", "Self-care", "Rest", "Recreation"]
         }
       ]
     },

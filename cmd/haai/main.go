@@ -33,6 +33,62 @@ type Category struct {
 	Description string `json:"description"`
 }
 
+// Index file structure (v2.0.0 data model)
+type IndexFile struct {
+	IndexID     string            `json:"indexId"`
+	IndexName   string            `json:"indexName"`
+	Description string            `json:"description"`
+	Version     string            `json:"version"`
+	Scale       IndexScale        `json:"scale"`
+	Values      map[string]int    `json:"values"`
+}
+
+type IndexScale struct {
+	Min    int          `json:"min"`
+	Max    int          `json:"max"`
+	Levels []IndexLevel `json:"levels"`
+}
+
+type IndexLevel struct {
+	Level      int    `json:"level"`
+	Name       string `json:"name"`
+	Definition string `json:"definition"`
+}
+
+// Activities file structure (v2.0.0)
+type ActivitiesFile struct {
+	Version         string     `json:"version"`
+	ActivitiesCount int        `json:"activitiesCount"`
+	Activities      []Activity `json:"activities"`
+}
+
+// Assessment file structure
+type AssessmentFile struct {
+	AssessmentDate      string                     `json:"assessmentDate"`
+	Version             string                     `json:"version"`
+	AGIWaveTimelines    AGIWaveTimelines           `json:"agiWaveTimelines"`
+	ActivityAssessments map[string]json.RawMessage `json:"activityAssessments"`
+}
+
+type AGIWaveTimelines struct {
+	Description string     `json:"description"`
+	Waves       []WaveInfo `json:"waves"`
+}
+
+type WaveInfo struct {
+	Wave            int      `json:"wave"`
+	Timeline        string   `json:"timeline"`
+	Characteristics string   `json:"characteristics"`
+	TypicalDomains  []string `json:"typicalDomains"`
+	KeyCapabilities []string `json:"keyCapabilities"`
+}
+
+type ActivityAssessment struct {
+	AICapability string `json:"aiCapability"`
+	Bottleneck   string `json:"bottleneck"`
+	AGIWave      int    `json:"agiWave"`
+}
+
 // Activity from domain files
 type DomainFile struct {
 	DomainID   int        `json:"domainId"`
@@ -44,6 +100,7 @@ type Activity struct {
 	ID           string   `json:"id"`
 	Name         string   `json:"name"`
 	Description  string   `json:"description"`
+	DomainID     int      `json:"domainId"`
 	CategoryID   string   `json:"categoryId"`
 	Scores       Scores   `json:"scores"`
 	ExampleTasks []string `json:"exampleTasks"`
@@ -54,6 +111,7 @@ type Scores struct {
 	ErrorTolerance   int    `json:"errorTolerance"`
 	FeedbackSpeed    int    `json:"feedbackSpeed"`
 	SocialComplexity int    `json:"socialComplexity"`
+	Purpose          int    `json:"purpose"`
 	AICapability     string `json:"aiCapability"`
 	Bottleneck       string `json:"bottleneck"`
 	AGIWave          int    `json:"agiWave"`
@@ -165,6 +223,26 @@ func loadTaxonomy() (*Taxonomy, error) {
 }
 
 func loadActivities() ([]Activity, error) {
+	// First try to load from new activities.json format
+	var af ActivitiesFile
+	if err := loadJSON("activities.json", &af); err == nil && len(af.Activities) > 0 {
+		// Successfully loaded v2.0.0 format
+		activities := af.Activities
+
+		// Load indices and assessments to populate scores
+		indices, _ := loadIndices()
+		assessment, _ := loadLatestAssessment()
+
+		// For feedbackSpeed and socialComplexity, we need the old domain files
+		feedbackMap, socialMap := loadLegacyScores()
+
+		// Merge scores into activities
+		mergeScores(activities, indices, assessment, feedbackMap, socialMap)
+
+		return activities, nil
+	}
+
+	// Fall back to old domain-X.json files for backwards compatibility
 	var all []Activity
 	for i := 1; i <= 10; i++ {
 		var df DomainFile
@@ -172,9 +250,128 @@ func loadActivities() ([]Activity, error) {
 		if err := loadJSON(filename, &df); err != nil {
 			continue // Skip missing files
 		}
+		// Set DomainID for each activity from the domain file
+		for j := range df.Activities {
+			df.Activities[j].DomainID = df.DomainID
+		}
 		all = append(all, df.Activities...)
 	}
 	return all, nil
+}
+
+// loadIndices loads abstraction.json, error-tolerance.json, and purpose.json from indices/
+func loadIndices() (map[string]*IndexFile, error) {
+	indices := make(map[string]*IndexFile)
+	indexNames := []string{"abstraction", "error-tolerance", "purpose"}
+
+	for _, name := range indexNames {
+		var idx IndexFile
+		filename := fmt.Sprintf("indices/%s.json", name)
+		if err := loadJSON(filename, &idx); err != nil {
+			continue // Skip missing files
+		}
+		indices[name] = &idx
+	}
+
+	return indices, nil
+}
+
+// loadLatestAssessment finds and loads the most recent assessment file from assessments/
+func loadLatestAssessment() (*AssessmentFile, error) {
+	assessmentsDir := filepath.Join(basePath, "assessments")
+	entries, err := os.ReadDir(assessmentsDir)
+	if err != nil {
+		return nil, err
+	}
+
+	// Find the most recent assessment file (sorted by name = date)
+	var latestFile string
+	for _, entry := range entries {
+		if !entry.IsDir() && strings.HasSuffix(entry.Name(), ".json") {
+			if entry.Name() > latestFile {
+				latestFile = entry.Name()
+			}
+		}
+	}
+
+	if latestFile == "" {
+		return nil, fmt.Errorf("no assessment files found")
+	}
+
+	var af AssessmentFile
+	if err := loadJSON("assessments/"+latestFile, &af); err != nil {
+		return nil, err
+	}
+
+	return &af, nil
+}
+
+// loadLegacyScores loads feedbackSpeed and socialComplexity from old domain files
+func loadLegacyScores() (map[string]int, map[string]int) {
+	feedbackMap := make(map[string]int)
+	socialMap := make(map[string]int)
+
+	for i := 1; i <= 10; i++ {
+		var df DomainFile
+		filename := fmt.Sprintf("activities/domain-%d.json", i)
+		if err := loadJSON(filename, &df); err != nil {
+			continue
+		}
+		for _, a := range df.Activities {
+			feedbackMap[a.ID] = a.Scores.FeedbackSpeed
+			socialMap[a.ID] = a.Scores.SocialComplexity
+		}
+	}
+
+	return feedbackMap, socialMap
+}
+
+// mergeScores merges index values and assessment data into activity Scores structs
+func mergeScores(activities []Activity, indices map[string]*IndexFile, assessment *AssessmentFile, feedbackMap, socialMap map[string]int) {
+	for i := range activities {
+		id := activities[i].ID
+
+		// Merge abstraction index
+		if idx, ok := indices["abstraction"]; ok {
+			if val, ok := idx.Values[id]; ok {
+				activities[i].Scores.Abstraction = val
+			}
+		}
+
+		// Merge error-tolerance index
+		if idx, ok := indices["error-tolerance"]; ok {
+			if val, ok := idx.Values[id]; ok {
+				activities[i].Scores.ErrorTolerance = val
+			}
+		}
+
+		// Merge purpose index
+		if idx, ok := indices["purpose"]; ok {
+			if val, ok := idx.Values[id]; ok {
+				activities[i].Scores.Purpose = val
+			}
+		}
+
+		// Merge feedbackSpeed and socialComplexity from legacy scores
+		if val, ok := feedbackMap[id]; ok {
+			activities[i].Scores.FeedbackSpeed = val
+		}
+		if val, ok := socialMap[id]; ok {
+			activities[i].Scores.SocialComplexity = val
+		}
+
+		// Merge assessment data
+		if assessment != nil {
+			if raw, ok := assessment.ActivityAssessments[id]; ok {
+				var aa ActivityAssessment
+				if err := json.Unmarshal(raw, &aa); err == nil {
+					activities[i].Scores.AICapability = aa.AICapability
+					activities[i].Scores.Bottleneck = aa.Bottleneck
+					activities[i].Scores.AGIWave = aa.AGIWave
+				}
+			}
+		}
+	}
 }
 
 func loadMappings() (*Mappings, error) {
@@ -199,6 +396,8 @@ Commands:
   wave <n>             List activities by AGI wave (1-4)
   capability <status>  List by AI capability (solved, near_solved, partial, early, not_attempted)
   bottleneck <type>    List by bottleneck (dexterity, social, reasoning, mobility, etc.)
+  index <name>         Show details about an index (abstraction, error-tolerance, or purpose)
+  purpose <level>      List activities by purpose level (1-5)
   search <term>        Search activities by name or description
   time                 Show ATUS time-spent data
   econ                 Show economic impact by domain
@@ -212,6 +411,8 @@ Examples:
   haai wave 1
   haai capability solved
   haai bottleneck dexterity
+  haai index purpose
+  haai purpose 1
   haai search "code"
   haai time
   haai econ
@@ -347,12 +548,16 @@ func cmdActivity(id string) {
 	fmt.Println(strings.Repeat("-", 60))
 	fmt.Printf("Description:  %s\n", activity.Description)
 	fmt.Printf("Category:     %s\n", activity.CategoryID)
+	if activity.DomainID > 0 {
+		fmt.Printf("Domain:       %d\n", activity.DomainID)
+	}
 	fmt.Println()
 	fmt.Println("Scores:")
 	fmt.Printf("  Abstraction:       %d\n", activity.Scores.Abstraction)
 	fmt.Printf("  Error Tolerance:   %d\n", activity.Scores.ErrorTolerance)
 	fmt.Printf("  Feedback Speed:    %d\n", activity.Scores.FeedbackSpeed)
 	fmt.Printf("  Social Complexity: %d\n", activity.Scores.SocialComplexity)
+	fmt.Printf("  Purpose:           %d (%s)\n", activity.Scores.Purpose, getPurposeName(activity.Scores.Purpose))
 	fmt.Printf("  AI Capability:     %s\n", activity.Scores.AICapability)
 	fmt.Printf("  Bottleneck:        %s\n", activity.Scores.Bottleneck)
 	fmt.Printf("  AGI Wave:          %d\n", activity.Scores.AGIWave)
@@ -363,6 +568,77 @@ func cmdActivity(id string) {
 			fmt.Printf("  - %s\n", t)
 		}
 	}
+}
+
+// getPurposeName returns the name for a purpose level
+func getPurposeName(level int) string {
+	names := map[int]string{
+		1: "Productive",
+		2: "Operational",
+		3: "Developmental",
+		4: "Relational",
+		5: "Restorative",
+	}
+	if name, ok := names[level]; ok {
+		return name
+	}
+	return "Unknown"
+}
+
+// cmdTable shows all activities with index values, grouped by domain
+func cmdTable() {
+	activities, err := loadActivities()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		os.Exit(1)
+	}
+
+	tax, err := loadTaxonomy()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		os.Exit(1)
+	}
+
+	// Group activities by domain
+	byDomain := make(map[int][]Activity)
+	for _, a := range activities {
+		domainID := getDomainFromID(a.ID)
+		byDomain[domainID] = append(byDomain[domainID], a)
+	}
+
+	// Print by domain
+	for domainID := 1; domainID <= 10; domainID++ {
+		domainActivities, ok := byDomain[domainID]
+		if !ok || len(domainActivities) == 0 {
+			continue
+		}
+
+		// Find domain name
+		domainName := fmt.Sprintf("Domain %d", domainID)
+		for _, d := range tax.Domains {
+			if d.ID == domainID {
+				domainName = d.Name
+				break
+			}
+		}
+
+		fmt.Printf("\n%s %d: %s %s\n", "═══", domainID, domainName, strings.Repeat("═", 60-len(domainName)))
+		fmt.Printf("%-8s %-36s %5s %5s %5s\n", "ID", "Name", "Abstr", "Error", "Purp")
+		fmt.Println(strings.Repeat("─", 70))
+
+		for _, a := range domainActivities {
+			name := a.Name
+			if len(name) > 36 {
+				name = name[:33] + "..."
+			}
+			fmt.Printf("%-8s %-36s %5d %5d %5d\n",
+				a.ID, name,
+				a.Scores.Abstraction,
+				a.Scores.ErrorTolerance,
+				a.Scores.Purpose)
+		}
+	}
+	fmt.Println()
 }
 
 func cmdWave(wave int) {
@@ -566,12 +842,14 @@ func cmdStats() {
 	waveCounts := make(map[int]int)
 	bottleneckCounts := make(map[string]int)
 	domainCounts := make(map[int]int)
+	purposeCounts := make(map[int]int)
 
 	for _, a := range activities {
 		capCounts[a.Scores.AICapability]++
 		waveCounts[a.Scores.AGIWave]++
 		bottleneckCounts[a.Scores.Bottleneck]++
 		domainCounts[getDomainFromID(a.ID)]++
+		purposeCounts[a.Scores.Purpose]++
 	}
 
 	fmt.Println("HAAI Taxonomy Statistics")
@@ -588,6 +866,12 @@ func cmdStats() {
 	for wave := 1; wave <= 4; wave++ {
 		pct := float64(waveCounts[wave]) / float64(len(activities)) * 100
 		fmt.Printf("  Wave %d:         %4d (%5.1f%%)\n", wave, waveCounts[wave], pct)
+	}
+
+	fmt.Println("\nBy Purpose:")
+	for purpose := 1; purpose <= 5; purpose++ {
+		pct := float64(purposeCounts[purpose]) / float64(len(activities)) * 100
+		fmt.Printf("  %d %-13s %4d (%5.1f%%)\n", purpose, getPurposeName(purpose), purposeCounts[purpose], pct)
 	}
 
 	fmt.Println("\nBy Bottleneck:")
@@ -610,6 +894,84 @@ func cmdStats() {
 	for d := 1; d <= 10; d++ {
 		fmt.Printf("  Domain %2d:     %4d activities\n", d, domainCounts[d])
 	}
+}
+
+// cmdIndex shows details about an index (abstraction, error-tolerance, or purpose)
+func cmdIndex(name string) {
+	indices, err := loadIndices()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error loading indices: %v\n", err)
+		os.Exit(1)
+	}
+
+	idx, ok := indices[name]
+	if !ok {
+		fmt.Fprintf(os.Stderr, "Index '%s' not found. Available: abstraction, error-tolerance, purpose\n", name)
+		os.Exit(1)
+	}
+
+	fmt.Printf("Index: %s\n", idx.IndexName)
+	fmt.Println(strings.Repeat("=", 60))
+	fmt.Printf("ID:          %s\n", idx.IndexID)
+	fmt.Printf("Version:     %s\n", idx.Version)
+	fmt.Printf("Description: %s\n", idx.Description)
+	fmt.Println()
+	fmt.Println("Scale:")
+	fmt.Printf("  Range: %d - %d\n", idx.Scale.Min, idx.Scale.Max)
+	fmt.Println()
+	fmt.Println("Levels:")
+	for _, level := range idx.Scale.Levels {
+		fmt.Printf("  %d. %-18s %s\n", level.Level, level.Name, level.Definition)
+	}
+
+	// Count activities per level
+	fmt.Println()
+	fmt.Println("Distribution:")
+	levelCounts := make(map[int]int)
+	for _, val := range idx.Values {
+		levelCounts[val]++
+	}
+	total := len(idx.Values)
+	for level := idx.Scale.Min; level <= idx.Scale.Max; level++ {
+		count := levelCounts[level]
+		pct := float64(count) / float64(total) * 100
+		levelName := ""
+		for _, l := range idx.Scale.Levels {
+			if l.Level == level {
+				levelName = l.Name
+				break
+			}
+		}
+		fmt.Printf("  Level %d %-16s %4d activities (%5.1f%%)\n", level, levelName, count, pct)
+	}
+}
+
+// cmdPurpose lists activities by purpose level (1-5)
+func cmdPurpose(level int) {
+	activities, err := loadActivities()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		os.Exit(1)
+	}
+
+	purposeName := getPurposeName(level)
+	fmt.Printf("Activities with Purpose Level %d (%s)\n", level, purposeName)
+	fmt.Println(strings.Repeat("-", 80))
+	fmt.Printf("%-8s %-40s %-12s %-5s\n", "ID", "Name", "Capability", "Wave")
+	fmt.Println(strings.Repeat("-", 80))
+
+	count := 0
+	for _, a := range activities {
+		if a.Scores.Purpose == level {
+			name := a.Name
+			if len(name) > 40 {
+				name = name[:37] + "..."
+			}
+			fmt.Printf("%-8s %-40s %-12s %-5d\n", a.ID, name, a.Scores.AICapability, a.Scores.AGIWave)
+			count++
+		}
+	}
+	fmt.Printf("\nTotal: %d activities\n", count)
 }
 
 func main() {
@@ -670,6 +1032,24 @@ func main() {
 			os.Exit(1)
 		}
 		cmdBottleneck(args[0])
+	case "index":
+		if len(args) < 1 {
+			fmt.Fprintln(os.Stderr, "Usage: haai index <name>")
+			fmt.Fprintln(os.Stderr, "Available indices: abstraction, error-tolerance, purpose")
+			os.Exit(1)
+		}
+		cmdIndex(args[0])
+	case "purpose":
+		if len(args) < 1 {
+			fmt.Fprintln(os.Stderr, "Usage: haai purpose <1-5>")
+			os.Exit(1)
+		}
+		level, err := strconv.Atoi(args[0])
+		if err != nil || level < 1 || level > 5 {
+			fmt.Fprintf(os.Stderr, "Invalid purpose level: %s (must be 1-5)\n", args[0])
+			os.Exit(1)
+		}
+		cmdPurpose(level)
 	case "search":
 		if len(args) < 1 {
 			fmt.Fprintln(os.Stderr, "Usage: haai search <term>")
@@ -682,6 +1062,8 @@ func main() {
 		cmdEcon()
 	case "stats":
 		cmdStats()
+	case "table":
+		cmdTable()
 	case "help", "-h", "--help":
 		printUsage()
 	default:
