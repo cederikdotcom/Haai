@@ -91,32 +91,38 @@
       "description": "Measures the consequences and recoverability of mistakes",
       "scale": {
         "min": 1,
-        "max": 4
+        "max": 5
       },
       "rationale": "Within any domain, low-error-tolerance activities automate later. Error tolerance interacts with abstraction (physical errors often irreversible).",
       "levels": [
         {
           "level": 1,
-          "name": "High",
-          "definition": "Errors easily corrected, low stakes, iteration expected.",
-          "examples": ["Drafting", "Brainstorming", "Prototyping"]
+          "name": "Very High",
+          "definition": "Errors trivial to correct, no real stakes, rapid iteration expected.",
+          "examples": ["Brainstorming", "Sketching", "Casual conversation"]
         },
         {
           "level": 2,
+          "name": "High",
+          "definition": "Errors easily corrected, low stakes, iteration expected.",
+          "examples": ["Drafting", "Prototyping", "Practice exercises"]
+        },
+        {
+          "level": 3,
           "name": "Medium",
           "definition": "Errors costly but recoverable, moderate stakes.",
           "examples": ["Cooking", "Scheduling", "Routine maintenance"]
         },
         {
-          "level": 3,
+          "level": 4,
           "name": "Low",
-          "definition": "Errors expensive or harmful, limited recovery.",
+          "definition": "Errors expensive or harmful, limited recovery options.",
           "examples": ["Surgery", "Vehicle repair", "Legal filing"]
         },
         {
-          "level": 4,
-          "name": "Very Low",
-          "definition": "Errors potentially catastrophic or irreversible.",
+          "level": 5,
+          "name": "Critical",
+          "definition": "Errors potentially catastrophic, irreversible, or life-threatening.",
           "examples": ["Emergency response", "Childcare safety", "Critical infrastructure"]
         }
       ]
